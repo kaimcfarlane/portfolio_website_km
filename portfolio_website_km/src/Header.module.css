@@ -1,3 +1,9 @@
+#header{
+    display: flex;
+    color: aliceblue;
+}
+
+
 .btn11 {
     position: absolute;
     width: 60px;

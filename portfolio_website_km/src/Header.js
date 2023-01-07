@@ -1,5 +1,7 @@
 import React, {useRef} from 'react'
-import './Header.css'
+// import './Header.css'
+import styles from "./Header.module.css"
+import "./Header.module.css"
 
 export default function Header() {
     //We are implementing button here
@@ -9,9 +11,6 @@ export default function Header() {
 
     const burgerMenu = useRef();
     function burgerMenuClick() {
-        // $('.menu').click (function(){
-        //     $(this).toggleClass('open');
-        //   });
         burgerMenu.current.classList.toggle('open');
         console.log("burgerMenu Clicked!");
     } 
@@ -20,11 +19,22 @@ export default function Header() {
 
     
     <>
-        <div>This is the header</div>
+    <section id={styles.header}>
+    <div>This is the header</div>
         <div ref={burgerMenu} className="menu btn11" data-menu="11" onClick={burgerMenuClick}>
-        <div className="icon-left"></div>
-        <div className="icon-right"></div>
-      </div>
+            <div className="icon-left"></div>
+            <div className="icon-right"></div>
+        </div>
+        <div id='menuContent'>
+            <ul id='dropdown'>
+                <li className='headerItem'><a href='#'>ABOUT ME</a></li>
+                <li className='headerItem'><a href='#'>SKILLS</a></li>
+                <li className='headerItem'><a href='#'>PROJECTS</a></li>
+                <li className='headerItem'><a href='#'>CONTACT</a></li>
+                <li className='headerItem'><a href='#'>RESUME</a></li>
+            </ul>
+        </div>
+    </section>
     </>
   )
 }
