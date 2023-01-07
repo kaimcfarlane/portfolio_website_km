@@ -15,8 +15,6 @@ export default function Header() {
 
     function burgerMenuClick() {
         burgerMenu.current.classList.toggle('open');
-        burgerMenuLeft.current.classList.toggle('open');
-        burgerMenuRight.current.classList.toggle('open');
         console.log("burgerMenu Clicked!");
     } 
 
@@ -26,9 +24,9 @@ export default function Header() {
     <>
     <section id={styles.header}>
     <div>This is the header</div>
-        <div ref={burgerMenu} className={[styles.menu, styles.btn11].join(' ')} data-menu="11" onClick={burgerMenuClick}>
-            <div ref={burgerMenuLeft} className={styles["icon-left"]}></div>
-            <div ref={burgerMenuRight} className={styles["icon-right"]}></div>
+        <div ref={burgerMenu} className='menu btn11' data-menu="11" onClick={burgerMenuClick}>
+            <div ref={burgerMenuLeft} className='icon-left'></div>
+            <div ref={burgerMenuRight} className='icon-right'></div>
         </div>
         <div id='menuContent'>
             <ul id='dropdown'>
