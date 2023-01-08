@@ -12,6 +12,12 @@
   color: #6246ea;
   font-size: 30px;
   padding-left: 30px;
+  cursor: pointer;
+}
+
+#logoText:hover{
+  color: #a7a7fa;
+  transition: 0.5s;
 }
 
 #dropdown{
@@ -28,6 +34,7 @@
   letter-spacing: 0.1em;
   /* background-color: #6246ead9; */
   background-color: #a7a7fa;
+  text-transform: uppercase
 }
 
 .hLink{

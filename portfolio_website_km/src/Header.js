@@ -13,15 +13,31 @@ export default function Header() {
     const burgerMenuLeft = useRef();
     const burgerMenuRight = useRef();
     const menuContent = useRef();
+    const logoText = useRef();
+
+    function HomeBtn() {
+        console.log("Home Button Clicked");
+        // window.location.reload();
+        // window.scrollTo({ top: 100, behavior: 'smooth' });
+        var scrollToTop = window.setInterval(function() {
+            var pos = window.pageYOffset;
+            if ( pos > 0 ) {
+                window.scrollTo( 0, pos - 20 ); // how far to scroll on each step
+            } else {
+                window.clearInterval( scrollToTop );
+            }
+        }, 16); // how fast to scroll (this equals roughly 60 fps)
+        scrollToTop();
+    }
 
     function burgerMenuClick() {
         burgerMenu.current.classList.toggle('open');
-        console.log(menuContent.current.style.display)
+        console.log(menuContent.current.style.display);
         if(menuContent.current.style.display === "none" || menuContent.current.style.display === '')
         {
             menuContent.current.style.display = "flex";
             // burgerMenu.current.style.backgroundColor = "#7a61f0d9";
-            burgerMenu.current.style.backgroundColor = "#a7a7fa"
+            burgerMenu.current.style.backgroundColor = "#a7a7fa";
         }
         else {
             menuContent.current.style.display = "none";
@@ -36,7 +52,7 @@ export default function Header() {
     
     <>
     <section id={styles.header}>
-    <div id={styles.logoText}>KM</div>
+    <div ref={logoText} id={styles.logoText} onClick={HomeBtn}>KM</div>
     <div id={styles.burgerMenu}>
         <div  ref={burgerMenu} className='menu btn11' data-menu="11" onClick={burgerMenuClick}>
             <div ref={burgerMenuLeft} className='icon-left'></div>
@@ -49,7 +65,7 @@ export default function Header() {
                 <li className={styles.headerItem}><a href='#' className={styles.hLink}>SKILLS</a></li>
                 <li className={styles.headerItem}><a href='#' className={styles.hLink}>PROJECTS</a></li>
                 <li className={styles.headerItem}><a href='#' className={styles.hLink}>CONTACT</a></li>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>RESUME</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>resumé</a></li>
             </ul>
         </div>
     </section>
