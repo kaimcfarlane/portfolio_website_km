@@ -20,7 +20,8 @@ export default function Header() {
         if(menuContent.current.style.display === "none" || menuContent.current.style.display === '')
         {
             menuContent.current.style.display = "flex";
-            burgerMenu.current.style.backgroundColor = "#7a61f0d9";
+            // burgerMenu.current.style.backgroundColor = "#7a61f0d9";
+            burgerMenu.current.style.backgroundColor = "#a7a7fa"
         }
         else {
             menuContent.current.style.display = "none";

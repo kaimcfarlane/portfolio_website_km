@@ -26,13 +26,28 @@
   font-family: 'Gill Sans', 'GillSansCRegular', Arial, sans-serif;
   font-size: 23px;
   letter-spacing: 0.1em;
-  background-color: #6246ead9;
+  /* background-color: #6246ead9; */
+  background-color: #a7a7fa;
 }
 
 .hLink{
   color: inherit;
   text-decoration: none;
-  background-color: #7a61f0d9;
+  /* background-color: #7a61f0d9; */
+  background-color: #a7a7fa;
+  transition-duration: 0.5s;
+
+
+
+  padding: 8px;
+    border-style: dashed;
+    border-color: white;
+}
+
+.hLink:hover{
+  color: white;
+  background-color: black;
+  border-style: outset;
 }
 
 #burgerMenu{
@@ -43,12 +58,18 @@
   display: none;
   color: #212121;
   position: absolute;
-  background-color: #6246ead9;
-  left: 83%;
+  /* background-color: #6246ead9; */
+  background-color: #a7a7fa;
+  border-bottom-left-radius: 6px;
+  left: 86%;
   padding: 77px;
   padding-top: 70px;
   padding-bottom: 70px;
   top: 0;
+
+  border-style: solid;
+  border-top: white;
+
 }
 
 .btn11 {
