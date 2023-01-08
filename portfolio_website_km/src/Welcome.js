@@ -5,6 +5,7 @@ import imageS from './KaiMcFarlaneSeniorPicture2.jpeg'
 
 export default function Welcome() {
   return (
+    <>
     <section id={styles.welcomeAll}>
     <div id={styles.welcomeContent}>
         <h2 id={styles.subtitle}>Hey I'm,</h2>
@@ -16,5 +17,10 @@ export default function Welcome() {
         <img id={styles.profilePic} alt='Logo' src={imageC}></img>
     </div>
     </section>
+    <div id={styles.mouseContainer}>
+        <div className={styles["icon-scroll"]}></div>
+    </div>
+    
+    </>
   )
 }
