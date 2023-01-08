@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './Header';
+import Welcome from './Welcome'
 
 import React, {useState, useRef, useEffect} from 'react'
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Header/>
+      <Welcome/>
     </>
    
   );

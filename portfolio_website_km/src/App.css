@@ -1,5 +1,35 @@
 *{
   box-sizing: border-box;
+  /* background-color: aliceblue; */
+  background-color: #fffffe;
+  /* background-color: #e8f9fd; */
+ /* background-color: #76c1d4; */
+ /* Barely Gray Edge: #f7f7f7 */
+  /* Purple #7d3cff */
+  /* Night Blue #2d545e */
+  /* Night Blue Shadow #12343b */
+  /* Purple baseline: #161748 */
+
+  /* Dark Mode border-block-width:  */
+  /* background-color: #16161a; */
+  /* paragraph color #94a1b2 */
+  /* button Text/All Big Headlines #fffffe */
+  /* Button color  #7f5af0 */
+
+  /* Light Mode Purple  */
+  /* Background #fffffe */
+  /* Paragraph #94a1b2 */
+  /* Headline #2b2c34 */
+  /* Button text #fffffe */
+  /* Button #6246ea */
+
+  /* Light Mode Blue  */
+  /* Background #fffffe */
+  /* Paragraph  #5f6c7b*/
+  /* Headline #2b2c34 */
+  /* Button text ##fffffe */
+  /* Button #3da9fc */
+
 }
 
 .App {

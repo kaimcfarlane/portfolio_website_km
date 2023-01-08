@@ -33,7 +33,7 @@ export default function Header() {
     
     <>
     <section id={styles.header}>
-    <div>KM</div>
+    <div id={styles.logoText}>KM</div>
     <div id={styles.burgerMenu}>
         <div  ref={burgerMenu} className='menu btn11' data-menu="11" onClick={burgerMenuClick}>
             <div ref={burgerMenuLeft} className='icon-left'></div>

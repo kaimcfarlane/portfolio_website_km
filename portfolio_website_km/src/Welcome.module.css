@@ -1,0 +1,16 @@
+#welcomeContent{
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    margin-top: 250px;
+    
+
+}
+
+#subtitle{
+    font-size: 40px;
+}
+
+#title{
+    font-size: 48px;
+}
