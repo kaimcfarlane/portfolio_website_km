@@ -16,20 +16,23 @@
 
 #dropdown{
   list-style: none; 
+  padding: 0;
 }
 
 .headerItem{
   color: rgb(0, 0, 0);
   font-weight: 600;
-  line-height: 2;
+  line-height: 3;
   font-family: 'Gill Sans', 'GillSansCRegular', Arial, sans-serif;
-  font-size: 15px;
+  font-size: 23px;
   letter-spacing: 0.1em;
+  background-color: #6246ead9;
 }
 
 .hLink{
   color: inherit;
   text-decoration: none;
+  background-color: #7a61f0d9;
 }
 
 #burgerMenu{
@@ -40,12 +43,15 @@
   display: none;
   color: #212121;
   position: absolute;
-  left: 80%;
-  top: 5%;
+  background-color: #6246ead9;
+  left: 83%;
+  padding: 77px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  top: 0;
 }
 
 .btn11 {
-    position: absolute;
     width: 60px;
     height: 60px;
     top: 300px;

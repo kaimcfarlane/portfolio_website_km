@@ -20,9 +20,11 @@ export default function Header() {
         if(menuContent.current.style.display === "none" || menuContent.current.style.display === '')
         {
             menuContent.current.style.display = "flex";
+            burgerMenu.current.style.backgroundColor = "#7a61f0d9";
         }
         else {
             menuContent.current.style.display = "none";
+            burgerMenu.current.style.backgroundColor = "";
         }
         
         console.log("burgerMenu Clicked!");
@@ -42,7 +44,7 @@ export default function Header() {
     </div>
         <div id={styles.menuContent} ref={menuContent}>
             <ul id={styles.dropdown}>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>ABOUT ME</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>ABOUT</a></li>
                 <li className={styles.headerItem}><a href='#' className={styles.hLink}>SKILLS</a></li>
                 <li className={styles.headerItem}><a href='#' className={styles.hLink}>PROJECTS</a></li>
                 <li className={styles.headerItem}><a href='#' className={styles.hLink}>CONTACT</a></li>
