@@ -1,10 +1,10 @@
 
 .btn11 {
-    position: absolute;
+    /* position: absolute; */
     width: 60px;
     height: 60px;
-    top: 300px;
-    left: 240px;
+    /* top: 300px;
+    left: 240px; */
     transition-duration: 0.5s;
   }
   .btn11 .icon-left {

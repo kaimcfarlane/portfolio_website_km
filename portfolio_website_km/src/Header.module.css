@@ -1,10 +1,16 @@
 #header{
     display: flex;
     color: #137dda;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .headerItem{
   color: rgb(0, 0, 0);
+}
+
+#burgerMenu{
+    position: relative;
 }
 
 #menuContent{

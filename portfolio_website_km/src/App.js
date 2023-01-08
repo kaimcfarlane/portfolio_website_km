@@ -15,7 +15,6 @@ function App() {
 
   return (
     <>
-      <h1>Kai Allan McFarlane</h1>
       <Header/>
     </>
    

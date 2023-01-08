@@ -33,11 +33,13 @@ export default function Header() {
     
     <>
     <section id={styles.header}>
-    <div>This is the header</div>
-        <div ref={burgerMenu} className='menu btn11' data-menu="11" onClick={burgerMenuClick}>
+    <div>KM</div>
+    <div id={styles.burgerMenu}>
+        <div  ref={burgerMenu} className='menu btn11' data-menu="11" onClick={burgerMenuClick}>
             <div ref={burgerMenuLeft} className='icon-left'></div>
             <div ref={burgerMenuRight} className='icon-right'></div>
         </div>
+    </div>
         <div id={styles.menuContent} ref={menuContent}>
             <ul id='dropdown'>
                 <li className={styles.headerItem}><a href='#'>ABOUT ME</a></li>
