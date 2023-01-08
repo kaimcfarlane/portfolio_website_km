@@ -41,12 +41,12 @@ export default function Header() {
         </div>
     </div>
         <div id={styles.menuContent} ref={menuContent}>
-            <ul id='dropdown'>
-                <li className={styles.headerItem}><a href='#'>ABOUT ME</a></li>
-                <li className='headerItem'><a href='#'>SKILLS</a></li>
-                <li className='headerItem'><a href='#'>PROJECTS</a></li>
-                <li className='headerItem'><a href='#'>CONTACT</a></li>
-                <li className='headerItem'><a href='#'>RESUME</a></li>
+            <ul id={styles.dropdown}>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>ABOUT ME</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>SKILLS</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>PROJECTS</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>CONTACT</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>RESUME</a></li>
             </ul>
         </div>
     </section>
