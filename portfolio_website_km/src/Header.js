@@ -12,9 +12,19 @@ export default function Header() {
     const burgerMenu = useRef();
     const burgerMenuLeft = useRef();
     const burgerMenuRight = useRef();
+    const menuContent = useRef();
 
     function burgerMenuClick() {
         burgerMenu.current.classList.toggle('open');
+        console.log(menuContent.current.style.display)
+        if(menuContent.current.style.display === "none" || menuContent.current.style.display === '')
+        {
+            menuContent.current.style.display = "flex";
+        }
+        else {
+            menuContent.current.style.display = "none";
+        }
+        
         console.log("burgerMenu Clicked!");
     } 
 
@@ -28,7 +38,7 @@ export default function Header() {
             <div ref={burgerMenuLeft} className='icon-left'></div>
             <div ref={burgerMenuRight} className='icon-right'></div>
         </div>
-        <div id='menuContent'>
+        <div id={styles.menuContent} ref={menuContent}>
             <ul id='dropdown'>
                 <li className={styles.headerItem}><a href='#'>ABOUT ME</a></li>
                 <li className='headerItem'><a href='#'>SKILLS</a></li>
