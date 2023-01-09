@@ -47,7 +47,7 @@
 
 
   padding: 8px;
-    border-style: dashed;
+    /* border-style: dashed; */
     border-color: white;
 }
 
@@ -68,15 +68,19 @@
   /* background-color: #6246ead9; */
   background-color: #a7a7fa;
   border-bottom-left-radius: 6px;
-  left: 86%;
+  /* left: 86%;
   padding: 77px;
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 70px; */
   top: 0;
 
   border-style: solid;
   border-top: white;
 
+  left: 89%;
+  padding: 46px;
+  padding-top: 70px;
+  padding-bottom: 22px;
 }
 
 .btn11 {
