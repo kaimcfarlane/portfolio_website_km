@@ -35,13 +35,30 @@ export default function Header() {
         console.log(menuContent.current.style.display);
         if(menuContent.current.style.display === "none" || menuContent.current.style.display === '')
         {
+            // menuContent.current.style.opacity = "0"
             menuContent.current.style.display = "flex";
+            menuContent.current.style.animation = "slideLeft"
+            setTimeout(() => {
+                // menuContent.current.style.opacity = "100%"
+                menuContent.current.style.left = "86.5%"
+                burgerMenu.current.style.backgroundColor = "#a7a7fa";
+            },100)
             // burgerMenu.current.style.backgroundColor = "#7a61f0d9";
-            burgerMenu.current.style.backgroundColor = "#a7a7fa";
+            
         }
         else {
-            menuContent.current.style.display = "none";
-            burgerMenu.current.style.backgroundColor = "";
+            menuContent.current.style.animation = "slideRight"
+            // burgerMenu.current.style.animation = "slideBurgerRight";
+            setTimeout(() => {
+                menuContent.current.style.left = "100%"
+                setTimeout(() => {
+                    menuContent.current.style.display = "none"
+                },600)
+            },100)
+            setTimeout(() => {
+                burgerMenu.current.style.backgroundColor = "";
+            },320);
+            
         }
         
         console.log("burgerMenu Clicked!");
@@ -61,11 +78,11 @@ export default function Header() {
     </div>
         <div id={styles.menuContent} ref={menuContent}>
             <ul id={styles.dropdown}>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>ABOUT</a></li>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>SKILLS</a></li>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>PROJECTS</a></li>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>CONTACT</a></li>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>resumé</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
+                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;resumé/&gt;</a></li>
             </ul>
         </div>
     </section>

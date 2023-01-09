@@ -73,15 +73,35 @@
   padding-top: 70px;
   padding-bottom: 70px; */
   top: 0;
+  /* transition-duration: 0.5s; */
+  transition: all .5s ease;
 
   border-style: solid;
   border-top: white;
 
-  left: 89%;
+  /* left: 86.5%; */
+  left: 100%;
   padding: 46px;
   padding-top: 70px;
   padding-bottom: 22px;
+  animation: '';
 }
+
+@keyframes slideLeft {
+  100% { 
+    left: 86.5%; 
+  }
+}
+
+@keyframes slideRight {
+  0%{
+    left: 86.5%;
+  }
+  100%{
+    left: 100%;
+  }
+}
+
 
 .btn11 {
     width: 60px;

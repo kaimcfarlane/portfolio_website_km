@@ -1,3 +1,11 @@
+@keyframes slideBurgerRight{
+  0%{
+    left: 0%;
+  }
+  100%{
+    left: 100%;
+  }
+}
 
 .btn11 {
     /* position: absolute; */
@@ -5,10 +13,11 @@
     z-index: 2;
     width: 60px;
     height: 60px;
+    animation: '';
     /* background-color: #7a61f0d9; */
     /* top: 300px;
     left: 240px; */
-    /* transition-duration: 0.5s; */
+    transition-duration: 0.1s;
     /* background-color: #a7a7fa; */
   }
   .btn11 .icon-left {
