@@ -87,6 +87,17 @@
   padding-bottom: 22px;
   border-right: white;
   animation: '';
+  padding-right: 30px;
+
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+
+  /* box-shadow: #6246ea -5px 5px, #745ce8 -10px 10px, #816be8 -15px 15px, #998ae0 -20px 20px, #b4abdf -25px 25px; */
+
+  box-shadow: #6246ea -5px 5px, #ffffff -10px 10px, #9182df -15px 15px;
+  border-color: white;
+
+  /* box-shadow: #6246ea -5px 5px, #7964e0 -10px 10px, #9182df -15px 15px; */
+  
 }
 
 @keyframes slideLeft {
