@@ -34,6 +34,7 @@
     box-shadow: 9px 10px 3px 0px rgba(98,70,234,0.76);
     -webkit-box-shadow: 9px 10px 3px 0px rgba(98,70,234,0.76);
     -moz-box-shadow: 9px 10px 3px 0px rgba(98,70,234,0.76);
+    transform: translateX(0px);
 }
 
 #subtitle{

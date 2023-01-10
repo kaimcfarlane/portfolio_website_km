@@ -1,9 +1,22 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import styles from './Welcome.module.css'
 import imageC from './selfPictures/selfie2.jpg'
 import imageS from './KaiMcFarlaneSeniorPicture2.jpeg'
 
 export default function Welcome() {
+
+    const profilePic = useRef();
+    document.addEventListener('mousemove', parrallax);
+    function parrallax(e) {
+        const speed = 4;
+        const x = (window.innerWidth - e.pageX*speed)/100;
+        const y = (window.innerHeight - e.pageY*speed)/100;
+        profilePic.current.style.transform = "translateX(" + x + "px)" + "translateY(" + y + "px)";
+        // console.log("Mouse Moved Bro");
+        // console.log("Page X speed is " + e.pageX);
+        // console.log("X value: " + x);
+    }
+
   return (
     <>
     <section id={styles.welcomeAll}>
@@ -15,7 +28,7 @@ export default function Welcome() {
         {/* I'm a Software Developer that loves to create exciting projects through code. */}
     </div>
     <div>
-        <img id={styles.profilePic} alt='Logo' src={imageC}></img>
+        <img ref={profilePic} id={styles.profilePic} alt='Logo' src={imageC}></img>
     </div>
     </section>
     <div id={styles.mouseContainer}>
