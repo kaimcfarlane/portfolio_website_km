@@ -13,11 +13,12 @@
   font-size: 30px;
   padding-left: 30px;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 #logoText:hover{
-  color: #a7a7fa;
-  transition: 0.5s;
+  /* color: #a7a7fa; */
+  font-size: 35px;
 }
 
 #dropdown{
