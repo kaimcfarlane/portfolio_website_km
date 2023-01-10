@@ -95,23 +95,11 @@ export default function Header() {
 
 
 
-//Our slide menu is overflowing because it is only partially coming out left
-//To fix make left 100% and format so it looks same as before
+
 //Next add parrallax for on mouse move for profile picture 
 //Then add the typing for hey I'm in different languages
 //Add dark light mode slector next to burger menu, try just balck white selector
-//Add zoom in/zoom out hover effect for logo
 //Add linkedin and github and resume if we can find logo into burger menu
 //Add load in animations for all things on the screen with the mouse coming in last probably
 //just add everthing come in from below with opacity 0 to 100 with header first then center stuff then mouse icon animation
-//just barely lower than orginal location too
-
-
-//For anything below full screen
-//82.85 for line to no scroll bar but line show
-//83.1 For minimum scroll bar
-
-//For full screen
-//85.4% With right line
-//
 
