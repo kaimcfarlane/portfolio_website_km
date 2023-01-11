@@ -14,6 +14,7 @@
   padding-left: 30px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  animation: 1s ease-out 0s 1 loadFromBtm;
 }
 
 #logoText:hover{
@@ -60,6 +61,7 @@
 
 #burgerMenu{
     position: relative;
+    animation: 1s ease-out 0s 1 loadFromBtm;
 }
 
 #menuContent{
@@ -208,3 +210,11 @@
     cursor: pointer;
   }
   
+  @keyframes loadFromBtm {
+    0% {
+        transform: translateY(100px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+  }
