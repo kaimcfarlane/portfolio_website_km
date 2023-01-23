@@ -2,6 +2,7 @@ import React, {useRef, useEffect, useState} from 'react'
 // import './Header.css'
 import styles from "./Header.module.css"
 import "./burgerMenu.css"
+import './nightDay.css'
 // import "https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 // {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 //      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"></link> */}
@@ -120,15 +121,15 @@ export default function Header() {
     <section id={styles.header}>
     <div ref={logoText} id={styles.logoText} onClick={HomeBtn}>KM</div>
     <div id={styles.burgerMenu}>
-        <div className={styles.content}>
-            <i ref={i} className={styles["fas fa-sun"]} style={{color: iColor}}></i>
+        <div className='content'>
+            <i ref={i} className='fas fa sun' style={{color: iColor}}></i>
             &nbsp;&nbsp;&nbsp;
             <input type="checkbox"
             // id="tooglenight" class="cbx hidden" 
-            id={styles.toogleNight} ref={tooglenight} className={styles["cbx hidden"]} onClick={tooglenightBtn} />
-            <label for="tooglenight" className={styles.switch}></label>
+             id="toogleNight" ref={tooglenight} className='cbx hidden' onClick={tooglenightBtn} />
+            <label for="tooglenight" className='switch'></label>
             &nbsp;&nbsp;&nbsp;
-            <i ref={i} className={styles["fas fa-moon"]}></i>
+            <i ref={i} className="fas fa-moon"></i>
         </div>
         <div  ref={burgerMenu} className='menu btn11' data-menu="11" onClick={burgerMenuClick}>
             <div ref={burgerMenuLeft} className='icon-left'></div>
