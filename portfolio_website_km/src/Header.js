@@ -1,7 +1,20 @@
-import React, {useRef} from 'react'
+import React, {useRef, useEffect, useState} from 'react'
 // import './Header.css'
 import styles from "./Header.module.css"
 import "./burgerMenu.css"
+// import "https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+// {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+//      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"></link> */}
+
+//some issues
+//we need to import the styling link into our react from the codepen
+//we also need to make sure that the image of sun and moon appear upon implementing this link
+//for th styling also we have an issue with our class names not showing in the elments tab
+//Next we need either decompile or import jquery javascript into here
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
+
 
 export default function Header() {
     //We are implementing button here
@@ -14,8 +27,13 @@ export default function Header() {
     const burgerMenuRight = useRef();
     const menuContent = useRef();
     const logoText = useRef();
+    const tooglenight = useRef();
+    const i = useRef();
 
-    function HomeBtn() {
+    const [iColor, setIColor] = useState('white');
+
+    
+    const HomeBtn = () => {
         console.log("Home Button Clicked");
         // window.location.reload();
         // window.scrollTo({ top: 100, behavior: 'smooth' });
@@ -30,7 +48,7 @@ export default function Header() {
         scrollToTop();
     }
 
-    function burgerMenuClick() {
+    const burgerMenuClick = () => {
         burgerMenu.current.classList.toggle('open');
         console.log(menuContent.current.style.display);
         if(menuContent.current.style.display === "none" || menuContent.current.style.display === '')
@@ -66,14 +84,52 @@ export default function Header() {
         
         console.log("burgerMenu Clicked!");
     } 
+    var NDClicked= false;
+    const tooglenightBtn = () => {
+                if(!NDClicked) {
+                    //add code to make body background black
+                    console.log("toogle night btn clicked");
+                    // document.body.style.backgroundColor = "blue";
+                    setIColor('black');
+                    // console.log("tooglenight.checked: " + tooglenight.checked);
+                    NDClicked = true;
+                    // i.setState({color: 'white'});
+                }else{
+                    //add code to make background white again
+                    console.log("toogle night btn clicked");
+                    // console.log("tooglenight.checked: " + tooglenight.checked);
+                    document.body.style.backgroundColor = "white";
+                    setIColor('white');
+                    NDClicked = false;
+                    // i.setState({color: 'black'});
+                }
+
+                //Stupid but we need to find a way to implement this js code correctly
+                //Color of the "i" element need to change onclick and the methods in react
+                //keep using the this keyword which won't work unless change is on the elemnt were clicking
+                //After making this work we need to probably put our own icons for fas fa-sun
+                //I would use the fontawesome since we already have it installed
+
+                //Create a class and add it/remove it from the i tag
+
+        }
 
   return (
-
     
     <>
     <section id={styles.header}>
     <div ref={logoText} id={styles.logoText} onClick={HomeBtn}>KM</div>
     <div id={styles.burgerMenu}>
+        <div className={styles.content}>
+            <i ref={i} className={styles["fas fa-sun"]} style={{color: iColor}}></i>
+            &nbsp;&nbsp;&nbsp;
+            <input type="checkbox"
+            // id="tooglenight" class="cbx hidden" 
+            id={styles.toogleNight} ref={tooglenight} className={styles["cbx hidden"]} onClick={tooglenightBtn} />
+            <label for="tooglenight" className={styles.switch}></label>
+            &nbsp;&nbsp;&nbsp;
+            <i ref={i} className={styles["fas fa-moon"]}></i>
+        </div>
         <div  ref={burgerMenu} className='menu btn11' data-menu="11" onClick={burgerMenuClick}>
             <div ref={burgerMenuLeft} className='icon-left'></div>
             <div ref={burgerMenuRight} className='icon-right'></div>

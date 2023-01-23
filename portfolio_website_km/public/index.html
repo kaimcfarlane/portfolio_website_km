@@ -10,11 +10,29 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+     integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"></link> -->
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>$(function() { alert('hello') });</script>
+    <!-- <script>$(document).ready(function(){
+      $("#tooglenight").change(function() {
+        console.log("CheckBox was clicked")
+          if(this.checked) {
+              $("#bd").addClass("night");
+              $("i").css("color", "white");
+          }else{
+              $("#bd").removeClass("night");
+              $("i").css("color", "black");
+          }
+      });
+    });</script> -->
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
