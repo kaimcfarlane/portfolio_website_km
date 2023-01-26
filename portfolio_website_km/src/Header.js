@@ -32,7 +32,6 @@ export default function Header() {
     const i = useRef();
 
     const [iColor, setIColor] = useState('white');
-
     
     const HomeBtn = () => {
         console.log("Home Button Clicked");
@@ -105,15 +104,29 @@ export default function Header() {
                     // i.setState({color: 'black'});
                 }
 
-                //Stupid but we need to find a way to implement this js code correctly
-                //Color of the "i" element need to change onclick and the methods in react
-                //keep using the this keyword which won't work unless change is on the elemnt were clicking
-                //After making this work we need to probably put our own icons for fas fa-sun
-                //I would use the fontawesome since we already have it installed
-
-                //Create a class and add it/remove it from the i tag
+                //Make sure to add code to change the value of checkbox to checked one the click
 
         }
+
+    //We need to set the value of checked using a state thing, we did it before in last react app so look there
+    const [DLChecked, setCheck] = useState(false);
+
+    const DLBtnClick = () => {
+        console.log("CSS Switch Clicked")
+        const tBtn = document.getElementById("toogleNight");
+        console.log("DLChecked: " + DLChecked);
+        if(!DLChecked) 
+        {
+            setCheck(true);
+            // tooglenight.checked = true;
+            // tBtn.checked = true;
+        }
+        else{
+            setCheck(false);
+            // tooglenight.checked = false;
+            // tBtn.checked = false;
+        }
+    }
 
   return (
     
@@ -126,8 +139,8 @@ export default function Header() {
             &nbsp;&nbsp;&nbsp;
             <input type="checkbox"
             // id="tooglenight" class="cbx hidden" 
-             id="toogleNight" ref={tooglenight} className='cbx hidden' onClick={tooglenightBtn} />
-            <label for="tooglenight" className='switch'></label>
+             id="toogleNight" ref={tooglenight} className='cbx hidden' onClick={tooglenightBtn} checked={DLChecked} />
+            <label for="tooglenight" className='switch' onClick={DLBtnClick}></label>
             &nbsp;&nbsp;&nbsp;
             <i ref={i} className="fas fa-moon"></i>
         </div>
