@@ -6,6 +6,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-right: 10px;
+  margin-top: 3px;
 }
 .content > i{
   font-size: 44px;

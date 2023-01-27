@@ -85,7 +85,10 @@ export default function Header() {
         console.log("burgerMenu Clicked!");
     } 
     var NDClicked= false;
+
+
     const tooglenightBtn = () => {
+        var allElements = document.getElementsByTagName("*");
                 if(!NDClicked) {
                     //add code to make body background black
                     console.log("toogle night btn clicked");
@@ -93,6 +96,10 @@ export default function Header() {
                     setIColor('black');
                     // console.log("tooglenight.checked: " + tooglenight.checked);
                     NDClicked = true;
+                    for (var i = 0, len = allElements.length; i < len; i++) {
+                        var element = allElements[i];
+                        element.style.backgroundColor = "#16161a";
+                    }
                     // i.setState({color: 'white'});
                 }else{
                     //add code to make background white again
@@ -101,6 +108,11 @@ export default function Header() {
                     document.body.style.backgroundColor = "white";
                     setIColor('white');
                     NDClicked = false;
+                    document.body.style.backgroundColor = "#16161a";
+                    for (var x = 0, lenx = allElements.length; x < lenx; x++) {
+                        var elementx = allElements[x];
+                        elementx.style.backgroundColor = "#fffffe";
+                    }
                     // i.setState({color: 'black'});
                 }
 
@@ -109,22 +121,42 @@ export default function Header() {
         }
 
     //We need to set the value of checked using a state thing, we did it before in last react app so look there
+
+        // Below Changes the background of every elements background to balck or white and liek before we are havign trouble
+        // accessing the CSS trhough regular JS and probably will have to do so through states which is annoyning
+        // If we keep below we would have to change every single color thats isn't the right background to what it is
+        // If we just change the background then we'll have to change every single items we want to changed background on
+        // After this fix the mobile menu popping o wrong side at first click and fix mouse position for laptop view via media querys.
+
     const [DLChecked, setCheck] = useState(false);
+    const DLSwitch = useRef();
 
     const DLBtnClick = () => {
         console.log("CSS Switch Clicked")
         const tBtn = document.getElementById("toogleNight");
-        console.log("DLChecked: " + DLChecked);
+        console.log("DLChecked: " + DLChecked)
+        console.log("DLSwitch element below: " + DLSwitch);
+        var allElements = document.getElementsByTagName("*");
         if(!DLChecked) 
         {
             setCheck(true);
             // tooglenight.checked = true;
             // tBtn.checked = true;
+            for (var i = 0, len = allElements.length; i < len; i++) {
+                var element = allElements[i];
+                element.style.backgroundColor = "#16161a";
+            }
+            DLSwitch.current.style.backgroundColor = "#6246ea";
         }
         else{
             setCheck(false);
             // tooglenight.checked = false;
             // tBtn.checked = false;
+            for (var x = 0, lenx = allElements.length; x < lenx; x++) {
+                var elementx = allElements[x];
+                elementx.style.backgroundColor = "#fffffe";
+            }
+            DLSwitch.current.style.backgroundColor = "#303030";
         }
     }
 
@@ -140,7 +172,7 @@ export default function Header() {
             <input type="checkbox"
             // id="tooglenight" class="cbx hidden" 
              id="toogleNight" ref={tooglenight} className='cbx hidden' onClick={tooglenightBtn} checked={DLChecked} />
-            <label for="tooglenight" className='switch' onClick={DLBtnClick}></label>
+            <label for="tooglenight" className='switch' onClick={DLBtnClick} id="DLswitch" ref={DLSwitch}></label>
             &nbsp;&nbsp;&nbsp;
             <i ref={i} className="fas fa-moon"></i>
         </div>
