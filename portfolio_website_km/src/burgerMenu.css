@@ -100,4 +100,14 @@
   .btn11:hover {
     cursor: pointer;
   }
+
+
+  .specialB:before{
+    background-color: white !important;
+  }
+
+  .specialA:after{
+    background-color: white !important;
+  }
+
   

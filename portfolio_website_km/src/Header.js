@@ -128,6 +128,10 @@ export default function Header() {
         // If we just change the background then we'll have to change every single items we want to changed background on
         // After this fix the mobile menu popping o wrong side at first click and fix mouse position for laptop view via media querys.
 
+
+    //add .specialB and .specialA classes to the burgerMenu/Left&Right Classes for !DLClicked
+    
+
     const [DLChecked, setCheck] = useState(false);
     const DLSwitch = useRef();
 
@@ -147,16 +151,29 @@ export default function Header() {
                 element.style.backgroundColor = "#16161a";
             }
             DLSwitch.current.style.backgroundColor = "#6246ea";
+            burgerMenuRight.current.style.backgroundColor = "white";
+            burgerMenuLeft.current.style.backgroundColor = "#ffffff00";
+
+            burgerMenuLeft.current.classList.add('specialA');
+            burgerMenuRight.current.classList.add('specialA');
+            burgerMenuLeft.current.classList.add('specialB');
+            burgerMenuRight.current.classList.add('specialB');
         }
         else{
             setCheck(false);
             // tooglenight.checked = false;
             // tBtn.checked = false;
+            burgerMenuLeft.current.classList.remove('specialA');
+            burgerMenuRight.current.classList.remove('specialA');
+            burgerMenuLeft.current.classList.remove('specialB');
+            burgerMenuRight.current.classList.remove('specialB');
             for (var x = 0, lenx = allElements.length; x < lenx; x++) {
                 var elementx = allElements[x];
                 elementx.style.backgroundColor = "#fffffe";
             }
             DLSwitch.current.style.backgroundColor = "#303030";
+            burgerMenuRight.current.style.backgroundColor = "#212121";
+            burgerMenuLeft.current.style.backgroundColor = "#ffffff00";
         }
     }
 
@@ -171,7 +188,7 @@ export default function Header() {
             &nbsp;&nbsp;&nbsp;
             <input type="checkbox"
             // id="tooglenight" class="cbx hidden" 
-             id="toogleNight" ref={tooglenight} className='cbx hidden' onClick={tooglenightBtn} checked={DLChecked} />
+             id="toogleNight" ref={tooglenight} className='cbx hidden' onClick={tooglenightBtn} checked={DLChecked}/>
             <label for="tooglenight" className='switch' onClick={DLBtnClick} id="DLswitch" ref={DLSwitch}></label>
             &nbsp;&nbsp;&nbsp;
             <i ref={i} className="fas fa-moon"></i>
