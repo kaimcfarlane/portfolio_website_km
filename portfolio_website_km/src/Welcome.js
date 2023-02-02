@@ -6,6 +6,12 @@ import { func } from 'prop-types';
 
 export default function Welcome() {
 
+    //margin-right 910px for laptop
+
+    //CURRENTLY BEING USED
+    //or we can remove the margins off both the img and div surrounding our text then put the main content div with justify content space around.
+    //then we can make the mouse have no margin as it doesn't need horizontally centering
+
     const profilePic = useRef();
     const subtitle = useRef();
     const title = useRef();
@@ -120,7 +126,7 @@ export default function Welcome() {
     //     }
         
     // }
-
+    
    
 
   return (
