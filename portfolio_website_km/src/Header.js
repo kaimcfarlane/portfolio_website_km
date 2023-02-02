@@ -153,7 +153,8 @@ export default function Header() {
             DLSwitch.current.style.backgroundColor = "#6246ea";
             burgerMenuRight.current.style.backgroundColor = "white";
             burgerMenuLeft.current.style.backgroundColor = "#ffffff00";
-
+            logoText.current.style.textShadow = '2px 1px 0px #ffffff';
+            logoText.current.style.fontWeight = 'bold';
             burgerMenuLeft.current.classList.add('specialA');
             burgerMenuRight.current.classList.add('specialA');
             burgerMenuLeft.current.classList.add('specialB');
@@ -163,6 +164,8 @@ export default function Header() {
             setCheck(false);
             // tooglenight.checked = false;
             // tBtn.checked = false;
+            logoText.current.style.textShadow = '';
+            logoText.current.style.fontWeight = '';
             burgerMenuLeft.current.classList.remove('specialA');
             burgerMenuRight.current.classList.remove('specialA');
             burgerMenuLeft.current.classList.remove('specialB');

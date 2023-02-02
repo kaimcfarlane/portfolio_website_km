@@ -13,8 +13,11 @@
   font-size: 30px;
   padding-left: 30px;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
   animation: 1s ease-out 0s 1 loadFromBtm;
+  
+  /* text-shadow: -2px 2px 0px #ffffff; */
+  /* text-shadow: 2px 1px 0px #ffffff; */
 }
 
 #logoText:hover{
