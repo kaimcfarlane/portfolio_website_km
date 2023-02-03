@@ -17,7 +17,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
-export default function Header() {
+export default function Header({DLObj, toggleDL}) {
     //We are implementing button here
     //Styling on web page link 
     //Check errors on chroms and look to handle future ones
@@ -143,6 +143,9 @@ export default function Header() {
         var allElements = document.getElementsByTagName("*");
         if(!DLChecked) 
         {
+            // DLObj.isLight = false;
+            toggleDL();
+            console.log("DLOBJ is now " + DLObj.isLight);
             setCheck(true);
             // tooglenight.checked = true;
             // tBtn.checked = true;
@@ -161,6 +164,9 @@ export default function Header() {
             burgerMenuRight.current.classList.add('specialB');
         }
         else{
+            // DLObj.isLight = true;
+            toggleDL();
+            console.log("DLOBJ is now " + DLObj.isLight);
             setCheck(false);
             // tooglenight.checked = false;
             // tBtn.checked = false;

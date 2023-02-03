@@ -4,7 +4,7 @@ import imageC from './selfPictures/selfie2.jpg';
 import imageS from './KaiMcFarlaneSeniorPicture2.jpeg';
 import { func } from 'prop-types';
 
-export default function Welcome() {
+export default function Welcome({DLObj}) {
 
     //margin-right 910px for laptop
 
@@ -18,6 +18,12 @@ export default function Welcome() {
     const paragraph1 = useRef();
     const paragraph2 = useRef();
     const mouseContainer = useRef();
+    const mouse = useRef()
+
+    useEffect(() =>{
+        //change mouse, pic outline, and text colors
+        console.log("CHange Light State Changed (Off Header Change)");
+    },[DLObj])
 
     
     useEffect(() => {
@@ -144,7 +150,7 @@ export default function Welcome() {
     </div>
     </section>
     <div ref={mouseContainer} id={styles.mouseContainer}>
-        <div className={styles["icon-scroll"]}></div>
+        <div ref={mouse} className={styles["icon-scroll"]}></div>
     </div>
     
     </>
