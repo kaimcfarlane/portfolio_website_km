@@ -19,10 +19,26 @@ export default function Welcome({DLObj}) {
     const paragraph2 = useRef();
     const mouseContainer = useRef();
     const mouse = useRef()
+    
+
 
     useEffect(() =>{
-        //change mouse, pic outline, and text colors
-        console.log("CHange Light State Changed (Off Header Change)");
+        if(!DLObj.isLight)
+        {
+            paragraph1.current.style.color = "#fffffe";
+            paragraph2.current.style.color = "#94a1b2";
+            subtitle.current.style.color = "#fffffe";
+            profilePic.current.style.borderColor = "#fffffe";
+            mouse.current.style.backgroundColor = "rgb(22, 22, 26)";
+        }
+        else
+        {
+            paragraph1.current.style.color = "black";
+            paragraph2.current.style.color = "#2b2c34";
+            subtitle.current.style.color = "black";
+            profilePic.current.style.borderColor = "black";
+            mouse.current.style.backgroundColor = "#a7a7fa";
+        }
     },[DLObj])
 
     
