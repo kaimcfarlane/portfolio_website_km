@@ -30,6 +30,18 @@
   padding: 0;
 }
 
+.darkMode{
+  background-color: #16161a;
+}
+
+.lightMode{
+  background-color: #fffffe;
+}
+
+.Lpurple {
+  background-color: rgb(167, 167, 250);
+}
+
 .headerItem{
   color: rgb(0, 0, 0);
   font-weight: 600;
@@ -71,7 +83,7 @@
 }
 
 #menuContent{
-  display: none;
+  display: none; 
   color: #212121;
   position: absolute;
   /* background-color: #6246ead9; */
@@ -84,7 +96,7 @@
   top: 0;
   /* transition-duration: 0.5s; */
   transition: all .5s ease;
-
+  z-index: 1;
   border-style: solid;
   border-top: white;
   /* overflow-x: hidden;
@@ -103,6 +115,8 @@
   /* box-shadow: #6246ea -5px 5px, #745ce8 -10px 10px, #816be8 -15px 15px, #998ae0 -20px 20px, #b4abdf -25px 25px; */
 
   box-shadow: #6246ea -5px 5px, #ffffff -10px 10px, #9182df -15px 15px;
+  /* For Dark Mode for certain things */
+  /* box-shadow: #733eff -5px 5px, #733eff -10px 10px, #7054ff -15px 15px; */
   border-color: white;
 
   /* box-shadow: #6246ea -5px 5px, #7964e0 -10px 10px, #9182df -15px 15px; */
@@ -273,4 +287,9 @@ transition: all .2s ease-in;
       100% {
         transform: translateY(0);
       }
+  }
+
+
+  .menuDark{
+
   }

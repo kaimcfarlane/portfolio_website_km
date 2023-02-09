@@ -27,6 +27,16 @@ export default function Header({DLObj, toggleDL}) {
     const burgerMenuLeft = useRef();
     const burgerMenuRight = useRef();
     const menuContent = useRef();
+    const styleLink1 = useRef();
+    const styleLink2 = useRef();
+    const styleLink3 = useRef();
+    const styleLink4 = useRef();
+    const styleLink5 = useRef();
+    const hLink1 = useRef();
+    const hLink2 = useRef();
+    const hLink3 = useRef();
+    const hLink4 = useRef();
+    const hLink5 = useRef();
     const logoText = useRef();
     const tooglenight = useRef();
     const i = useRef();
@@ -61,10 +71,44 @@ export default function Header({DLObj, toggleDL}) {
                 // menuContent.current.style.left = "86.5%"
                 // menuContent.current.style.left = "0";
                 menuContent.current.style.right = "0";
-                burgerMenu.current.style.backgroundColor = "#a7a7fa";
+                // burgerMenu.current.style.backgroundColor = "#a7a7fa";
+                if(DLObj.isLight)
+                {
+                    console.log("Light Mode activated giving mobile menu purple background menu")
+                    burgerMenu.current.style.backgroundColor = 'rgb(167, 167, 250)';
+                    // menuContent.current.style.backgroundColor = 'rgb(167, 167, 250) !important';
+                    // styleLink.current.style.backgroundColor = 'rgb(167, 167, 250) !important';
+                    // hLink.current.style.backgroundColor = 'rgb(167, 167, 250) !important';
+                    menuContent.current.classList.add("Lpurple");
+                    styleLink1.current.classList.add(styles.Lpurple);
+                    styleLink2.current.classList.add(styles.Lpurple);
+                    styleLink3.current.classList.add(styles.Lpurple);
+                    styleLink4.current.classList.add(styles.Lpurple);
+                    styleLink5.current.classList.add(styles.Lpurple);
+                    hLink1.current.classList.add(styles.Lpurple);
+                    hLink2.current.classList.add(styles.Lpurple);
+                    hLink3.current.classList.add(styles.Lpurple);
+                    hLink4.current.classList.add(styles.Lpurple);
+                    hLink5.current.classList.add(styles.Lpurple);
+                }
+                else
+                {
+                    menuContent.current.classList.remove("Lpurple");
+                    styleLink1.current.classList.remove(styles.Lpurple);
+                    styleLink2.current.classList.remove(styles.Lpurple);
+                    styleLink3.current.classList.remove(styles.Lpurple);
+                    styleLink4.current.classList.remove(styles.Lpurple);
+                    styleLink5.current.classList.remove(styles.Lpurple);
+                    hLink1.current.classList.remove(styles.Lpurple);
+                    hLink2.current.classList.remove(styles.Lpurple);
+                    hLink3.current.classList.remove(styles.Lpurple);
+                    hLink4.current.classList.remove(styles.Lpurple);
+                    hLink5.current.classList.remove(styles.Lpurple);
+                    console.log("Dark Mode activated giving mobile menu black background menu");
+                    burgerMenu.current.style.backgroundColor = '#16161a';
+                }
             },100)
             // burgerMenu.current.style.backgroundColor = "#7a61f0d9";
-            
         }
         else {
             menuContent.current.style.animation = "slideRight"
@@ -98,7 +142,8 @@ export default function Header({DLObj, toggleDL}) {
                     NDClicked = true;
                     for (var i = 0, len = allElements.length; i < len; i++) {
                         var element = allElements[i];
-                        element.style.backgroundColor = "#16161a";
+                        // element.style.backgroundColor = "#16161a";
+                        element.current.classList.add(styles.darkMode);
                     }
                     // i.setState({color: 'white'});
                 }else{
@@ -111,7 +156,9 @@ export default function Header({DLObj, toggleDL}) {
                     document.body.style.backgroundColor = "#16161a";
                     for (var x = 0, lenx = allElements.length; x < lenx; x++) {
                         var elementx = allElements[x];
-                        elementx.style.backgroundColor = "#fffffe";
+
+                        // elementx.style.backgroundColor = "#fffffe";
+                        elementx.current.classList.add(styles.lightMode);
                     }
                     // i.setState({color: 'black'});
                 }
@@ -151,7 +198,9 @@ export default function Header({DLObj, toggleDL}) {
             // tBtn.checked = true;
             for (var i = 0, len = allElements.length; i < len; i++) {
                 var element = allElements[i];
-                element.style.backgroundColor = "#16161a";
+                // element.style.backgroundColor = "#16161a";
+                element.classList.remove(styles.lightMode);
+                element.classList.add(styles.darkMode);
             }
             DLSwitch.current.style.backgroundColor = "#6246ea";
             burgerMenuRight.current.style.backgroundColor = "white";
@@ -178,11 +227,15 @@ export default function Header({DLObj, toggleDL}) {
             burgerMenuRight.current.classList.remove('specialB');
             for (var x = 0, lenx = allElements.length; x < lenx; x++) {
                 var elementx = allElements[x];
-                elementx.style.backgroundColor = "#fffffe";
+                // elementx.style.backgroundColor = "#fffffe";
+                elementx.classList.remove(styles.darkMode)
+                elementx.classList.add(styles.lightMode);
             }
             DLSwitch.current.style.backgroundColor = "#303030";
             burgerMenuRight.current.style.backgroundColor = "#212121";
             burgerMenuLeft.current.style.backgroundColor = "#ffffff00";
+            //Add Dark Mode changes for mobile menu
+            menuContent.current.style.backgroundColor = "";
         }
     }
 
@@ -209,11 +262,11 @@ export default function Header({DLObj, toggleDL}) {
     </div>
         <div id={styles.menuContent} ref={menuContent}>
             <ul id={styles.dropdown}>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
-                <li className={styles.headerItem}><a href='#' className={styles.hLink}>&lt;resumé/&gt;</a></li>
+                <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} href='#' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
+                <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} href='#' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
+                <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} href='#' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
+                <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} href='#' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
+                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} href='#' className={styles.hLink}>&lt;resumé/&gt;</a></li>
             </ul>
         </div>
     </section>
