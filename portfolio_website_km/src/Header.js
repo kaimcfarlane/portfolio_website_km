@@ -16,7 +16,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
-
 export default function Header({DLObj, toggleDL}) {
     //We are implementing button here
     //Styling on web page link 
@@ -93,17 +92,47 @@ export default function Header({DLObj, toggleDL}) {
                 }
                 else
                 {
-                    menuContent.current.classList.remove("Lpurple");
-                    styleLink1.current.classList.remove(styles.Lpurple);
-                    styleLink2.current.classList.remove(styles.Lpurple);
-                    styleLink3.current.classList.remove(styles.Lpurple);
-                    styleLink4.current.classList.remove(styles.Lpurple);
-                    styleLink5.current.classList.remove(styles.Lpurple);
-                    hLink1.current.classList.remove(styles.Lpurple);
-                    hLink2.current.classList.remove(styles.Lpurple);
-                    hLink3.current.classList.remove(styles.Lpurple);
-                    hLink4.current.classList.remove(styles.Lpurple);
-                    hLink5.current.classList.remove(styles.Lpurple);
+                    //h link is background-color: #7a61f0d9;
+                    //border-style solid
+                    //border color black
+                    menuContent.current.style.boxShadow = "#6246ea -5px 5px, #2d2d2d -10px 10px, #96949400 -15px 15px";
+                    menuContent.current.style.backgroundColor = "#6246ead9";
+                    
+                    styleLink1.current.style.backgroundColor = "#6246ead9";
+                    
+                    styleLink2.current.style.backgroundColor = "#6246ead9";
+                    
+                    styleLink3.current.style.backgroundColor = "#6246ead9";
+                    
+                    styleLink4.current.style.backgroundColor = "#6246ead9";
+                    
+                    styleLink5.current.style.backgroundColor = "#6246ead9";
+
+                    
+                    hLink1.current.style.backgroundColor = "6246ead9";
+                    hLink1.current.style.borderStyle = "solid";
+                    hLink1.current.style.borderColor = "black";
+
+                    
+                    hLink2.current.style.backgroundColor = "6246ead9";
+                    hLink2.current.style.borderStyle = "solid";
+                    hLink2.current.style.borderColor = "black";
+
+                    
+                    hLink3.current.style.backgroundColor = "6246ead9";
+                    hLink3.current.style.borderStyle = "solid";
+                    hLink3.current.style.borderColor = "black";
+
+                   
+                    hLink4.current.style.backgroundColor = "6246ead9";
+                    hLink4.current.style.borderStyle = "solid";
+                    hLink4.current.style.borderColor = "black";
+
+                    
+                    hLink5.current.style.backgroundColor = "6246ead9";
+                    hLink5.current.style.borderStyle = "solid";
+                    hLink5.current.style.borderColor = "black";
+
                     console.log("Dark Mode activated giving mobile menu black background menu");
                     burgerMenu.current.style.backgroundColor = '#16161a';
                 }
@@ -181,6 +210,11 @@ export default function Header({DLObj, toggleDL}) {
 
     const [DLChecked, setCheck] = useState(false);
     const DLSwitch = useRef();
+
+    //Make general burgermneu background color to be
+    //background-color: #6246ead9; this if other not working #7272ff;
+    //With the background of the hlink being a bit less transparent
+    //aslo add new border lines to match
 
     const DLBtnClick = () => {
         console.log("CSS Switch Clicked")
