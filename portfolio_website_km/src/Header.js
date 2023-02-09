@@ -78,17 +78,34 @@ export default function Header({DLObj, toggleDL}) {
                     // menuContent.current.style.backgroundColor = 'rgb(167, 167, 250) !important';
                     // styleLink.current.style.backgroundColor = 'rgb(167, 167, 250) !important';
                     // hLink.current.style.backgroundColor = 'rgb(167, 167, 250) !important';
-                    menuContent.current.classList.add("Lpurple");
-                    styleLink1.current.classList.add(styles.Lpurple);
-                    styleLink2.current.classList.add(styles.Lpurple);
-                    styleLink3.current.classList.add(styles.Lpurple);
-                    styleLink4.current.classList.add(styles.Lpurple);
-                    styleLink5.current.classList.add(styles.Lpurple);
-                    hLink1.current.classList.add(styles.Lpurple);
-                    hLink2.current.classList.add(styles.Lpurple);
-                    hLink3.current.classList.add(styles.Lpurple);
-                    hLink4.current.classList.add(styles.Lpurple);
-                    hLink5.current.classList.add(styles.Lpurple);
+                    menuContent.current.style.backgroundColor = "#a7a7fa";
+                    menuContent.current.style.boxShadow = "#6246ea -5px 5px, #ffffff -10px 10px, #9182df -15px 15px";
+                    styleLink1.current.style.backgroundColor = "";
+                    styleLink2.current.style.backgroundColor = "";
+                    styleLink3.current.style.backgroundColor = "";
+                    styleLink4.current.style.backgroundColor = "";
+                    styleLink5.current.style.backgroundColor = "";
+                    
+                    hLink1.current.style.backgroundColor = "";
+                    hLink1.current.style.borderStyle = "";
+                    hLink1.current.style.borderColor = "white";
+
+                    hLink2.current.style.backgroundColor = "";
+                    hLink2.current.style.borderStyle = "";
+                    hLink2.current.style.borderColor = "white";
+
+                    hLink3.current.style.backgroundColor = "";
+                    hLink3.current.style.borderStyle = "";
+                    hLink3.current.style.borderColor = "white";
+
+                    hLink4.current.style.backgroundColor = "";
+                    hLink4.current.style.borderStyle = "";
+                    hLink4.current.style.borderColor = "white";
+
+                    hLink5.current.style.backgroundColor = "";
+                    hLink5.current.style.borderStyle = "";
+                    hLink5.current.style.borderColor = "white";
+                    
                 }
                 else
                 {
