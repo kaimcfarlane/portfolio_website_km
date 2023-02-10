@@ -110,6 +110,7 @@ export default function Header({DLObj, toggleDL}) {
                     hLink5.current.style.borderStyle = "";
                     hLink5.current.style.borderColor = "white";
                     hLink5.current.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset";
+                    burgerMenuRight.current.style.backgroundColor = "#ffffff00";
                     
                 }
                 else
@@ -164,6 +165,8 @@ export default function Header({DLObj, toggleDL}) {
                     console.log("Dark Mode activated giving mobile menu black background menu");
                     burgerMenu.current.style.backgroundColor = '#16161a';
 
+                    burgerMenuRight.current.style.backgroundColor = "#ffffff00";
+
                     //add the this to regular light view to box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
                 }
@@ -173,11 +176,22 @@ export default function Header({DLObj, toggleDL}) {
         else {
             menuContent.current.style.animation = "slideRight"
             // burgerMenu.current.style.animation = "slideBurgerRight";
+            if(DLObj.isLight)
+                    {
+                        burgerMenuRight.current.style.backgroundColor = "black";
+                    }
+                    else 
+                    {
+                        burgerMenuRight.current.style.backgroundColor = "white";
+                    }
             setTimeout(() => {
                 // menuContent.current.style.left = "100%"
                 menuContent.current.style.right = "-285px";
                 setTimeout(() => {
                     menuContent.current.style.display = "none"
+
+                    
+
                 },600)
             },100)
             setTimeout(() => {
@@ -272,6 +286,7 @@ export default function Header({DLObj, toggleDL}) {
             burgerMenuLeft.current.style.backgroundColor = "#ffffff00";
             logoText.current.style.textShadow = '2px 1px 0px #ffffff';
             logoText.current.style.fontWeight = 'bold';
+            
             burgerMenuLeft.current.classList.add('specialA');
             burgerMenuRight.current.classList.add('specialA');
             burgerMenuLeft.current.classList.add('specialB');
