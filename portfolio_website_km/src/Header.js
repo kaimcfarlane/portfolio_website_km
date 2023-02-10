@@ -163,7 +163,7 @@ export default function Header({DLObj, toggleDL}) {
                     hLink5.current.style.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
 
                     console.log("Dark Mode activated giving mobile menu black background menu");
-                    burgerMenu.current.style.backgroundColor = '#16161a';
+                    burgerMenu.current.style.backgroundColor = "rgb(98 70 234 / 19%)";
 
                     burgerMenuRight.current.style.backgroundColor = "#ffffff00";
 
