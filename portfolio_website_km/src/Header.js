@@ -89,22 +89,27 @@ export default function Header({DLObj, toggleDL}) {
                     hLink1.current.style.backgroundColor = "";
                     hLink1.current.style.borderStyle = "";
                     hLink1.current.style.borderColor = "white";
+                    hLink1.current.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset";
 
                     hLink2.current.style.backgroundColor = "";
                     hLink2.current.style.borderStyle = "";
                     hLink2.current.style.borderColor = "white";
+                    hLink2.current.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset";
 
                     hLink3.current.style.backgroundColor = "";
                     hLink3.current.style.borderStyle = "";
                     hLink3.current.style.borderColor = "white";
+                    hLink3.current.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset";
 
                     hLink4.current.style.backgroundColor = "";
                     hLink4.current.style.borderStyle = "";
                     hLink4.current.style.borderColor = "white";
+                    hLink4.current.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset";
 
                     hLink5.current.style.backgroundColor = "";
                     hLink5.current.style.borderStyle = "";
                     hLink5.current.style.borderColor = "white";
+                    hLink5.current.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset";
                     
                 }
                 else
@@ -129,29 +134,38 @@ export default function Header({DLObj, toggleDL}) {
                     hLink1.current.style.backgroundColor = "6246ead9";
                     hLink1.current.style.borderStyle = "solid";
                     hLink1.current.style.borderColor = "black";
+                    hLink1.current.style.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
+                    // hLink1.current.stlye.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
 
                     
                     hLink2.current.style.backgroundColor = "6246ead9";
                     hLink2.current.style.borderStyle = "solid";
                     hLink2.current.style.borderColor = "black";
+                    hLink2.current.style.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
 
                     
                     hLink3.current.style.backgroundColor = "6246ead9";
                     hLink3.current.style.borderStyle = "solid";
                     hLink3.current.style.borderColor = "black";
+                    hLink3.current.style.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
 
                    
                     hLink4.current.style.backgroundColor = "6246ead9";
                     hLink4.current.style.borderStyle = "solid";
                     hLink4.current.style.borderColor = "black";
+                    hLink4.current.style.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
 
                     
                     hLink5.current.style.backgroundColor = "6246ead9";
                     hLink5.current.style.borderStyle = "solid";
                     hLink5.current.style.borderColor = "black";
+                    hLink5.current.style.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
 
                     console.log("Dark Mode activated giving mobile menu black background menu");
                     burgerMenu.current.style.backgroundColor = '#16161a';
+
+                    //add the this to regular light view to box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
                 }
             },100)
             // burgerMenu.current.style.backgroundColor = "#7a61f0d9";
