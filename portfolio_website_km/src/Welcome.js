@@ -192,7 +192,6 @@ export default function Welcome({DLObj}) {
     <div ref={mouseContainer} id={styles.mouseContainer}>
         <div ref={mouse} className={styles["icon-scroll"]}></div>
     </div>
-    
     </>
   )
 }
