@@ -36,11 +36,13 @@ function App() {
 
 
   return (
-    <>
-      <Header DLObj={DLObj} toggleDL={toggleDL}/>
-      <Welcome DLObj={DLObj} toggleDL={toggleDL}/>
-    </>
-   
+    <div id='website'>
+      <div id='mainPage'>
+        <Header DLObj={DLObj} toggleDL={toggleDL}/>
+        <Welcome DLObj={DLObj} toggleDL={toggleDL}/>
+      </div>
+      <div id='skillsPage'></div>
+    </div>
   );
 }
 

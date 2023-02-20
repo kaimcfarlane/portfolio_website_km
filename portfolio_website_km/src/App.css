@@ -33,7 +33,21 @@
   /* overflow-x: hidden; */
 }
 
-.App {
+#website{
+  scroll-snap-type: y mandatory;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+#mainPage{
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+#skillsPage{
+  scroll-snap-align: start;
+  height: 2000px;
+  background-color: aquamarine;
   
 }
 
