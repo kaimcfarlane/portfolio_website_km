@@ -46,9 +46,7 @@
 
 #skillsPage{
   scroll-snap-align: start;
-  height: 2000px;
-  background-color: aquamarine;
-  
+  height: 1000px;
+  background-color: #b7c2be;
 }
-
 
