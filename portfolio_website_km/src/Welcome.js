@@ -1,6 +1,8 @@
 import React, {useRef, useEffect} from 'react';
 import styles from './Welcome.module.css';
 import imageC from './selfPictures/selfie2.jpg';
+import githubPic from  './githubLogo1.png';
+import linkedinPic from './linkedinLogo1.png';
 import imageS from './KaiMcFarlaneSeniorPicture2.jpeg';
 import { func } from 'prop-types';
 
@@ -153,6 +155,19 @@ export default function Welcome({DLObj}) {
 
   return (
     <>
+    <div id={styles.SMContainer}>
+        <div id={styles.linkedin}>
+            <a href='https://www.linkedin.com/in/kaimcfarlane/' target='_blank'>
+                <img id={styles.linkedinPic} alt='LinkedIn Logo' src={linkedinPic}></img>
+            </a>
+        </div>
+        <span id={styles.line}></span>
+        <div id={styles.github}>
+            <a href='https://github.com/kaimcfarlane' target='_blank'>
+                <img id={styles.githubPic} alt='GitHub Logo' src={githubPic}></img>
+            </a>
+        </div>
+    </div>
     <section id={styles.welcomeAll}>
     <div id={styles.welcomeContent}>
         <h2 ref={subtitle} id={styles.subtitle}>Hey I'm,</h2>

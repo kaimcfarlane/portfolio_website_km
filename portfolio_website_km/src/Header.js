@@ -41,7 +41,7 @@ export default function Header({DLObj, toggleDL}) {
     const i = useRef();
 
     const [iColor, setIColor] = useState('white');
-    
+
     const HomeBtn = () => {
         console.log("Home Button Clicked");
         // window.location.reload();
@@ -342,6 +342,7 @@ export default function Header({DLObj, toggleDL}) {
     </div>
         <div id={styles.menuContent} ref={menuContent}>
             <ul id={styles.dropdown}>
+                {/* Create naivation component or use inline stlyes w/t object */}
                 <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} href='#' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
                 <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} href='#' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
                 <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} href='#' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
