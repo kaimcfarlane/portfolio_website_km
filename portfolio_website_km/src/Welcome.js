@@ -21,6 +21,8 @@ export default function Welcome({DLObj}) {
     const paragraph2 = useRef();
     const mouseContainer = useRef();
     const mouse = useRef()
+    const linkedinPicture = useRef();
+    const githubPicture = useRef();
     const SMContainer = useRef();
     
 
@@ -33,6 +35,8 @@ export default function Welcome({DLObj}) {
             subtitle.current.style.color = "#fffffe";
             profilePic.current.style.borderColor = "#fffffe";
             mouse.current.style.backgroundColor = "rgb(22, 22, 26)";
+            linkedinPicture.current.style.backgroundColor = "white";
+            githubPicture.current.style.backgroundColor = "white";
         }
         else
         {
@@ -41,6 +45,8 @@ export default function Welcome({DLObj}) {
             subtitle.current.style.color = "black";
             profilePic.current.style.borderColor = "black";
             mouse.current.style.backgroundColor = "#a7a7fa";
+            linkedinPicture.current.style.backgroundColor = "";
+            githubPicture.current.style.backgroundColor = "";
         }
     },[DLObj])
 
@@ -161,13 +167,13 @@ export default function Welcome({DLObj}) {
     <div id={styles.SMContainer} ref={SMContainer}>
         <div id={styles.linkedin}>
             <a href='https://www.linkedin.com/in/kaimcfarlane/' target='_blank'>
-                <img id={styles.linkedinPic} alt='LinkedIn Logo' src={linkedinPic}></img>
+                <img ref={linkedinPicture}  id={styles.linkedinPic} alt='LinkedIn Logo' src={linkedinPic}></img>
             </a>
         </div>
         <span id={styles.line}></span>
         <div id={styles.github}>
             <a href='https://github.com/kaimcfarlane' target='_blank'>
-                <img id={styles.githubPic} alt='GitHub Logo' src={githubPic}></img>
+                <img ref={githubPicture} id={styles.githubPic} alt='GitHub Logo' src={githubPic}></img>
             </a>
         </div>
     </div>
