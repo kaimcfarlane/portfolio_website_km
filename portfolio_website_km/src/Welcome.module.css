@@ -28,6 +28,7 @@
   position: absolute;
   left: 2%;
   top: 42%;
+  animation: 1s ease-out 0s 1 loadFromLeft;
 }
 
 #linkedin{
@@ -200,6 +201,15 @@
       100% {
         transform: translateY(0);
       }
+  }
+
+  @keyframes loadFromLeft {
+    0% {
+      transform: translateX(-100px);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   @keyframes invisible {

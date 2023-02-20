@@ -21,6 +21,7 @@ export default function Welcome({DLObj}) {
     const paragraph2 = useRef();
     const mouseContainer = useRef();
     const mouse = useRef()
+    const SMContainer = useRef();
     
 
 
@@ -102,9 +103,11 @@ export default function Welcome({DLObj}) {
         if(profilePic) 
         {
             mouseContainer.current.style.display = "none";
+            SMContainer.current.style.display = "none";
 
          setTimeout(() => {
             mouseContainer.current.style.display = "block";
+            SMContainer.current.style.display = "block";
          },3800)
         }
     }  
@@ -155,7 +158,7 @@ export default function Welcome({DLObj}) {
 
   return (
     <>
-    <div id={styles.SMContainer}>
+    <div id={styles.SMContainer} ref={SMContainer}>
         <div id={styles.linkedin}>
             <a href='https://www.linkedin.com/in/kaimcfarlane/' target='_blank'>
                 <img id={styles.linkedinPic} alt='LinkedIn Logo' src={linkedinPic}></img>
