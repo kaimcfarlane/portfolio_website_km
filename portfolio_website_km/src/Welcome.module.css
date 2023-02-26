@@ -90,6 +90,8 @@
     margin-top: 200px;
     border-style: solid; */
     display: block;
+    pointer-events: none;
+    opacity: 0%;
     width: 500px;
 
     /* margin-top: 163px; */
@@ -102,6 +104,7 @@
     -moz-box-shadow: 9px 10px 3px 0px rgba(98,70,234,0.76);
     transform: translateX(0px);
     animation: 1s ease-out 0s 1 loadFromBtm;
+    animation-delay: 1s;
 
     margin-left: 50px;
 
@@ -111,36 +114,51 @@
 }
 
 #subtitle{
-    font-size: 40px;
-    animation: 1s ease-out 0s 1 loadFromBtm;
-    /* animation-delay: 1s; */
+  display: block;
+  pointer-events: none;
+  opacity: 0%;
+  font-size: 40px;
+  animation: 1s ease-out 0s 1 loadFromBtm;
+  animation-delay: 1s;
 }
 
 #title{
+  display: block;
+  pointer-events: none;
+  opacity: 0%;
     /* Half Screen
     font-size: 48px; */
-    animation: 1s ease-out 0s 1 loadFromBtm;
-    /* animation-delay: 1s; */
+  animation: 1s ease-out 0s 1 loadFromBtm;
+  animation-delay: 2s;
     font-size: 58px;
     color: #6246ea;
 }
 
 #paragraph1{
+    display: block;
+    pointer-events: none;
+    opacity: 0%;
     color: #2b2c34;
     font-weight: bold;
     animation: 1s ease-out 0s 1 loadFromBtm;
+    animation-delay: 3s;
     /* animation-delay: 1s; */
 }
 
 #paragraph2{
-    color: #2b2c34;
-    max-width: 500px;
-    animation: 1s ease-out 0s 1 loadFromBtm;
+  display: block;
+  pointer-events: none;
+  opacity: 0%;
+  color: #2b2c34;
+  /* transition: ease-in-out 3s; */
+  max-width: 500px;
+  animation: 1s ease-out 0s 1 loadFromBtm;
+  animation-delay: 3s;
     /* animation-delay: 1s; */
 }
 
 #mouseContainer{
-    display: flex;
+    display: none;
     animation: 1s ease-out 0s 1 loadFromBtm;
 }
 

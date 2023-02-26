@@ -81,28 +81,28 @@ export default function Welcome({DLObj}) {
         
 
     const mainLoadAnimation = () => {
-        if(profilePic) 
-        {
-            profilePic.current.style.display = "none";
-            subtitle.current.style.display = "none";
-            title.current.style.display = "none";
-            paragraph1.current.style.display = "none";
-            paragraph2.current.style.display = "none";
+        // if(profilePic) 
+        // {
+        //     profilePic.current.style.display = "none";
+        //     subtitle.current.style.display = "none";
+        //     title.current.style.display = "none";
+        //     paragraph1.current.style.display = "none";
+        //     paragraph2.current.style.display = "none";
 
          setTimeout(() => {
-             profilePic.current.style.display = "block";
+            //  profilePic.current.style.display = "block";
+            profilePic.current.style.opacity = "100%"
             // title.current.style.display = "block";
-            subtitle.current.style.display = "block";
+            subtitle.current.style.opacity = "100%";
          },1000)
          setTimeout(() => {
-            title.current.style.display = "block";
-            subtitle.current.style.display = "block";
+            title.current.style.opacity = "100%";
         },2000)
         setTimeout(() => {
-            paragraph1.current.style.display = "block";
-            paragraph2.current.style.display = "block";
+            paragraph1.current.style.opacity = "100%";
+            paragraph2.current.style.opacity = "100%";
         },3000)
-        }
+        // }
     }  
 
     const mainMouseLoadAnimation = () => {
