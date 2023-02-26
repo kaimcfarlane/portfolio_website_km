@@ -91,6 +91,7 @@
   display: none; 
   color: #212121;
   position: absolute;
+  right: -285px;
   /* background-color: #6246ead9; */
   background-color: #a7a7fa;
   border-bottom-left-radius: 6px;
