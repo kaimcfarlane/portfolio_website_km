@@ -55,7 +55,7 @@ function App() {
         <Welcome DLObj={DLObj} toggleDL={toggleDL}/>
       </div>
       <div id='skillsPage'>
-        <Skills/>
+        <Skills DLObj={DLObj}/>
       </div>
      </div>
   );

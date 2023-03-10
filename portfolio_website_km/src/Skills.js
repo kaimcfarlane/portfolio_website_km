@@ -1,5 +1,6 @@
-import React from 'react'
+import {React, useRef, useEffect} from 'react'
 import './skill.css'
+import SkillsRTitle from './SkillsRTitle'
 import JS_Icon from './javascriptIcon.png'
 import html_Icon from './htmlLogo.png'
 import css_Icon from './cssLogo.png'
@@ -14,18 +15,39 @@ import mongodb_Logo from './mongodb_Logo.png'
 import api_Logo from './apiLogo.png'
 import git_Logo from './gitLogo.png'
 
-export default function skillsPage() {
+export default function Skills({DLObj}) {
+
+  const titleOne = useRef()
+  const titleTwo = useRef()
+  const subtitle = useRef()
+
+  useEffect(() =>{
+    if(!DLObj.isLight)
+    {
+        titleOne.current.style.color = "#fffffe";
+        titleTwo.current.style.color = "#fffffe";
+        subtitle.current.style.color = "#fffffe";
+    }
+    else
+    {
+      titleOne.current.style.color = "black";
+        titleTwo.current.style.color = "black";
+        subtitle.current.style.color = "black";
+    }
+},[DLObj])
+
+
   return (
   <>
     <section id='skillsContainer'>
       <div id='skillsText'>
-        <h1>I'm</h1>
-        <h1>Experienced</h1>
-        <p>- 3 Years of Code -</p>
+        <h1 ref={titleOne}>I'm</h1>
+        <h1 ref={titleTwo}>Experienced</h1>
+        <p ref={subtitle}>- 3 Years of Code -</p>
       </div>
       <div id='skillsContent'>
         <div>
-          <h1>Lanuages</h1>
+          <SkillsRTitle name={'Langauges'} DLObj={DLObj}/>
           <div className='imageContainer'>
             <img className='icon' alt='languageIcon' src={html_Icon}></img>
             <img className='icon' alt='languageIcon' src={css_Icon}></img>
@@ -36,7 +58,7 @@ export default function skillsPage() {
           </div>
         </div>
         <div>
-        <h1>Libraries</h1>
+        <SkillsRTitle name={'Libraries'} DLObj={DLObj}/>
           <div className='imageContainer'>
             <img className='icon' id='react_Logo' alt='libraryIcon' src={react_Logo}></img>
             <img className='icon' alt='libraryIcon' src={express_Logo}></img>
@@ -45,7 +67,7 @@ export default function skillsPage() {
           </div>
         </div>
         <div>
-        <h1>Learned</h1>
+        <SkillsRTitle name={'Learned'} DLObj={DLObj}/>
           <div className='imageContainer'>
             <img className='icon' alt='learnedIcon' src={mongodb_Logo}></img>
             <img className='icon' alt='learnedIcon' src={api_Logo}></img>
