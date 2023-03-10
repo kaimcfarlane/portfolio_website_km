@@ -3,6 +3,7 @@ import React, {useRef, useEffect, useState} from 'react'
 import styles from "./Header.module.css"
 import "./burgerMenu.css"
 import './nightDay.css'
+import Pdf from './kaimcfarlane_resume_2023.pdf'
 // import "https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 // {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 //      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"></link> */}
@@ -46,15 +47,25 @@ export default function Header({DLObj, toggleDL}) {
         console.log("Home Button Clicked");
         // window.location.reload();
         // window.scrollTo({ top: 100, behavior: 'smooth' });
-        var scrollToTop = window.setInterval(function() {
-            var pos = window.pageYOffset;
-            if ( pos > 0 ) {
-                window.scrollTo( 0, pos - 20 ); // how far to scroll on each step
-            } else {
-                window.clearInterval( scrollToTop );
-            }
-        }, 16); // how fast to scroll (this equals roughly 60 fps)
-        scrollToTop();
+        // var scrollToTop = window.setInterval(() => {
+        //     var pos = window.pageYOffset;
+        //     if ( pos > 0 ) {
+        //         window.scrollTo( 0, pos - 20 ); // how far to scroll on each step
+        //     } else {
+        //         window.clearInterval( scrollToTop );
+        //     }
+        // }, 16); // how fast to scroll (this equals roughly 60 fps)
+        // scrollToTop();
+
+        // document.body.scrollTop = 0;
+        // window.scrollTo(0,0);
+        window.scroll({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth' 
+           });           
+        console.log(document.body.scrollTop)
+        // console.log(window.pageYOffset)
     }
 
     const burgerMenuClick = () => {
@@ -323,6 +334,7 @@ export default function Header({DLObj, toggleDL}) {
     
     <>
     <section id={styles.header}>
+        {/* <a href='#header'></a> */}
     <div ref={logoText} id={styles.logoText} onClick={HomeBtn}>KM</div>
     <div id={styles.burgerMenu}>
         <div className='content'>
@@ -347,7 +359,7 @@ export default function Header({DLObj, toggleDL}) {
                 <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} href='#' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
                 <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} href='#' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
                 <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} href='#' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
-                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} href='#' className={styles.hLink}>&lt;resumé/&gt;</a></li>
+                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} href={Pdf} target="_blank" className={styles.hLink}>&lt;resumé/&gt;</a></li>
             </ul>
         </div>
     </section>

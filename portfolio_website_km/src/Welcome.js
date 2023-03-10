@@ -110,11 +110,12 @@ export default function Welcome({DLObj}) {
         {
             mouseContainer.current.style.display = "none";
             SMContainer.current.style.display = "none";
-
          setTimeout(() => {
             mouseContainer.current.style.display = "block";
-            SMContainer.current.style.display = "block";
          },3800)
+         setTimeout(() => {
+            SMContainer.current.style.display = "block";
+         }, 3600)
         }
     }  
 

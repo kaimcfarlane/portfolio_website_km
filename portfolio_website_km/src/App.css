@@ -33,6 +33,10 @@
   /* overflow-x: hidden; */
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 #website{
   scroll-snap-type: y mandatory;
   max-height: 100vh;
@@ -47,6 +51,6 @@
 #skillsPage{
   scroll-snap-align: start;
   height: 1000px;
-  background-color: #b7c2be;
+  /* background-color: #b7c2be; */
 }
 
