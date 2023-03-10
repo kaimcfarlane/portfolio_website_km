@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './Header';
 import Welcome from './Welcome';
-import skillsPage from './skillsPage';
+import Skills from './Skills';
 
 import React, {useState, useRef, useEffect} from 'react'
 
@@ -54,8 +54,10 @@ function App() {
         <Header DLObj={DLObj} toggleDL={toggleDL}/>
         <Welcome DLObj={DLObj} toggleDL={toggleDL}/>
       </div>
-      <div id='skillsPage'></div>
-    </div>
+      <div id='skillsPage'>
+        <Skills/>
+      </div>
+     </div>
   );
 }
 
