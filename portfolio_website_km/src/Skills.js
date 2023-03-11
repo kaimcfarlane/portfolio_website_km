@@ -14,6 +14,10 @@ import node_Logo from './nodeLogo.png'
 import mongodb_Logo from './mongodb_Logo.png'
 import api_Logo from './apiLogo.png'
 import git_Logo from './gitLogo.png'
+import gitlab_Logo from './gitlabLogo.png'
+import heroku_Logo from './herokuLogo.png'
+import dr_Logo from './davinciresolveLogo.png'
+import chartjs_Logo from './icons8-area-chart-96.png'
 
 export default function Skills({DLObj}) {
 
@@ -61,9 +65,10 @@ export default function Skills({DLObj}) {
         <SkillsRTitle name={'Libraries'} DLObj={DLObj}/>
           <div className='imageContainer'>
             <img className='icon' id='react_Logo' alt='libraryIcon' src={react_Logo}></img>
-            <img className='icon' alt='libraryIcon' src={express_Logo}></img>
-            <img className='icon' alt='libraryIcon' src={mui_Logo}></img>
-            <img className='icon' alt='libraryIcon' src={node_Logo}></img>
+            <img className='icon' id='express_Logo' alt='libraryIcon' src={express_Logo}></img>
+            <img className='icon' id='mui_Logo' alt='libraryIcon' src={mui_Logo}></img>
+            <img className='icon' id='node_Logo' alt='libraryIcon' src={node_Logo}></img>
+            <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={chartjs_Logo}></img>
           </div>
         </div>
         <div>
@@ -72,6 +77,8 @@ export default function Skills({DLObj}) {
             <img className='icon' alt='learnedIcon' src={mongodb_Logo}></img>
             <img className='icon' alt='learnedIcon' src={api_Logo}></img>
             <img className='icon' alt='learnedIcon' src={git_Logo}></img>
+            <img className='icon' alt='learnedIcon' src={gitlab_Logo}></img>
+            <img className='icon' alt='learnedIcon' src={heroku_Logo}></img>
           </div>
         </div>
       </div>

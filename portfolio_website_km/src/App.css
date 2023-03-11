@@ -50,7 +50,17 @@ html{
 
 #skillsPage{
   scroll-snap-align: start;
-  height: 1000px;
+  height: 100vh;
   /* background-color: #b7c2be; */
+}
+
+#achievePage{
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+#projectsPage{
+  scroll-snap-align: start;
+  height: 100vh;
 }
 

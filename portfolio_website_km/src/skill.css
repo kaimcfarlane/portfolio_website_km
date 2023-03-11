@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 250px;
+    padding-top: 245px;
 }
 
 #skillsText{
@@ -37,11 +37,28 @@
     width: 40px;
     margin-top: 5px;
     margin-left: 5px;
+    margin-right: 20px;
 }
 
 #java_Logo{
     height: 40px;
     width: 40px;
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 8px;
+}
+
+#express_Logo{
+    margin-right: 20px;
+}
+
+#mui_Logo{
+    margin-right: 20px;
+}
+
+#node_Logo{
+    margin-right: 20px;
+}
+
+#chartjs_Logo{
+    margin-right: 20px;
 }

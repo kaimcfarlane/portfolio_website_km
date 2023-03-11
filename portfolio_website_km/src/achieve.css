@@ -1,0 +1,37 @@
+#achievePageContainer{
+    
+}
+
+#titleContainer{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+#awardsContainer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 500px;
+}
+
+.award{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.awardImg{
+    width: 75px;
+    height: 75px;
+}
+
+.awardText1{
+    font-weight: 600;
+}
+
+.awardText2{
+    font-weight: 400;
+}

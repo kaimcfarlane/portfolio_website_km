@@ -2,6 +2,8 @@ import './App.css';
 import Header from './Header';
 import Welcome from './Welcome';
 import Skills from './Skills';
+import Projects from './Projects'
+import Achieve from './Achieve'
 
 import React, {useState, useRef, useEffect} from 'react'
 
@@ -57,6 +59,13 @@ function App() {
       <div id='skillsPage'>
         <Skills DLObj={DLObj}/>
       </div>
+      <div id='achievePage'>
+        <Achieve DLObj={DLObj}/>
+      </div>
+      <div id='projectsPage'>
+        <Projects DLObj={DLObj}/>
+      </div>
+      <a target="_blank" href="https://icons8.com/icon/33470/innovation">Innovation</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
      </div>
   );
 }
