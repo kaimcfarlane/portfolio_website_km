@@ -16,6 +16,7 @@ import purpleWeb_Logo3 from './purpleWeb_Logo3.png'
 
 export default function Achieve({DLObj}) {
     const achieveTitle = useRef()
+    const achieveSubtitle = useRef()
     const job1 = useRef()
     const job2 = useRef()
     const job3 = useRef()
@@ -146,6 +147,7 @@ export default function Achieve({DLObj}) {
             job3.current.style.backgroundColor = "#6246ea"
 
             achieveTitle.current.style.color = "rgb(255, 255, 254)"
+            achieveSubtitle.current.style.color = "rgb(255, 255, 254)"
             jobTitle1.current.style.color = "rgb(255, 255, 254)"
             jobTitle2.current.style.color = "rgb(255, 255, 254)"
             jobTitle3.current.style.color = "rgb(255, 255, 254)"
@@ -182,6 +184,7 @@ export default function Achieve({DLObj}) {
             job3.current.style.backgroundColor = "white"
 
             achieveTitle.current.style.color = "black"
+            achieveSubtitle.current.style.color = "black"
             jobTitle1.current.style.color = "black"
             jobTitle2.current.style.color = "black"
             jobTitle3.current.style.color = "black"
@@ -220,7 +223,8 @@ export default function Achieve({DLObj}) {
   return (
     <>
         <div id='titleContainer'>
-            <h1 ref={achieveTitle}>I'm an Innovator and an Achiever</h1>
+            <h1 ref={achieveTitle}>I'm an Innovator</h1>
+            <p ref={achieveSubtitle} id='achieveSubtitle'>-Work and Awards-</p>
             <img alt='' src=''></img>
         </div>
         <div id='workContainer'>
