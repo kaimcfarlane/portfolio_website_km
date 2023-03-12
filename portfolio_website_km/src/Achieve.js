@@ -58,8 +58,12 @@ export default function Achieve({DLObj}) {
             if(!clicked1)
             {
                 // jobDesc1.current.style.display = "flex"
-                img1.current.style.height = "188px"
-                img1.current.style.minHeight = "188px"
+                // img1.current.style.height = "188px"
+                // img1.current.style.minHeight = "188px"
+
+                img1.current.style.height = "135px"
+                img1.current.style.minHeight = "135px"
+
                 jobDesc1.current.style.opacity = "100%"
                 // const newjobImages = jobImages.map((img) => {
                 //     if(img.job == kiwi_WebsitePic){
@@ -72,9 +76,11 @@ export default function Achieve({DLObj}) {
             else
             {
                 // jobDesc1.current.style.display = "none"
-                img1.current.style.height = "210px"
+                // img1.current.style.height = "210px"
+                // img1.current.style.minHeight = "210px"
+                img1.current.style.height = "177px"
+                img1.current.style.minHeight = "177px"
                 jobDesc1.current.style.opacity = "0%"
-                img1.current.style.minHeight = "210px"
                 clicked1 = false
             }
         }
@@ -82,18 +88,20 @@ export default function Achieve({DLObj}) {
         {
             if(!clicked2)
             {
-                img2.current.style.height = "188px"
-                // jobDesc2.current.style.display = "flex"
-                img2.current.style.minHeight = "188px"
+                // img2.current.style.height = "188px"
+                // img2.current.style.minHeight = "188px"
+                img2.current.style.height = "135px"
+                img2.current.style.minHeight = "135px"
                 jobDesc2.current.style.opacity = "100%"
                 clicked2 = true
             }
             else
             {
-                img2.current.style.height = "210px"
-                // jobDesc2.current.style.display = "none"
+                // img2.current.style.height = "210px"
+                // img2.current.style.minHeight = "210px"
+                img2.current.style.height = "177px"
+                img2.current.style.minHeight = "177px"
                 jobDesc2.current.style.opacity = "0%"
-                img2.current.style.minHeight = "210px"
                 clicked2 = false
             }
         }
@@ -102,17 +110,21 @@ export default function Achieve({DLObj}) {
             if(!clicked3)
             {
                 // jobDesc3.current.style.display = "flex"
-                img3.current.style.minHeight = "188px"
-                img3.current.style.height = "188px"
+                // img3.current.style.minHeight = "188px"
+                // img3.current.style.height = "188px"
+                img3.current.style.minHeight = "135px"
+                img3.current.style.height = "135px"
                 jobDesc3.current.style.opacity = "100%"
                 clicked3 = true
             }
             else
             {
                 // jobDesc3.current.style.display = "none"
-                img3.current.style.height = "210px"
+                // img3.current.style.height = "210px"
+                // img3.current.style.minHeight = "210px"
+                img3.current.style.height = "177px"
+                img3.current.style.minHeight = "177px"
                 jobDesc3.current.style.opacity = "0%"
-                img3.current.style.minHeight = "210px"
                 clicked3 = false
             }
         }

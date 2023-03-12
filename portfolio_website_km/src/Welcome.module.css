@@ -15,7 +15,8 @@
     margin-top: 145px; */
 
     /* margin-top: 145px; */
-    margin-top: 230px;
+    /* margin-top: 230px; */
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
 
@@ -92,10 +93,12 @@
     display: block;
     pointer-events: none;
     opacity: 0%;
-    width: 500px;
+    /* width: 500px; */
+    width: 450px;
 
     /* margin-top: 163px; */
-    margin-top: 205px;
+    /* margin-top: 215px; */
+    margin-top: 140px;
     border-style: solid;
     border-color: black;
     border-radius: 10px;
@@ -118,7 +121,7 @@
   pointer-events: none;
   opacity: 0%;
   /* font-size: 40px; */
-  font-size: 60px;
+  font-size: 40px;
   animation: 1s ease-out 0s 1 loadFromBtm;
   animation-delay: 1s;
 }
@@ -132,7 +135,7 @@
   animation: 1s ease-out 0s 1 loadFromBtm;
   animation-delay: 2s;
   /* font-size: 58px; */
-  font-size: 78px;
+  font-size: 58px;
   color: #6246ea;
 }
 
@@ -144,7 +147,7 @@
     font-weight: bold;
     animation: 1s ease-out 0s 1 loadFromBtm;
     animation-delay: 3s;
-    font-size: 20px;
+    /* font-size: 20px; */
     /* animation-delay: 1s; */
 }
 
@@ -157,7 +160,7 @@
   max-width: 500px;
   animation: 1s ease-out 0s 1 loadFromBtm;
   animation-delay: 3s;
-  font-size: 20px;
+  /* font-size: 20px; */
     /* animation-delay: 1s; */
 }
 
