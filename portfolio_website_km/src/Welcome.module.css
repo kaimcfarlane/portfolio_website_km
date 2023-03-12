@@ -117,7 +117,8 @@
   display: block;
   pointer-events: none;
   opacity: 0%;
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: 60px;
   animation: 1s ease-out 0s 1 loadFromBtm;
   animation-delay: 1s;
 }
@@ -126,12 +127,13 @@
   display: block;
   pointer-events: none;
   opacity: 0%;
-    /* Half Screen
-    font-size: 48px; */
+  /* Half Screen
+  font-size: 48px; */
   animation: 1s ease-out 0s 1 loadFromBtm;
   animation-delay: 2s;
-    font-size: 58px;
-    color: #6246ea;
+  /* font-size: 58px; */
+  font-size: 78px;
+  color: #6246ea;
 }
 
 #paragraph1{
@@ -142,6 +144,7 @@
     font-weight: bold;
     animation: 1s ease-out 0s 1 loadFromBtm;
     animation-delay: 3s;
+    font-size: 20px;
     /* animation-delay: 1s; */
 }
 
@@ -154,6 +157,7 @@
   max-width: 500px;
   animation: 1s ease-out 0s 1 loadFromBtm;
   animation-delay: 3s;
+  font-size: 20px;
     /* animation-delay: 1s; */
 }
 
