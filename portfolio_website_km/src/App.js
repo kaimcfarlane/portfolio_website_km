@@ -20,6 +20,7 @@ function App() {
   useEffect(() => {
     console.log("Launched Kai Personal Website");
     console.log("DLObj's isLight value: " + DLObj.isLight);
+    //If Locally stored isLight value is true, change to bright mode, if false, change to dark mode
     // setTimeout(() => {
     //   console.log("Window has scrolled")
     //   window.scroll({
@@ -30,7 +31,6 @@ function App() {
     // }, 6000)
   }, [])
 
-  
 
   const toggleDL = () => {
     if(DLObj.isLight == true)

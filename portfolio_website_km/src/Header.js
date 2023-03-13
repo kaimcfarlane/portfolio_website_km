@@ -272,6 +272,27 @@ export default function Header({DLObj, toggleDL}) {
     //With the background of the hlink being a bit less transparent
     //aslo add new border lines to match
 
+    const makeDarkMode = () => {
+        setCheck(true)
+        DLBtnClick()
+    }
+
+    //Bit Confusing, above we have !DLChecked so, if we are in dark mode, local storage is true, we call make darkMode, this makes DLChecked true, then on load we see if not DLChecked so goes to top part and makes local storage true again 
+    useEffect(() => {
+        if(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) != null)
+        {
+          JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) ? makeDarkMode() : setCheck(false) && DLBtnClick()
+          console.log(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)))
+        }
+        else
+        {
+          console.log("User has no data in localStorage")
+        }
+    },[])
+
+    const LOCAL_STORAGE_KEY = 'DLStorageKey';
+
+
     const DLBtnClick = () => {
         console.log("CSS Switch Clicked")
         const tBtn = document.getElementById("toogleNight");
@@ -280,7 +301,8 @@ export default function Header({DLObj, toggleDL}) {
         var allElements = document.getElementsByTagName("*");
         if(!DLChecked) 
         {
-            // DLObj.isLight = false;
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(true))
+            
             toggleDL();
             console.log("DLOBJ is now " + DLObj.isLight);
             setCheck(true);
@@ -304,7 +326,8 @@ export default function Header({DLObj, toggleDL}) {
             burgerMenuRight.current.classList.add('specialB');
         }
         else{
-            // DLObj.isLight = true;
+            localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(false))
+
             toggleDL();
             console.log("DLOBJ is now " + DLObj.isLight);
             setCheck(false);

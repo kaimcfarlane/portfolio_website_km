@@ -28,6 +28,7 @@
 }
 
 #SMContainer{
+  display: none;
   position: absolute;
   left: 2%;
   top: 42%;
