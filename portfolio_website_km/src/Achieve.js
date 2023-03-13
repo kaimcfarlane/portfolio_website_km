@@ -142,6 +142,17 @@ export default function Achieve({DLObj}) {
             job2.current.style.borderColor = "white"
             job3.current.style.borderColor = "white"
 
+            job1.current.style.borderWidth = '3px'
+            job2.current.style.borderWidth = '3px'
+            job3.current.style.borderWidth = '3px'
+            job1.current.style.borderStyle = 'ridge'
+            job2.current.style.borderStyle = 'ridge'
+            job3.current.style.borderStyle = 'ridge'
+            job1.current.style.boxShadow = '9px 10px 1px 0px rgb(255 255 255)'
+            job2.current.style.boxShadow = '9px 10px 1px 0px rgb(255 255 255)'
+            job3.current.style.boxShadow = '9px 10px 1px 0px rgb(255 255 255)'
+            
+
             job1.current.style.backgroundColor = "#6246ea"
             job2.current.style.backgroundColor = "#6246ea"
             job3.current.style.backgroundColor = "#6246ea"
@@ -182,6 +193,16 @@ export default function Achieve({DLObj}) {
             job1.current.style.backgroundColor = "white"
             job2.current.style.backgroundColor = "white"
             job3.current.style.backgroundColor = "white"
+
+            job1.current.style.borderWidth = '1px'
+            job2.current.style.borderWidth = '1px'
+            job3.current.style.borderWidth = '1px'
+            job1.current.style.borderStyle = 'solid'
+            job2.current.style.borderStyle = 'solid'
+            job3.current.style.borderStyle = 'solid'
+            job1.current.style.boxShadow = '9px 10px 3px 0px rgb(98 70 234 / 76%)'
+            job2.current.style.boxShadow = '9px 10px 3px 0px rgb(98 70 234 / 76%)'
+            job3.current.style.boxShadow = '9px 10px 3px 0px rgb(98 70 234 / 76%)'
 
             achieveTitle.current.style.color = "black"
             achieveSubtitle.current.style.color = "black"

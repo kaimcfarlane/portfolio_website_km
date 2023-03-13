@@ -48,8 +48,6 @@ function App() {
     
   }
 
-
-
   return (
     <div ref={website} id='website'>
       <div id='mainPage'>
