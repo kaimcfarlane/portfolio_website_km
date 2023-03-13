@@ -12,6 +12,17 @@
 
 }
 
+#projectContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.projectSubBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 #projectSubTitle{
     font-size: 40px;
     margin-top: -40px;

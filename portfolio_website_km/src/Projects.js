@@ -12,6 +12,17 @@ export default function Projects({DLObj}) {
   const topProjects = useRef()
   const botProjects = useRef()
 
+  const projectImg1 = useRef()
+  const projectTitle1 = useRef()
+
+  const info1 = {img: 'NA', title: 'Recipeat', tool1: 'TypeScript', tool2: 'Node.js', tool3: 'MongoDB'}
+  const info2 = {img: 'NA', title: 'MyClimi', tool1: 'JavaScript', tool2: 'KeyFrames', tool3: 'RestApi'}
+  const info3 = {img: 'NA', title: 'ReactTS', tool1: 'JavaScript', tool2: 'BootStrap', tool3: 'Chart.js'}
+  const info4 = {img: 'NA', title: 'Kiwi-El-Gato', tool1: 'JavaScript', tool2: 'JotForm', tool3: 'WordPress'}
+  const info5 = {img: 'NA', title: 'Kiwi Pong', tool1: 'C#', tool2: 'Unity', tool3: '2D-Modeling'}
+  const info6 = {img: 'NA', title: 'Calculator', tool1: 'C#', tool2: '2D-Arrays', tool3: 'OOP'}
+  
+
   return (
     <>
       <section ref={titleContainer} id='projectTitleContainer'>
@@ -20,46 +31,14 @@ export default function Projects({DLObj}) {
       </section>
       <section ref={projectContainer} id='projectContainer'>
         <div className='projectSubBox' ref={topProjects} id='topProjects'>
-          {/* <div className='project'>
-            <img ref={projectImg1} src='' alt='' id='projectImg1' className='projectImg'></img>
-            <h1 ref={projectTitle1} id='projectTitle1' className='projectTitle'></h1>
-            <div className='skillsContainer'>
-              <p ref={p1t1} className='tool' id='tool1'></p>
-              <p ref={p1t2} className='tool' id='tool2'></p>
-              <p ref={p1t3} className='tool' id='tool3'></p>
-            </div>
-          </div> */}
-          {/* <Porject info = {img: 'NA', title: '', subTitle: ''}/> */}
-
-          {/* <div className='project'>
-          <img ref={projectImg2} src='' alt='' id='projectImg2' className='projectImg'></img>
-            <h1 ref={projectTitle2} id='projectTitle2' className='projectTitle'></h1>
-            <div className='skillsContainer'>
-              <p ref={p2t1} className='tool' id='tool1'></p>
-              <p ref={p2t2} className='tool' id='tool2'></p>
-              <p ref={p2t3} className='tool' id='tool3'></p>
-            </div>
-          </div>
-          <div className='project'>
-          <img ref={projectImg3} src='' alt='' id='projectImg3' className='projectImg'></img>
-            <h1 ref={projectTitle3} id='projectTitle3' className='projectTitle'></h1>
-            <div className='skillsContainer'>
-              <p ref={p3t1} className='tool' id='tool1'></p>
-              <p ref={p3t2} className='tool' id='tool2'></p>
-              <p ref={p4t3} className='tool' id='tool3'></p>
-            </div>
-          </div> */}
+              <Project info={info1}/>
+              <Project info={info2}/>
+              <Project info={info3}/>
         </div>
         <div className='projectSubBox' ref={botProjects} id='botProjects'>
-          <div className='project'>
-
-          </div>
-          <div className='project'>
-
-          </div>
-          <div className='project'>
-
-          </div>
+            <Project info={info4}/>
+            <Project info={info5}/>
+            <Project info={info6}/>
         </div>
       </section>
     </>
