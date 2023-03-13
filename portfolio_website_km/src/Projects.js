@@ -1,7 +1,8 @@
 import {React, useRef} from 'react'
 import Project from './Project'
 import tankPicture from './modstankPic.png'
-import './projects.css'
+import recipeImg1 from './recipeatImg1.png'
+import './Projects.css'
 
 export default function Projects({DLObj}) {
 
@@ -15,12 +16,12 @@ export default function Projects({DLObj}) {
   const projectImg1 = useRef()
   const projectTitle1 = useRef()
 
-  const info1 = {img: 'NA', title: 'Recipeat', tool1: 'TypeScript', tool2: 'Node.js', tool3: 'MongoDB'}
-  const info2 = {img: 'NA', title: 'MyClimi', tool1: 'JavaScript', tool2: 'KeyFrames', tool3: 'RestApi'}
-  const info3 = {img: 'NA', title: 'ReactTS', tool1: 'JavaScript', tool2: 'BootStrap', tool3: 'Chart.js'}
-  const info4 = {img: 'NA', title: 'Kiwi-El-Gato', tool1: 'JavaScript', tool2: 'JotForm', tool3: 'WordPress'}
-  const info5 = {img: 'NA', title: 'Kiwi Pong', tool1: 'C#', tool2: 'Unity', tool3: '2D-Modeling'}
-  const info6 = {img: 'NA', title: 'Calculator', tool1: 'C#', tool2: '2D-Arrays', tool3: 'OOP'}
+  const info1 = {img: recipeImg1, title: 'Recipeat', tool1: 'TypeScript', tool2: 'Node.js', tool3: 'MongoDB'}
+  const info2 = {img: recipeImg1, title: 'MyClimi', tool1: 'JavaScript', tool2: 'KeyFrames', tool3: 'RestApi'}
+  const info3 = {img: recipeImg1, title: 'ReactTS', tool1: 'JavaScript', tool2: 'BootStrap', tool3: 'Chart.js'}
+  const info4 = {img: recipeImg1, title: 'Kiwi-El-Gato', tool1: 'JavaScript', tool2: 'JotForm', tool3: 'WordPress'}
+  const info5 = {img: recipeImg1, title: 'Kiwi Pong', tool1: 'C#', tool2: 'Unity', tool3: '2D-Modeling'}
+  const info6 = {img: recipeImg1, title: 'Calculator', tool1: 'C#', tool2: '2D-Arrays', tool3: 'OOP'}
   
 
   return (

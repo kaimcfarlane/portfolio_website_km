@@ -1,0 +1,19 @@
+#projectImg{
+    width: 150px;
+    height: 100px;
+}
+
+#project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skillsBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.tool{
+    font-size: 10px;
+}
