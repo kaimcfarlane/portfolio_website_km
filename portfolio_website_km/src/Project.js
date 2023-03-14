@@ -35,7 +35,6 @@ export default function Project({info, DLObj}) {
        // project.current.style.background = 'rgb(98,70,234)'
        project.current.style.background = 'linear-gradient(0deg, rgba(98,70,234,1) 0%, rgba(255,255,255,1) 100%)'
       //  project.current.style.boxShadow = '9px 10px 3px 0px rgb(255 255 255)'
-       
        proTitle.current.style.backgroundColor = 'rgba(255, 255, 255, 0)'
        proTitle.current.style.color = 'white'
        skillsBox.current.style.backgroundColor = 'rgba(255, 255, 255, 0)'
@@ -57,8 +56,21 @@ export default function Project({info, DLObj}) {
       console.log("UNHOVER BTN CLICKED!")
   }
 
+  const backgroundHoverEnter = () => {
+      if(DLObj.isLight){
+        project.current.style.boxShadow = '9px 10px 3px 0px rgb(98 70 234 / 76%)'
+      }
+      else{
+        project.current.style.boxShadow = '9px 10px 3px 0px rgb(254 254 254 / 100%)'
+      }
+ }
+
+ const backgroundHoverLeave = () => {
+  project.current.style.boxShadow = ''
+}
+
   return (
-    <div ref={project} id='project' onClick={unhoverProject}>
+    <div ref={project} id='project' onClick={unhoverProject} onMouseEnter={backgroundHoverEnter} onMouseLeave={backgroundHoverLeave}>
             <img ref={projectImg} src={info.img} alt='' id='projectImg'></img>
             <h1 ref={proTitle} id='proTitle' >{info.title}</h1>
             <div ref={skillsBox} id='skillsBox'>
