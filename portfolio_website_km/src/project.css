@@ -1,19 +1,43 @@
 #projectImg{
-    width: 150px;
-    height: 100px;
+    width: 220px;
+    height: 120px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 #project{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 40px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-color: #6246ea;
+    border-style: solid;
+
+    border-style: ridge;
+    border-width: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    /* For Dark Mode #31313; */
+}
+
+#proTitle{
+    background-color: white;
 }
 
 #skillsBox{
     display: flex;
     flex-direction: row;
+    background-color: white;
 }
 
 .tool{
     font-size: 10px;
+    margin-top: -10px;
+    background-color: white;
+    padding-bottom: 4px;
+    color: #6246ea;
+    padding-right: 4px;
 }
