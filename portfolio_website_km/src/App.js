@@ -4,6 +4,7 @@ import Welcome from './Welcome';
 import Skills from './Skills';
 import Projects from './Projects'
 import Achieve from './Achieve'
+import Contact from './Contact'
 
 import React, {useState, useRef, useEffect} from 'react'
 
@@ -63,7 +64,9 @@ function App() {
       <div id='projectsPage'>
         <Projects DLObj={DLObj}/>
       </div>
-      <a target="_blank" href="https://icons8.com/icon/33470/innovation">Innovation</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+      <div id='contactPage'>
+        <Contact DLObj={DLObj}/>
+      </div>  
      </div>
   );
 }

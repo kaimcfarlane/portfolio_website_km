@@ -64,3 +64,8 @@ html{
   height: 100vh;
 }
 
+#contactPage{
+  scroll-snap-align: start;
+  height: 100vh;
+}
+

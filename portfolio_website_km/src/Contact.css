@@ -1,0 +1,13 @@
+#contactTitleContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#contactTitle{
+    font-size: 50px;
+}
+
+#contactSubtitle{
+    font-size: 40px;
+    margin-top: -10px;
+}
