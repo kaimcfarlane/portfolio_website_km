@@ -1,4 +1,4 @@
-import {React, useRef} from 'react'
+import {React, useEffect, useRef} from 'react'
 import Project from './Project'
 import tankPicture from './modstankPic.png'
 import recipeImg1 from './recipeatImg1.png'
@@ -28,6 +28,18 @@ export default function Projects({DLObj}) {
   const info4 = {img: kiwiImg, title: 'Kiwi-El-Gato', tool1: '//JavaScript', tool2: '//JotForm', tool3: '//WordPress'}
   const info5 = {img: kiwipongimg, title: 'Kiwi Pong', tool1: '//C#', tool2: '//Unity', tool3: '//2D-Modeling'}
   const info6 = {img: recipeImg1, title: 'Calculator', tool1: '//C#', tool2: '//2D-Arrays', tool3: '//OOP'}
+
+  useEffect(()=> {
+    if(DLObj.isLight) {
+      title.current.style.color = 'black'
+      subTitle.current.style.color = "black"
+    }
+    else {
+      title.current.style.color = 'white'
+      subTitle.current.style.color = "white"
+    }
+  },[DLObj])
+  
   
 
   return (
@@ -38,14 +50,14 @@ export default function Projects({DLObj}) {
       </section>
       <section ref={projectContainer} id='projectContainer'>
         <div className='projectSubBox' ref={topProjects} id='topProjects'>
-              <Project info={info1}/>
-              <Project  info={info2}/>
-              <Project info={info3}/>
+              <Project DLObj={DLObj} info={info1}/>
+              <Project DLObj={DLObj}  info={info2}/>
+              <Project DLObj={DLObj} info={info3}/>
         </div>
         <div className='projectSubBox' ref={botProjects} id='botProjects'>
-            <Project info={info4}/>
-            <Project info={info5}/>
-            <Project info={info6}/>
+            <Project DLObj={DLObj} info={info4}/>
+            <Project DLObj={DLObj} info={info5}/>
+            <Project DLObj={DLObj} info={info6}/>
         </div>
       </section>
     </>

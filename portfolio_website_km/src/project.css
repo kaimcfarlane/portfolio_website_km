@@ -1,8 +1,6 @@
 #projectImg{
     width: 220px;
     height: 120px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
 }
 
 #project{
@@ -15,12 +13,17 @@
     border-top-right-radius: 5px;
     border-color: #6246ea;
     border-style: solid;
-
+    transition: ease-in-out 0.3s;
     border-style: ridge;
     border-width: 3px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    cursor: pointer;
 
     /* For Dark Mode #31313; */
+}
+
+#project:hover{
+    box-shadow: 9px 10px 3px 0px rgb(98 70 234 / 76%);
 }
 
 #proTitle{
