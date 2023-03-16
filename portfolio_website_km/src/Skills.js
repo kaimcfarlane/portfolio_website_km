@@ -45,6 +45,7 @@ export default function Skills({DLObj}) {
   <>
     <section id='skillsContainer'>
       <div id='skillsText'>
+        {/* Skillset I'm Skilled My Talent Im talented */}
         <h1 ref={titleOne}>I'm</h1>
         <h1 ref={titleTwo}>Experienced</h1>
         <p ref={subtitle}>- 3 Years of Code -</p>

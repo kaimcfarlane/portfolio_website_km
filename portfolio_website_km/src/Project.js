@@ -12,6 +12,8 @@ export default function Project({info, DLObj}) {
   const tool2 = useRef()
   const tool3 = useRef()
 
+  //Use Icons or projcts images
+
   useEffect(()=>{
     if(DLObj.isLight) {
       project.current.style.background = 'white'
