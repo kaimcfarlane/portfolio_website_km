@@ -1,5 +1,6 @@
 import {React, useRef, useEffect} from 'react'
 import './Contact.css'
+import purpleCopyright_Logo from './purpleCopyrightLogo.png'
 
 export default function Contact({DLObj}) {
 
@@ -9,6 +10,7 @@ export default function Contact({DLObj}) {
     const contactSubtitle = useRef()
     const formContainer = useRef()
     const submitSpan = useRef()
+
 
     useEffect(()=> {
         if(DLObj.isLight)
@@ -58,11 +60,16 @@ export default function Contact({DLObj}) {
             </form>
         </section>
         <section id='footerText'>
-                <a id='footerLinkedin' href='https://www.linkedin.com/in/kaimcfarlane/'>LinkedIn</a>
+                <a id='footerLinkedin' href='https://www.linkedin.com/in/kaimcfarlane/' target='_blank' rel='noreferrer'>LinkedIn</a>
                 <span className='rectSpan'></span>
-                <p id='footerEmail'>kaimcfarlane43@gmail.com</p>
+                {/* <p id='footerEmail'>kaimcfarlane43@gmail.com</p> */}
+                <a id='footerEmail' href='mailto: kaimcfarlane43@gmail.com'>Email</a>
                 <span className='rectSpan'></span>
-                <a id='footerGithub' href='https://github.com/kaimcfarlane'>GitHub</a>
+                <a id='footerGithub' href='https://github.com/kaimcfarlane' target='_blank' rel='noreferrer'>GitHub</a>
+        </section>
+        <section id='copyrightContainer'>
+            <img id='copyrightLogo' src={purpleCopyright_Logo} alt='copyrightLogo'></img>
+            <p id='copyrightName'>Kai McFarlane 2023</p>
         </section>
     </div>
   )

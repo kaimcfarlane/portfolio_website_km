@@ -202,7 +202,7 @@
 
 #footerText{
     display: flex;
-    margin-top: 195px;
+    margin-top: 180px;
     bottom: 10%;
     justify-content: center;
     align-items: center;
@@ -218,15 +218,61 @@
 #footerLinkedin{
     text-decoration: none;
     color: black;
+    transition: 0.3s ease-in-out;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #00000000;
+    
+}
+
+#footerLinkedin:hover{
+    border-color: #6246ea;
 }
 
 #footerEmail{
     text-decoration: none;
     color: black;
+    transition: 0.3s ease-in-out;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #00000000;
+}
+
+#footerEmail:hover{
+    border-color: #6246ea;
 }
 
 #footerGithub{
-    text-decoration: none; 
+    text-decoration: none;
     color: black;
+    transition: 0.3s ease-in-out;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #00000000;
+}
+
+#footerGithub:hover{
+    border-color: #6246ea;
+}
+
+#copyrightLogo{
+    /* width: 30px;
+    height: 30px; */
+
+    width:15px;
+    height: 15px;
+    margin-right: 3px;
+}
+
+#copyrightText{
+    font-size: 12px;
+}
+
+#copyrightContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    user-select: none;
 }
 
