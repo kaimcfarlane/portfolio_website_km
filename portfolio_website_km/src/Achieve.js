@@ -8,6 +8,14 @@ import ufit_Pic from './ufitPic.png'
 import purpleWeb_Logo1 from './purpleWeb_Logo1.png'
 import purpleWeb_Logo2 from './purpleWeb_Logo2.png'
 import purpleWeb_Logo3 from './purpleWeb_Logo3.png'
+import kiwi_Logo from './Kiwi-cat-logo-1.png'
+import Mods_Logo from './MODS_Logo_Transparent.png'
+import Mods_Logo2 from './mods_Logo2_Transparent.png'
+import UFIT_logo from './UFIT-Primary-Signature.png'
+import UF_Logo from './UF_Logo.png'
+import codingPic1 from './codingPic1.jpg'
+import ufitPic2 from './ufitPic2.jpg'
+import vrPic1 from './virtualRealityPic1.jpg'
 
 
 //It works but we want seperate images to display upon clicking an arrow on the img
@@ -252,19 +260,19 @@ export default function Achieve({DLObj}) {
                 <div ref={job1} className='job' id='job1'>
                     <h1 ref={jobTitle1} className='jobh1'>Website Developer and Founder</h1>
                     <h2 ref={jobSub1} className='jobh2'>Kiwi-El-Gato</h2>
-                    <img ref={img1} id='kiwi_WebsitePic' src={kiwi_WebsitePic} alt='' onClick={() => openJobDesc(1)}></img>
+                    <img ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)}></img>
                     <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Developed educational website with digital art, designs, animations, and code</p>
                 </div>
                 <div ref={job2} className='job' id='job2'>
                     <h1 ref={jobTitle2} className='jobh1'>Lead Software Devloper Intern</h1>
                     <h2 ref={jobSub2} className='jobh2'>Musuem of Discovery and Science</h2>
-                    <img ref={img2} id='modsvr_Pic' src={modsvr_Pic} alt='' onClick={() => openJobDesc(2)}></img>
+                    <img ref={img2} id='modsvr_Pic' src={vrPic1} alt='' onClick={() => openJobDesc(2)}></img>
                     <p ref={jobDesc2} className='jobDesc' id='jobDesc2'>Programmed virtual reality images and animations with C# and Unity to explain natural phenomena</p>
                 </div>
                 <div ref={job3} className='job' id='job3'>
                     <h1 ref={jobTitle3} className='jobh1'>Website Application Developer Intern</h1>
                     <h2 ref={jobSub3} className='jobh2'>University of Florida Information Technology</h2>
-                    <img ref={img3} id='ufit_Pic' src={ufit_Pic} alt='' onClick={() => openJobDesc(3)}></img>
+                    <img ref={img3} id='ufit_Pic' src={ufitPic2} alt='' onClick={() => openJobDesc(3)}></img>
                     <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Redesigning and implementing new cards feature for the personal UF Workspace with javascript frameworks</p>
                 </div>
             </div>
