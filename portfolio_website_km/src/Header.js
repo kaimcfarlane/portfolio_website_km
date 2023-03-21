@@ -14,6 +14,7 @@ import Pdf from './kaimcfarlane_resume_2023.pdf'
 //for th styling also we have an issue with our class names not showing in the elments tab
 //Next we need either decompile or import jquery javascript into here
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Skills from './Skills'
 
 
 
@@ -59,13 +60,14 @@ export default function Header({DLObj, toggleDL}) {
 
         // document.body.scrollTop = 0;
         // window.scrollTo(0,0);
-        window.scroll({
-            top: 0, 
-            left: 0, 
-            behavior: 'smooth' 
-           });           
-        console.log(document.body.scrollTop)
+        // window.scroll({
+        //     top: 0, 
+        //     left: 0, 
+        //     behavior: 'smooth' 
+        //    });           
+        // console.log(document.body.scrollTop)
         // console.log(window.pageYOffset)
+        // scrollTo()
     }
 
     const burgerMenuClick = () => {
@@ -353,12 +355,23 @@ export default function Header({DLObj, toggleDL}) {
         }
     }
 
+
+    // const scrollTo = () => {
+    //     console.log("running scroll function")
+    //     Skills.current.scrollIntoView({
+    //         block: 'end',
+    //         behavior: 'smooth',
+    //         inline: 'center'
+    //     })
+    // }
+
   return (
     
     <>
     <section id={styles.header}>
-        {/* <a href='#header'></a> */}
-    <div ref={logoText} id={styles.logoText} onClick={HomeBtn}>KM</div>
+    <a href='#mainPage' id={styles.logoHREF}>
+        <div ref={logoText} id={styles.logoText} onClick={HomeBtn}>KM</div>
+    </a>
     <div id={styles.burgerMenu}>
         <div className='content'>
             <i ref={i} className='fas fa sun' style={{color: iColor}}></i>
@@ -378,10 +391,10 @@ export default function Header({DLObj, toggleDL}) {
         <div id={styles.menuContent} ref={menuContent}>
             <ul id={styles.dropdown}>
                 {/* Create naivation component or use inline stlyes w/t object */}
-                <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} href='#' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
-                <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} href='#' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
-                <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} href='#' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
-                <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} href='#' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
+                <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} href='#mainPage' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
+                <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} href='#skillsPage' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
+                <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} href='#projectsPage' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
+                <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} href='#contactPage' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
                 <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} href={Pdf} target="_blank" className={styles.hLink}>&lt;resumé/&gt;</a></li>
             </ul>
         </div>

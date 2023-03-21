@@ -47,6 +47,10 @@
   background-color: rgb(167, 167, 250);
 }
 
+#logoHREF{
+  text-decoration: none;
+}
+
 .headerItem{
   color: rgb(0, 0, 0);
   font-weight: 600;

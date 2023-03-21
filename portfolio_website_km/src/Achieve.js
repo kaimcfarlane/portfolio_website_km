@@ -62,6 +62,7 @@ export default function Achieve({DLObj}) {
     var clicked3 = false;
 
     const openJobDesc = (item) => {
+        
         if (item === 1)
         {
             if(!clicked1)
