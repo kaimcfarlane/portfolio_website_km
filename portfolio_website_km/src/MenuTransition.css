@@ -1,0 +1,10 @@
+#transitionBox{
+    position: fixed;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    transition: ease-in-out .3s;
+    width: 100%;
+    background-color: blueviolet;
+    transform: translateX(-100%);
+}

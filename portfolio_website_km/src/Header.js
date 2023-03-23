@@ -18,7 +18,7 @@ import Skills from './Skills'
 
 
 
-export default function Header({DLObj, toggleDL}) {
+export default function Header({DLObj, toggleDL, animateMenu}) {
     //We are implementing button here
     //Styling on web page link 
     //Check errors on chroms and look to handle future ones
@@ -364,7 +364,6 @@ export default function Header({DLObj, toggleDL}) {
     //         inline: 'center'
     //     })
     // }
-
   return (
     
     <>
@@ -391,11 +390,11 @@ export default function Header({DLObj, toggleDL}) {
         <div id={styles.menuContent} ref={menuContent}>
             <ul id={styles.dropdown}>
                 {/* Create naivation component or use inline stlyes w/t object */}
-                <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} href='#mainPage' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
-                <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} href='#skillsPage' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
-                <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} href='#projectsPage' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
-                <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} href='#contactPage' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
-                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} href={Pdf} target="_blank" className={styles.hLink}>&lt;resumé/&gt;</a></li>
+                <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} onClick={animateMenu()} href='#mainPage' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
+                <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} onClick={animateMenu()} href='#skillsPage' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
+                <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} onClick={animateMenu()} href='#projectsPage' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
+                <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} onClick={animateMenu()} href='#contactPage' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
+                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} onClick={animateMenu()} href={Pdf} target="_blank" className={styles.hLink}>&lt;resumé/&gt;</a></li>
             </ul>
         </div>
     </section>

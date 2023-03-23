@@ -5,6 +5,8 @@ import Skills from './Skills';
 import Projects from './Projects'
 import Achieve from './Achieve'
 import Contact from './Contact'
+import MenuTransition from './MenuTransition';
+import styled from 'styled-components';
 
 import React, {useState, useRef, useEffect} from 'react'
 
@@ -15,6 +17,16 @@ function App() {
   const [DLObj, changeDL] = useState({
     isLight: true
   })
+
+  const trans = useRef()
+
+  const animateMenu = () => {
+    console.log("Animate Btn Clicked")
+    // trans.current.style.transform = 'translateX(0%)'
+    // setTimeout(()=> {
+    //   MenuTransition.current.style.transform = 'translateX(-100%)'
+    // },3000)
+  }
 
   const website = useRef()
 
@@ -49,10 +61,14 @@ function App() {
     
   }
 
+  // const styledMenuTransition = styled.MenuTransition `
+  //     backgroundColor: blue
+  // `
+
   return (
     <div ref={website} id='website'>
       <div id='mainPage'>
-        <Header DLObj={DLObj} toggleDL={toggleDL}/>
+        <Header DLObj={DLObj} animateMenu={animateMenu} toggleDL={toggleDL}/>
         <Welcome DLObj={DLObj} toggleDL={toggleDL}/>
       </div>
       <div id='skillsPage'>
@@ -66,8 +82,9 @@ function App() {
       </div>
       <div id='contactPage'>
         <Contact DLObj={DLObj}/>
-      </div>  
-     </div>
+      </div>
+      {/* <MenuTransition/>   */}
+    </div>
   );
 }
 

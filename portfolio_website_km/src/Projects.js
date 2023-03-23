@@ -1,4 +1,4 @@
-import {React, useEffect, useRef} from 'react'
+import {React, useEffect, useRef, useState} from 'react'
 import Project from './Project'
 import tankPicture from './modstankPic.png'
 import recipeImg1 from './recipeatImg1.png'
@@ -9,6 +9,7 @@ import kiwiImg from './kiwiWebsitePic.png'
 import weatherappImg from './weatherappImg1.png'
 import kiwipongimg from './kiwipongImg.png'
 import './Projects.css'
+import ProjectInfo from './ProjectInfo'
 
 export default function Projects({DLObj}) {
 
@@ -18,6 +19,7 @@ export default function Projects({DLObj}) {
   const projectContainer = useRef()
   const topProjects = useRef()
   const botProjects = useRef()
+  const projectInfoBox = useRef()
 
   const projectImg1 = useRef()
   const projectTitle1 = useRef()
@@ -40,6 +42,79 @@ export default function Projects({DLObj}) {
     }
   },[DLObj])
   
+  const [selectedProjectInfo, changeProjectInfo] = useState({title: '', img: '', tool1: '', tool2: '', tool3: ''})
+
+  //When user clicks on project we add onclick method, one method that takes a parameter called name probably or info
+  //In method we say dependent on name we will change the data in the object of selectedProjectInfo using the useState method
+  //We also will say before this to make the div with Project Info appear with animation
+  const [state, changeState] = useState(true)
+
+
+  const projectClick = (index) => {
+    //set original project info to new project variable for changes
+    console.log("Inner Project Function Clicked!")
+    projectInfoBox.current.style.transform = 'translateX(0%)'
+    var newProject = selectedProjectInfo
+    if(index === 1) {
+      newProject.title = info1.title
+      newProject.img = info1.img
+      newProject.tool1 = info1.tool1
+      newProject.tool2 = info1.tool2
+      newProject.tool3 = info1.tool3
+      changeProjectInfo(newProject)
+      console.log('Image passed is: ' + JSON.stringify(selectedProjectInfo))
+      changeState(!state)
+    }
+    else if(index === 2) {
+      newProject.title = info2.title
+      newProject.img = info2.img
+      newProject.tool1 = info2.tool1
+      newProject.tool2 = info2.tool2
+      newProject.tool3 = info2.tool3
+      changeProjectInfo(newProject)
+      changeState(!state)
+    }
+    else if(index === 3) {
+      newProject.title = info3.title
+      newProject.img = info3.img
+      newProject.tool1 = info3.tool1
+      newProject.tool2 = info3.tool2
+      newProject.tool3 = info3.tool3
+      changeProjectInfo(newProject)
+      changeState(!state)
+    }
+    else if(index === 4) {
+      newProject.title = info4.title
+      newProject.img = info4.img
+      newProject.tool1 = info4.tool1
+      newProject.tool2 = info4.tool2
+      newProject.tool3 = info4.tool3
+      changeProjectInfo(newProject)
+      changeState(!state)
+    }
+    else if(index === 5) {
+      newProject.title = info5.title
+      newProject.img = info5.img
+      newProject.tool1 = info5.tool1
+      newProject.tool2 = info5.tool2
+      newProject.tool3 = info5.tool3
+      changeProjectInfo(newProject)
+      changeState(!state)
+    }
+    else if(index === 6) {
+      newProject.title = info6.title
+      newProject.img = info6.img
+      newProject.tool1 = info6.tool1
+      newProject.tool2 = info6.tool2
+      newProject.tool3 = info6.tool3
+      changeProjectInfo(newProject)
+      changeState(!state)
+    }
+  }
+
+  // useEffect(()=> {
+  //   console.log("Value passed to inner project component" + selectedProjectInfo.img)
+  // },[selectedProjectInfo, selectedProjectInfo.img, state])
   
 
   return (
@@ -50,16 +125,19 @@ export default function Projects({DLObj}) {
       </section>
       <section ref={projectContainer} id='projectContainer'>
         <div className='projectSubBox' ref={topProjects} id='topProjects'>
-              <Project DLObj={DLObj} info={info1}/>
-              <Project DLObj={DLObj}  info={info2}/>
-              <Project DLObj={DLObj} info={info3}/>
+              <Project DLObj={DLObj} info={info1} projectClick={projectClick} index={1}/>
+              <Project DLObj={DLObj}  info={info2} projectClick={projectClick} index={2}/>
+              <Project DLObj={DLObj} info={info3} projectClick={projectClick} index={3}/>
         </div>
         <div className='projectSubBox' ref={botProjects} id='botProjects'>
-            <Project DLObj={DLObj} info={info4}/>
-            <Project DLObj={DLObj} info={info5}/>
-            <Project DLObj={DLObj} info={info6}/>
+            <Project DLObj={DLObj} info={info4} projectClick={projectClick} index={4}/>
+            <Project DLObj={DLObj} info={info5} projectClick={projectClick} index={5}/>
+            <Project DLObj={DLObj} info={info6} projectClick={projectClick} index={6}/>
         </div>
       </section>
+      <div ref={projectInfoBox} id='projectInfoBox'>
+        <ProjectInfo selectedProjectInfo={selectedProjectInfo} DLObj={DLObj}/>
+      </div>
     </>
   )
 }

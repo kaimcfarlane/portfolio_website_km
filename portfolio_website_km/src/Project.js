@@ -2,7 +2,7 @@ import { hover } from '@testing-library/user-event/dist/hover'
 import {React, useEffect, useRef} from 'react'
 import './project.css'
 
-export default function Project({info, DLObj}) {
+export default function Project({info, DLObj, projectClick, index}) {
 
   const project = useRef()
   const projectImg = useRef()
@@ -54,8 +54,9 @@ export default function Project({info, DLObj}) {
   
 
   const unhoverProject = () => {
-      project.current.style.boxShadow = ''
-      console.log("UNHOVER BTN CLICKED!")
+      // project.current.style.boxShadow = ''
+      console.log("Project " + index + " Btn Clicked!")
+      projectClick(index)
   }
 
   const backgroundHoverEnter = () => {
