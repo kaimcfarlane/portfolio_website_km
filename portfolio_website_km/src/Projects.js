@@ -42,7 +42,7 @@ export default function Projects({DLObj}) {
     }
   },[DLObj])
   
-  const [selectedProjectInfo, changeProjectInfo] = useState({title: '', img: '', tool1: '', tool2: '', tool3: ''})
+  const [selectedProjectInfo, changeProjectInfo] = useState({title: '', img: '', desc: '', tool1: '', tool2: '', tool3: '', isOpen: false})
 
   //When user clicks on project we add onclick method, one method that takes a parameter called name probably or info
   //In method we say dependent on name we will change the data in the object of selectedProjectInfo using the useState method
@@ -52,65 +52,79 @@ export default function Projects({DLObj}) {
 
   const projectClick = (index) => {
     //set original project info to new project variable for changes
-    console.log("Inner Project Function Clicked!")
-    projectInfoBox.current.style.transform = 'translateX(0%)'
-    var newProject = selectedProjectInfo
-    if(index === 1) {
-      newProject.title = info1.title
-      newProject.img = info1.img
-      newProject.tool1 = info1.tool1
-      newProject.tool2 = info1.tool2
-      newProject.tool3 = info1.tool3
-      changeProjectInfo(newProject)
-      console.log('Image passed is: ' + JSON.stringify(selectedProjectInfo))
-      changeState(!state)
+      console.log("Inner Project Function Clicked!")
+      projectInfoBox.current.style.transform = 'translateX(0%)'
+      var newProject = selectedProjectInfo
+      if(index === 1) {
+        newProject.title = info1.title
+        newProject.img = info1.img
+        newProject.desc = 'A Fullstack Recipe Creation App'
+        newProject.tool1 = info1.tool1
+        newProject.tool2 = info1.tool2
+        newProject.tool3 = info1.tool3
+        changeProjectInfo(newProject)
+        console.log('Image passed is: ' + JSON.stringify(selectedProjectInfo))
+        changeState(!state)
+      }
+      else if(index === 2) {
+        newProject.title = info2.title
+        newProject.img = info2.img
+        newProject.desc = 'A Dynamic Weather App'
+        newProject.tool1 = info2.tool1
+        newProject.tool2 = info2.tool2
+        newProject.tool3 = info2.tool3
+        changeProjectInfo(newProject)
+        changeState(!state)
+      }
+      else if(index === 3) {
+        newProject.title = info3.title
+        newProject.img = info3.img
+        newProject.desc = 'A Reaction Speed App'
+        newProject.tool1 = info3.tool1
+        newProject.tool2 = info3.tool2
+        newProject.tool3 = info3.tool3
+        changeProjectInfo(newProject)
+        changeState(!state)
+      }
+      else if(index === 4) {
+        newProject.title = info4.title
+        newProject.img = info4.img
+        newProject.desc = 'An Educational Website'
+        newProject.tool1 = info4.tool1
+        newProject.tool2 = info4.tool2
+        newProject.tool3 = info4.tool3
+        changeProjectInfo(newProject)
+        changeState(!state)
+      }
+      else if(index === 5) {
+        newProject.title = info5.title
+        newProject.img = info5.img
+        newProject.desc = 'A 1980s Video Game Classic w/t a Modern Twist'
+        newProject.tool1 = info5.tool1
+        newProject.tool2 = info5.tool2
+        newProject.tool3 = info5.tool3
+        changeProjectInfo(newProject)
+        changeState(!state)
+      }
+      else if(index === 6) {
+        newProject.title = info6.title
+        newProject.img = info6.img
+        newProject.desc = 'A Calculator made in the Unity Game Engine'
+        newProject.tool1 = info6.tool1
+        newProject.tool2 = info6.tool2
+        newProject.tool3 = info6.tool3
+        changeProjectInfo(newProject)
+        changeState(!state)
+      }
     }
-    else if(index === 2) {
-      newProject.title = info2.title
-      newProject.img = info2.img
-      newProject.tool1 = info2.tool1
-      newProject.tool2 = info2.tool2
-      newProject.tool3 = info2.tool3
-      changeProjectInfo(newProject)
-      changeState(!state)
+
+  useEffect(() => {
+    console.log("Project Button closed so value here in object should trigger a close")
+    if (selectedProjectInfo.isOpen === true) {
+      projectInfoBox.current.style.transform = 'translateX(-100%)'
+      selectedProjectInfo.isOpen = false
     }
-    else if(index === 3) {
-      newProject.title = info3.title
-      newProject.img = info3.img
-      newProject.tool1 = info3.tool1
-      newProject.tool2 = info3.tool2
-      newProject.tool3 = info3.tool3
-      changeProjectInfo(newProject)
-      changeState(!state)
-    }
-    else if(index === 4) {
-      newProject.title = info4.title
-      newProject.img = info4.img
-      newProject.tool1 = info4.tool1
-      newProject.tool2 = info4.tool2
-      newProject.tool3 = info4.tool3
-      changeProjectInfo(newProject)
-      changeState(!state)
-    }
-    else if(index === 5) {
-      newProject.title = info5.title
-      newProject.img = info5.img
-      newProject.tool1 = info5.tool1
-      newProject.tool2 = info5.tool2
-      newProject.tool3 = info5.tool3
-      changeProjectInfo(newProject)
-      changeState(!state)
-    }
-    else if(index === 6) {
-      newProject.title = info6.title
-      newProject.img = info6.img
-      newProject.tool1 = info6.tool1
-      newProject.tool2 = info6.tool2
-      newProject.tool3 = info6.tool3
-      changeProjectInfo(newProject)
-      changeState(!state)
-    }
-  }
+  },[selectedProjectInfo, state])
 
   // useEffect(()=> {
   //   console.log("Value passed to inner project component" + selectedProjectInfo.img)
@@ -136,7 +150,7 @@ export default function Projects({DLObj}) {
         </div>
       </section>
       <div ref={projectInfoBox} id='projectInfoBox'>
-        <ProjectInfo selectedProjectInfo={selectedProjectInfo} DLObj={DLObj}/>
+        <ProjectInfo selectedProjectInfo={selectedProjectInfo} changeProjectInfo={changeProjectInfo} changeState={changeState} state={state} DLObj={DLObj}/>
       </div>
     </>
   )
