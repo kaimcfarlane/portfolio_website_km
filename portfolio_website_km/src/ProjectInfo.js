@@ -1,6 +1,7 @@
 import {React, useEffect} from 'react'
 import './ProjectInfo.css'
 import closePic from './close.png'
+import { faUsersLine } from '@fortawesome/free-solid-svg-icons'
 
 export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectInfo, changeState, state}) {
     // useEffect(()=> {
@@ -17,14 +18,21 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
         console.log('Close Project Btn Clicked, selectedPorjectInfo is now ' + selectedProjectInfo.isOpen)
         changeState(!state)
     }
+
+    const urlBtnClick = (url) => {
+        // window.location.href = url + '_blank'
+        window.open(url, '_blank')
+    }
+
+
   return (
                 <div id='projectInfoContainer'> 
                     <img id='projectInfoImg' alt='' src={selectedProjectInfo.img}></img>
                     <h1 id='projectInfoTitle'>{selectedProjectInfo.title}</h1>
                     <p id='projectInfoDesc'>{selectedProjectInfo.desc}</p>
                     <div id='buttonsContainer'>
-                            <button id='demoBtn' role="button">Live Demo <span>&#128640;</span></button>
-                            <button id='codeBtn'>Code <span>&#127757;</span></button>
+                            <button id='demoBtn' role="button" onClick={() => {urlBtnClick(selectedProjectInfo.demoUrl)}}>Live Demo <span>&#128640;</span></button>
+                            <button id='codeBtn' onClick={() => {urlBtnClick(selectedProjectInfo.codeUrl)}}>Code <span>&#127757;</span></button>
                     </div>
                     {/* <div id='closeBtnContainer'>
                         <img id='closePic' alt='Close Btn' src={closePic} onClick={closeProject}></img>

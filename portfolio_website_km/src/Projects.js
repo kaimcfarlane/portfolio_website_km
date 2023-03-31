@@ -43,7 +43,7 @@ export default function Projects({DLObj}) {
     }
   },[DLObj])
   
-  const [selectedProjectInfo, changeProjectInfo] = useState({title: '', img: '', desc: '', tool1: '', tool2: '', tool3: '', isOpen: false})
+  const [selectedProjectInfo, changeProjectInfo] = useState({title: '', img: '', desc: '', tool1: '', tool2: '', tool3: '', isOpen: false, demoUrl: '', codeUrl: ''})
 
   //When user clicks on project we add onclick method, one method that takes a parameter called name probably or info
   //In method we say dependent on name we will change the data in the object of selectedProjectInfo using the useState method
@@ -65,6 +65,8 @@ export default function Projects({DLObj}) {
         newProject.tool1 = info1.tool1
         newProject.tool2 = info1.tool2
         newProject.tool3 = info1.tool3
+        newProject.demoUrl = 'https://recipeat.herokuapp.com/'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat'
         changeProjectInfo(newProject)
         console.log('Image passed is: ' + JSON.stringify(selectedProjectInfo))
         changeState(!state)
@@ -76,6 +78,8 @@ export default function Projects({DLObj}) {
         newProject.tool1 = info2.tool1
         newProject.tool2 = info2.tool2
         newProject.tool3 = info2.tool3
+        newProject.demoUrl = 'https://kaimcfarlane.github.io/WeatherApp/'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/WeatherApp'
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -86,6 +90,8 @@ export default function Projects({DLObj}) {
         newProject.tool1 = info3.tool1
         newProject.tool2 = info3.tool2
         newProject.tool3 = info3.tool3
+        newProject.demoUrl = 'https://kaimcfarlane.github.io/ReactTS/'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/myreactjs_practice'
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -96,6 +102,8 @@ export default function Projects({DLObj}) {
         newProject.tool1 = info4.tool1
         newProject.tool2 = info4.tool2
         newProject.tool3 = info4.tool3
+        newProject.demoUrl = 'https://kiwielgato.com/'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/Kiwi-Website-1.0-2022'
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -106,6 +114,8 @@ export default function Projects({DLObj}) {
         newProject.tool1 = info5.tool1
         newProject.tool2 = info5.tool2
         newProject.tool3 = info5.tool3
+        newProject.demoUrl = 'https://play.unity.com/mg/other/kiwi-pong-webgl'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/UnityPongGame'
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -116,6 +126,8 @@ export default function Projects({DLObj}) {
         newProject.tool1 = info6.tool1
         newProject.tool2 = info6.tool2
         newProject.tool3 = info6.tool3
+        newProject.demoUrl = 'https://recipeat.herokuapp.com/'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat'
         changeProjectInfo(newProject)
         changeState(!state)
       }
