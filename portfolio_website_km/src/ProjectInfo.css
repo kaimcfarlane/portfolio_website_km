@@ -1,6 +1,11 @@
 #projectInfoImg{
     width: 100%;
-    height: 340px;
+    height: 360px;
+    object-fit: cover;
+}
+
+#projectInfoDesc{
+    margin-top: -10px;
 }
 
 #projectInfoContainer{
@@ -8,16 +13,68 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: grey;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    background-color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+#close {
+    overflow: hidden;
+    position: relative;
+    border: none;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background: transparent;
+    color: #000000;
+    font: inherit;
+    text-indent: 100%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#close:focus {
+    outline: solid 0 transparent;
+    /* box-shadow: 0 0 0 2px #8ed0f9; */
+}
+#close:hover {
+    background: rgba(57, 59, 59, 0.1);
+}
+#close:before, #close:after {
+    position: absolute;
+    top: 15%;
+    left: calc(50% - .0625em);
+    width: 0.125em;
+    height: 70%;
+    border-radius: 0.125em;
+    transform: rotate(45deg);
+    background: currentcolor;
+    content: '';
+}
+#close:after {
+    transform: rotate(-45deg);
+}
+
+
+
 
 #closeBtnContainer{
     position: absolute;
     left: 80%;
-    top: 4%;
-
+    /* top: -18%; */
+    top: 3%;
 }
-
+/* 
 #closePic{
     width: 25px;
     height: 25px;
@@ -25,3 +82,163 @@
     cursor: pointer;
     
 }
+
+.close-container {
+    position: relative;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+.leftright {
+    height: 3px;
+    width: 30px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: #000000;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in;
+}
+
+.rightleft {
+    height: 3px;
+    width: 30px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: #000000;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-in;
+}
+#exitlabel {
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in;
+    opacity: 0;
+}
+.close {
+    margin: 60px 0 0 5px;
+    position: absolute;
+}
+.close-container:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: #f25c66;
+}
+.close-container:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: #f25c66;
+}
+.close-container:hover label {
+    opacity: 1;
+} */
+
+#buttonsContainer{
+    margin-top: 10px;
+}
+
+
+
+#demoBtn {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 24px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-right: 25px;
+}
+
+#demoBtn:focus {
+  text-decoration: none;
+}
+
+#demoBtn:hover {
+  text-decoration: none;
+}
+
+#demoBtn:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+#demoBtn:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+/* @media (min-width: 768px) {
+  #demoBtn {
+    padding: 12px 50px;
+  }
+} */
+
+
+
+#codeBtn {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 27px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-right: 30px;
+  }
+  
+  #codeBtn:focus {
+    text-decoration: none;
+  }
+  
+  #codeBtn:hover {
+    text-decoration: none;
+  }
+  
+  #codeBtn:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+  }
+  
+  #codeBtn:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+  }

@@ -20,6 +20,7 @@ export default function Projects({DLObj}) {
   const topProjects = useRef()
   const botProjects = useRef()
   const projectInfoBox = useRef()
+  const projectInfoBackground = useRef()
 
   const projectImg1 = useRef()
   const projectTitle1 = useRef()
@@ -54,6 +55,8 @@ export default function Projects({DLObj}) {
     //set original project info to new project variable for changes
       console.log("Inner Project Function Clicked!")
       projectInfoBox.current.style.transform = 'translateX(0%)'
+      projectInfoBackground.current.classList.add('projectShadow')
+      // projectInfoBackground.current.classList === 'projectShadow' ? projectInfoBackground.current.classList.remove('projectShadow') : projectInfoBackground.current.classList.add('projectShadow')
       var newProject = selectedProjectInfo
       if(index === 1) {
         newProject.title = info1.title
@@ -122,6 +125,7 @@ export default function Projects({DLObj}) {
     console.log("Project Button closed so value here in object should trigger a close")
     if (selectedProjectInfo.isOpen === true) {
       projectInfoBox.current.style.transform = 'translateX(-100%)'
+      projectInfoBackground.current.classList.remove('projectShadow')
       selectedProjectInfo.isOpen = false
     }
   },[selectedProjectInfo, state])
@@ -149,9 +153,11 @@ export default function Projects({DLObj}) {
             <Project DLObj={DLObj} info={info6} projectClick={projectClick} index={6}/>
         </div>
       </section>
-      <div ref={projectInfoBox} id='projectInfoBox'>
-        <ProjectInfo selectedProjectInfo={selectedProjectInfo} changeProjectInfo={changeProjectInfo} changeState={changeState} state={state} DLObj={DLObj}/>
-      </div>
+      <section ref={projectInfoBackground} id='projectInfoBackground'>
+        <div ref={projectInfoBox} id='projectInfoBox'>
+          <ProjectInfo selectedProjectInfo={selectedProjectInfo} changeProjectInfo={changeProjectInfo} changeState={changeState} state={state} DLObj={DLObj}/>
+        </div>
+      </section>
     </>
   )
 }

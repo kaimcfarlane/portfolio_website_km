@@ -20,14 +20,19 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
   return (
                 <div id='projectInfoContainer'> 
                     <img id='projectInfoImg' alt='' src={selectedProjectInfo.img}></img>
-                    <h1>{selectedProjectInfo.title}</h1>
-                    <p>{selectedProjectInfo.desc}</p>
+                    <h1 id='projectInfoTitle'>{selectedProjectInfo.title}</h1>
+                    <p id='projectInfoDesc'>{selectedProjectInfo.desc}</p>
                     <div id='buttonsContainer'>
-                        <button id='demoBtn'>Live Demo</button>
-                        <button id='codeBtn'>Code</button>
+                            <button id='demoBtn' role="button">Live Demo <span>&#128640;</span></button>
+                            <button id='codeBtn'>Code <span>&#127757;</span></button>
                     </div>
-                    <div id='closeBtnContainer'>
+                    {/* <div id='closeBtnContainer'>
                         <img id='closePic' alt='Close Btn' src={closePic} onClick={closeProject}></img>
+                    </div> */}
+                    <div id="closeBtnContainer" class="close-container" onClick={closeProject}>
+                        {/* <div class="leftright"></div>
+                        <div class="rightleft"></div> */}
+                        <button id='close'></button>
                     </div>
                 </div>
   )
