@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react'
+import {React, useEffect,  useRef} from 'react'
 import './ProjectInfo.css'
 import closePic from './close.png'
 import { faUsersLine } from '@fortawesome/free-solid-svg-icons'
@@ -10,6 +10,8 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
 
     //Below our useState that calls this stuff to be passed is going to fast
     //By the time our img reaches here, the useState already render stuff
+
+    const projectInfoImg = useRef()
 
     const closeProject = () => {
         var newProject = selectedProjectInfo
@@ -24,10 +26,28 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
         window.open(url, '_blank')
     }
 
+    var imgIndex = 0
+    setInterval(() => {
+        if(imgIndex < selectedProjectInfo.img.length)
+        {
+            imgIndex++
+            projectInfoImg.src = selectedProjectInfo.img[imgIndex]
+        }
+        else{
+            imgIndex--
+            projectInfoImg.src = selectedProjectInfo.img[imgIndex]
+        }
+        console.log("IMG HAS CHANGED:")
+        console.log(selectedProjectInfo.img[imgIndex])
+        console.log("IMG INDEX: " + imgIndex)
+    }, [8000])
+
+    useEffect(()=> {},[imgIndex])
+
 
   return (
                 <div id='projectInfoContainer'> 
-                    <img id='projectInfoImg' alt='' src={selectedProjectInfo.img}></img>
+                    <img ref={projectInfoImg} id='projectInfoImg' alt='' src={selectedProjectInfo.img[imgIndex]}></img>
                     <h1 id='projectInfoTitle'>{selectedProjectInfo.title}</h1>
                     <p id='projectInfoDesc'>{selectedProjectInfo.desc}</p>
                     <div id='buttonsContainer'>

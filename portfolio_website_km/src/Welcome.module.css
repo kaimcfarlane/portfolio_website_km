@@ -140,6 +140,11 @@
   color: #6246ea;
 }
 
+#title::selection {
+  background: #282525;
+  cursor: pointer;
+}
+
 #paragraph1{
     display: block;
     pointer-events: none;

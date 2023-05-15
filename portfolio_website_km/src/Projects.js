@@ -8,6 +8,8 @@ import reactTSImg3 from './reacttsImg3.png'
 import kiwiImg from './kiwiWebsitePic.png'
 import weatherappImg from './weatherappImg1.png'
 import kiwipongimg from './kiwipongImg.png'
+import recipeImg2 from './recipeImg2.png'
+import recipeImg3 from './recipeImg3.png'
 import './Projects.css'
 import ProjectInfo from './ProjectInfo'
 
@@ -43,7 +45,7 @@ export default function Projects({DLObj}) {
     }
   },[DLObj])
   
-  const [selectedProjectInfo, changeProjectInfo] = useState({title: '', img: '', desc: '', tool1: '', tool2: '', tool3: '', isOpen: false, demoUrl: '', codeUrl: ''})
+  const [selectedProjectInfo, changeProjectInfo] = useState({title: '', img: [], desc: '', tool1: '', tool2: '', tool3: '', isOpen: false, demoUrl: '', codeUrl: ''})
 
   //When user clicks on project we add onclick method, one method that takes a parameter called name probably or info
   //In method we say dependent on name we will change the data in the object of selectedProjectInfo using the useState method
@@ -60,7 +62,7 @@ export default function Projects({DLObj}) {
       var newProject = selectedProjectInfo
       if(index === 1) {
         newProject.title = info1.title
-        newProject.img = info1.img
+        newProject.img = [info1.img, recipeImg2, recipeImg3]
         newProject.desc = 'A Fullstack Recipe Creation App'
         newProject.tool1 = info1.tool1
         newProject.tool2 = info1.tool2
@@ -73,7 +75,7 @@ export default function Projects({DLObj}) {
       }
       else if(index === 2) {
         newProject.title = info2.title
-        newProject.img = info2.img
+        newProject.img = [info2.img, 'null']
         newProject.desc = 'A Dynamic Weather App'
         newProject.tool1 = info2.tool1
         newProject.tool2 = info2.tool2
@@ -85,7 +87,7 @@ export default function Projects({DLObj}) {
       }
       else if(index === 3) {
         newProject.title = info3.title
-        newProject.img = info3.img
+        newProject.img = [info3.img, 'null']
         newProject.desc = 'A Reaction Speed App'
         newProject.tool1 = info3.tool1
         newProject.tool2 = info3.tool2
@@ -97,7 +99,7 @@ export default function Projects({DLObj}) {
       }
       else if(index === 4) {
         newProject.title = info4.title
-        newProject.img = info4.img
+        newProject.img = [info4.img, 'null']
         newProject.desc = 'An Educational Website'
         newProject.tool1 = info4.tool1
         newProject.tool2 = info4.tool2
@@ -109,7 +111,7 @@ export default function Projects({DLObj}) {
       }
       else if(index === 5) {
         newProject.title = info5.title
-        newProject.img = info5.img
+        newProject.img = [info5.img, 'null']
         newProject.desc = 'A 1980s Video Game Classic w/t a Modern Twist'
         newProject.tool1 = info5.tool1
         newProject.tool2 = info5.tool2
@@ -121,7 +123,7 @@ export default function Projects({DLObj}) {
       }
       else if(index === 6) {
         newProject.title = info6.title
-        newProject.img = info6.img
+        newProject.img = [info6.img, 'null']
         newProject.desc = 'A Calculator made in the Unity Game Engine'
         newProject.tool1 = info6.tool1
         newProject.tool2 = info6.tool2

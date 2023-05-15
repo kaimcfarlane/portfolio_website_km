@@ -71,3 +71,6 @@ html{
   height: 100vh;
 }
 
+::selection {
+  background: #6d55e9;
+}
