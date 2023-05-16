@@ -87,7 +87,7 @@ export default function Contact({DLObj}) {
             <p ref={contactSubtitle} id='contactSubtitle'>-Don't Be Shy-</p>
         </section>
         <section ref={formContainer} id='formContainer'>
-            <form id="form" action="/" method="POST">
+            <form id="form" action="https://formsubmit.co/kaimcfarlane43@gmail.com" method="POST">
                 <div id='contactInfo'>
                     <div id='nameContainer'>
                         <label ref={nameTitle} id='nameTitle'>
@@ -99,7 +99,7 @@ export default function Contact({DLObj}) {
                         <label ref={emailTitle} id='emailTitle'>
                             Email
                         </label>
-                        <input ref={email} type="text" id="email" name="email" placeholder='Enter your email'></input>
+                        <input ref={email} type="email" id="email" name="email" placeholder='Enter your email'></input>
                     </div>
                 </div>
                 <div id='contactText'>

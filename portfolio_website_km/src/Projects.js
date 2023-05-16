@@ -89,7 +89,7 @@ export default function Projects({DLObj}) {
       else if(index === 3) {
         newProject.title = info3.title
         newProject.img = [info3.img, 'null']
-        newProject.desc = 'A Reaction Speed App'
+        newProject.desc = 'A Canvas Docking Station'
         newProject.tool1 = info3.tool1
         newProject.tool2 = info3.tool2
         newProject.tool3 = info3.tool3
