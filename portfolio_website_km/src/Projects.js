@@ -82,7 +82,7 @@ export default function Projects({DLObj}) {
         newProject.tool2 = info2.tool2
         newProject.tool3 = info2.tool3
         newProject.demoUrl = 'https://kaimcfarlane.github.io/WeatherApp/'
-        newProject.codeUrl = 'https://github.com/kaimcfarlane/WeatherApp'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/MyClimi'
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -93,8 +93,8 @@ export default function Projects({DLObj}) {
         newProject.tool1 = info3.tool1
         newProject.tool2 = info3.tool2
         newProject.tool3 = info3.tool3
-        newProject.demoUrl = 'https://kaimcfarlane.github.io/ReactTS/'
-        newProject.codeUrl = 'https://github.com/kaimcfarlane/myreactjs_practice'
+        newProject.demoUrl = 'https://github.com/kaimcfarlane/CDS'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/CDS'
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -106,7 +106,7 @@ export default function Projects({DLObj}) {
         newProject.tool2 = info4.tool2
         newProject.tool3 = info4.tool3
         newProject.demoUrl = 'https://kiwielgato.com/'
-        newProject.codeUrl = 'https://github.com/kaimcfarlane/Kiwi-Website-1.0-2022'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/KiwiELGato_Website'
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -129,12 +129,14 @@ export default function Projects({DLObj}) {
         newProject.tool1 = info6.tool1
         newProject.tool2 = info6.tool2
         newProject.tool3 = info6.tool3
-        newProject.demoUrl = 'https://recipeat.herokuapp.com/'
-        newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat'
+        newProject.demoUrl = 'https://kaimcfarlane.github.io/ReactTS/'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/React_TS'
         changeProjectInfo(newProject)
         changeState(!state)
       }
     }
+
+    //FIX codeURL on INDEX6 because it is not working just openign websit epage again
 
   useEffect(() => {
     console.log("Project Button closed so value here in object should trigger a close")
