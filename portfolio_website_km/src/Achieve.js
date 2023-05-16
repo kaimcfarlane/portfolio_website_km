@@ -16,6 +16,8 @@ import UF_Logo from './UF_Logo.png'
 import codingPic1 from './codingPic1.jpg'
 import ufitPic2 from './ufitPic2.jpg'
 import vrPic1 from './virtualRealityPic1.jpg'
+import vr3 from './vr3.jpg'
+import code3 from './code3.jpg'
 
 
 //It works but we want seperate images to display upon clicking an arrow on the img
@@ -267,13 +269,13 @@ export default function Achieve({DLObj}) {
                 <div ref={job2} className='job' id='job2'>
                     <h1 ref={jobTitle2} className='jobh1'>Lead Software Devloper Intern</h1>
                     <h2 ref={jobSub2} className='jobh2'>Musuem of Discovery and Science</h2>
-                    <img ref={img2} id='modsvr_Pic' src={vrPic1} alt='' onClick={() => openJobDesc(2)}></img>
+                    <img ref={img2} id='modsvr_Pic' src={vr3} alt='' onClick={() => openJobDesc(2)}></img>
                     <p ref={jobDesc2} className='jobDesc' id='jobDesc2'>Programmed virtual reality images and animations with C# and Unity to explain natural phenomena</p>
                 </div>
                 <div ref={job3} className='job' id='job3'>
                     <h1 ref={jobTitle3} className='jobh1'>Website Application Developer Intern</h1>
-                    <h2 ref={jobSub3} className='jobh2'>University of Florida Information Technology</h2>
-                    <img ref={img3} id='ufit_Pic' src={ufitPic2} alt='' onClick={() => openJobDesc(3)}></img>
+                    <h2 ref={jobSub3} className='jobh2'>UF Information Technology</h2>
+                    <img ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)}></img>
                     <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Redesigning and implementing new cards feature for the personal UF Workspace with javascript frameworks</p>
                 </div>
             </div>
