@@ -246,11 +246,26 @@ export default function Achieve({DLObj}) {
     }
     
 
-   
-
-    // function openJobDesc() {
-    //     console.log("IMG CLIKED!")
+    // const unhoverProject = () => {
+    //     // project.current.style.boxShadow = ''
+    //     console.log("Project " + index + " Btn Clicked!")
+    //     projectClick(index)
     // }
+
+    const backgroundHoverLeave = (name) => {
+        name.current.style.boxShadow = ''
+      }
+
+      const backgroundHoverEnter = (name) => {
+        if(DLObj.isLight){
+          name.current.style.boxShadow = 'rgba(98, 70, 234, 0.76) 5px 6px 7px 0px'
+        }
+        else{
+          name.current.style.boxShadow = 'rgb(255 255 255 / 73%) 5px 7px 7px 0px'
+        }
+   }
+    
+   //box-shadow: rgba(98, 70, 234, 0.76) 5px 6px 7px 0px;
 
   return (
     <>
@@ -263,19 +278,19 @@ export default function Achieve({DLObj}) {
                 <div ref={job1} className='job' id='job1'>
                     <h1 ref={jobTitle1} className='jobh1'>Website Developer and Founder</h1>
                     <h2 ref={jobSub1} className='jobh2'>Kiwi-El-Gato</h2>
-                    <img ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)}></img>
+                    <img ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
                     <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Developed educational website with digital art, designs, animations, and code</p>
                 </div>
                 <div ref={job2} className='job' id='job2'>
                     <h1 ref={jobTitle2} className='jobh1'>Lead Software Devloper Intern</h1>
                     <h2 ref={jobSub2} className='jobh2'>Musuem of Discovery and Science</h2>
-                    <img ref={img2} id='modsvr_Pic' src={vr3} alt='' onClick={() => openJobDesc(2)}></img>
+                    <img ref={img2} id='modsvr_Pic' src={vr3} alt='' onClick={() => openJobDesc(2)} onMouseEnter={() => backgroundHoverEnter(img2)} onMouseLeave={() => backgroundHoverLeave(img2)}></img>
                     <p ref={jobDesc2} className='jobDesc' id='jobDesc2'>Programmed virtual reality images and animations with C# and Unity to explain natural phenomena</p>
                 </div>
                 <div ref={job3} className='job' id='job3'>
                     <h1 ref={jobTitle3} className='jobh1'>Website Application Developer Intern</h1>
                     <h2 ref={jobSub3} className='jobh2'>UF Information Technology</h2>
-                    <img ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)}></img>
+                    <img ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
                     <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Redesigning and implementing new cards feature for the personal UF Workspace with javascript frameworks</p>
                 </div>
             </div>

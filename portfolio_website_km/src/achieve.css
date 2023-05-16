@@ -115,7 +115,7 @@
     transition: ease-in-out 0.2s;
     cursor: pointer;
 
-    box-shadow: rgba(98, 70, 234, 0.76) 5px 6px 7px 0px;
+    /* box-shadow: rgba(98, 70, 234, 0.76) 5px 6px 7px 0px; */
 }
 
 #modsvr_Pic{
