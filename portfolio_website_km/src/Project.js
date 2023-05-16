@@ -74,7 +74,7 @@ export default function Project({info, DLObj, projectClick, index}) {
 
   return (
     <div ref={project} id='project' onClick={unhoverProject} onMouseEnter={backgroundHoverEnter} onMouseLeave={backgroundHoverLeave}>
-            <img ref={projectImg} src={info.img} alt='' id='projectImg'></img>
+            <img ref={projectImg} src={info.img} alt='' id='projectImg' style={{objectFit: info.title === 'CDS' && "cover"}}></img>
             <h1 ref={proTitle} id='proTitle' >{info.title}</h1>
             <div ref={skillsBox} id='skillsBox'>
               <p ref={tool1} className='tool' id='tool1'>{info.tool1}</p>

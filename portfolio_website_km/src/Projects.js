@@ -12,6 +12,7 @@ import recipeImg2 from './recipeImg2.png'
 import recipeImg3 from './recipeImg3.png'
 import './Projects.css'
 import ProjectInfo from './ProjectInfo'
+import CDSIMG1 from './CDSIMG1.JPG'
 
 export default function Projects({DLObj}) {
 
@@ -29,10 +30,10 @@ export default function Projects({DLObj}) {
 
   const info1 = {img: recipeImg1, title: 'Recipeat', tool1: '//TypeScript', tool2: '//Node.js', tool3: '//MongoDB'}
   const info2 = {img: weatherappImg, title: 'MyClimi', tool1: '//JavaScript', tool2: '//KeyFrames', tool3: '//RestApi'}
-  const info3 = {img: reactTSImg1, title: 'ReactTS', tool1: '//JavaScript', tool2: '//BootStrap', tool3: '//Chart.js'}
+  const info3 = {img: CDSIMG1, title: 'CDS', tool1: '//Python', tool2: '//Arduino', tool3: '//CanvasAPI'}
   const info4 = {img: kiwiImg, title: 'Kiwi-El-Gato', tool1: '//JavaScript', tool2: '//JotForm', tool3: '//WordPress'}
   const info5 = {img: kiwipongimg, title: 'Kiwi Pong', tool1: '//C#', tool2: '//Unity', tool3: '//2D-Modeling'}
-  const info6 = {img: recipeImg1, title: 'Calculator', tool1: '//C#', tool2: '//2D-Arrays', tool3: '//OOP'}
+  const info6 = {img: reactTSImg1, title: 'ReactTS', tool1: '//Javascript', tool2: '//Bootstrap', tool3: '//Chart.js'}
 
   useEffect(()=> {
     if(DLObj.isLight) {
