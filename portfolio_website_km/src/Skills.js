@@ -18,6 +18,10 @@ import gitlab_Logo from './gitlabLogo.png'
 import heroku_Logo from './herokuLogo.png'
 import dr_Logo from './davinciresolveLogo.png'
 import chartjs_Logo from './icons8-area-chart-96.png'
+import pythonLogo from './pythonlogo.png'
+import cPlusPlusLogo from './c++.png'
+import jiraLogo from './jiralogo.png'
+import sqlLogo from './sqlLogo.png'
 
 export default function Skills({DLObj}) {
 
@@ -60,6 +64,8 @@ export default function Skills({DLObj}) {
             <img className='icon' id='typescript_Logo' alt='languageIcon' src={typescript_Logo}></img>
             <img className='icon' id='java_Logo' alt='languageIcon' src={java_Logo}></img>
             <img className='icon' id='cSharp_Logo' alt='languageIcon' src={cSharp_Logo}></img>
+            <img className='icon' id='cPlusPlusLogo' alt='languageIcon' src={cPlusPlusLogo}></img>
+            <img className='icon' id='pythonLogo' alt='languageIcon' src={pythonLogo}></img>
           </div>
         </div>
         <div>
@@ -70,6 +76,7 @@ export default function Skills({DLObj}) {
             <img className='icon' id='mui_Logo' alt='libraryIcon' src={mui_Logo}></img>
             <img className='icon' id='node_Logo' alt='libraryIcon' src={node_Logo}></img>
             <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={chartjs_Logo}></img>
+            <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={sqlLogo}></img>
           </div>
         </div>
         <div>
@@ -80,6 +87,7 @@ export default function Skills({DLObj}) {
             <img className='icon' alt='learnedIcon' src={git_Logo}></img>
             <img className='icon' alt='learnedIcon' src={gitlab_Logo}></img>
             <img className='icon' alt='learnedIcon' src={heroku_Logo}></img>
+            <img className='icon' alt='learnedIcon' src={jiraLogo}></img>
           </div>
         </div>
       </div>

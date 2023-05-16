@@ -251,6 +251,23 @@ export default function Achieve({DLObj}) {
     //     console.log("Project " + index + " Btn Clicked!")
     //     projectClick(index)
     // }
+    
+    useEffect(() => {
+        setInterval(() => {
+            if(img3.current.name === 'imgA') 
+            {
+                img3.current.src = vr3
+                img3.current.name = 'imgB'
+            } 
+            else
+            {
+                img3.current.src = code3
+                img3.current.name = 'imgA'
+            }
+            console.log(img3.current.src)
+        }, 6000)
+    },[])
+    
 
     const backgroundHoverLeave = (name) => {
         name.current.style.boxShadow = ''
@@ -264,8 +281,6 @@ export default function Achieve({DLObj}) {
           name.current.style.boxShadow = 'rgb(255 255 255 / 73%) 5px 7px 7px 0px'
         }
    }
-    
-   //box-shadow: rgba(98, 70, 234, 0.76) 5px 6px 7px 0px;
 
   return (
     <>
@@ -290,7 +305,7 @@ export default function Achieve({DLObj}) {
                 <div ref={job3} className='job' id='job3'>
                     <h1 ref={jobTitle3} className='jobh1'>Website Application Developer Intern</h1>
                     <h2 ref={jobSub3} className='jobh2'>UF Information Technology</h2>
-                    <img ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
+                    <img name={'imgA'} ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
                     <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Redesigning and implementing new cards feature for the personal UF Workspace with javascript frameworks</p>
                 </div>
             </div>
