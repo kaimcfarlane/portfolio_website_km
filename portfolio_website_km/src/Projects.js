@@ -69,7 +69,7 @@ export default function Projects({DLObj}) {
         newProject.tool2 = info1.tool2
         newProject.tool3 = info1.tool3
         newProject.demoUrl = 'https://recipeat.herokuapp.com/'
-        newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat_PUBLIC'
         changeProjectInfo(newProject)
         console.log('Image passed is: ' + JSON.stringify(selectedProjectInfo))
         changeState(!state)
@@ -125,7 +125,7 @@ export default function Projects({DLObj}) {
       else if(index === 6) {
         newProject.title = info6.title
         newProject.img = [info6.img, 'null']
-        newProject.desc = 'A Calculator made in the Unity Game Engine'
+        newProject.desc = 'A Series of Reaction Speed Games'
         newProject.tool1 = info6.tool1
         newProject.tool2 = info6.tool2
         newProject.tool3 = info6.tool3

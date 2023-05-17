@@ -13,6 +13,7 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
 
     const projectInfoImg = useRef()
     const closeBtn = useRef()
+    const btnSpan = useRef()
 
     const closeProject = () => {
         var newProject = selectedProjectInfo
@@ -46,11 +47,13 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
     useEffect(()=> {},[imgIndex])
 
     const addArrowHoverCSS = () => {
-        closeBtn.current.style.animation = 'none';
+        // closeBtn.current.style.animation = 'none';
+        btnSpan.current.style.boxShadow = 'rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px'
     }
 
     const removeArrowHoverCSS = () => {
-        closeBtn.current.style.animation = 'blink 2s linear infinite';
+        // closeBtn.current.style.animation = 'blink 2s linear infinite';
+        btnSpan.current.style.boxShadow = 'none';
     }
 
   return (
@@ -63,7 +66,7 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
                             <button id='codeBtn' onClick={() => {urlBtnClick(selectedProjectInfo.codeUrl)}}>Code <span>&#127757;</span></button>
                     </div>
                     <div ref={closeBtn} id="closeBtnContainer" class="arrow arrow--left" onClick={closeProject} onMouseOver={addArrowHoverCSS} onMouseLeave={removeArrowHoverCSS}>
-                        <span></span>
+                        <span ref={btnSpan}></span>
                     </div>
                 </div>
   )
