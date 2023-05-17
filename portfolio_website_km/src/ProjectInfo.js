@@ -12,6 +12,7 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
     //By the time our img reaches here, the useState already render stuff
 
     const projectInfoImg = useRef()
+    const closeBtn = useRef()
 
     const closeProject = () => {
         var newProject = selectedProjectInfo
@@ -44,6 +45,13 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
 
     useEffect(()=> {},[imgIndex])
 
+    const addArrowHoverCSS = () => {
+        closeBtn.current.style.animation = 'none';
+    }
+
+    const removeArrowHoverCSS = () => {
+        closeBtn.current.style.animation = 'blink 2s linear infinite';
+    }
 
   return (
                 <div id='projectInfoContainer'> 
@@ -54,13 +62,8 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
                             <button id='demoBtn' role="button" onClick={() => {urlBtnClick(selectedProjectInfo.demoUrl)}}>Live Demo <span>&#128640;</span></button>
                             <button id='codeBtn' onClick={() => {urlBtnClick(selectedProjectInfo.codeUrl)}}>Code <span>&#127757;</span></button>
                     </div>
-                    {/* <div id='closeBtnContainer'>
-                        <img id='closePic' alt='Close Btn' src={closePic} onClick={closeProject}></img>
-                    </div> */}
-                    <div id="closeBtnContainer" class="close-container" onClick={closeProject}>
-                        {/* <div class="leftright"></div>
-                        <div class="rightleft"></div> */}
-                        <button id='close'></button>
+                    <div ref={closeBtn} id="closeBtnContainer" class="arrow arrow--left" onClick={closeProject} onMouseOver={addArrowHoverCSS} onMouseLeave={removeArrowHoverCSS}>
+                        <span></span>
                     </div>
                 </div>
   )

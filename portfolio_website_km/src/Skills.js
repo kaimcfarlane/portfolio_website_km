@@ -22,6 +22,7 @@ import pythonLogo from './pythonlogo.png'
 import cPlusPlusLogo from './c++.png'
 import jiraLogo from './jiralogo.png'
 import sqlLogo from './sqlLogo.png'
+import bootstrapLogo from './bootstraplogo.png'
 
 export default function Skills({DLObj}) {
 
@@ -77,6 +78,7 @@ export default function Skills({DLObj}) {
             <img className='icon' id='node_Logo' alt='libraryIcon' src={node_Logo}></img>
             <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={chartjs_Logo}></img>
             <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={sqlLogo}></img>
+            <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={bootstrapLogo}></img>
           </div>
         </div>
         <div>

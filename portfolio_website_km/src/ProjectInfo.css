@@ -42,13 +42,16 @@
     text-indent: 100%;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    background: white;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #7a61f0 0px 0px 0px 3px; */
 }
 #close:focus {
     outline: solid 0 transparent;
     /* box-shadow: 0 0 0 2px #8ed0f9; */
 }
 #close:hover {
-    background: rgba(57, 59, 59, 0.1);
+    background: rgb(7 7 7);
+    color: #ffffff;
 }
 #close:before, #close:after {
     position: absolute;
@@ -242,3 +245,61 @@
     box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
   }
+
+
+
+
+   .arrow {
+    cursor: pointer;
+    display: block;
+    width: 21.216407355px;
+    height: 42.43281471px;
+    position: relative;
+    animation: blink 2s linear infinite;
+ }
+
+ 
+
+   .arrow span, .arrow:before, .arrow:after {
+    background: #fff;
+    content: '';
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 30px;
+    position: absolute;
+    top: calc(50% - (2px / 2));
+ }
+
+ @keyframes blink{
+  0%{opacity: 0;}
+  25%{opacity: .5}
+  50%{opacity: 1;}
+  100%{opacity: 1;}
+  }
+
+   .arrow:before {
+    transform: rotate(-45deg);
+ }
+   .arrow:after {
+    transform: rotate(45deg);
+ }
+   .arrow span {
+    width: 0;
+ }
+   .arrow:hover span {
+    width: 42.42px;
+ }
+   .arrow.arrow--left span,  .arrow.arrow--left:before,  .arrow.arrow--left:after {
+    left: 0;
+    transform-origin: left 50%;
+ }
+   .arrow.arrow--left:before,  .arrow.arrow--left:after {
+    transition: left 0.3s 0.05s;
+ }
+   .arrow.arrow--left span {
+    transition: width 0.3s, left 0.3s 0.05s;
+ }
+   .arrow.arrow--left:hover span,  .arrow.arrow--left:hover:before, .arrow.arrow--left:hover:after {
+    left: -21.216407355px;
+   }
