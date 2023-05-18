@@ -23,6 +23,8 @@ import cPlusPlusLogo from './c++.png'
 import jiraLogo from './jiralogo.png'
 import sqlLogo from './sqlLogo.png'
 import bootstrapLogo from './bootstraplogo.png'
+// import { Tooltip } from 'react-tooltip'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 export default function Skills({DLObj}) {
 
@@ -59,14 +61,22 @@ export default function Skills({DLObj}) {
         <div>
           <SkillsRTitle name={'Langauges'} DLObj={DLObj}/>
           <div className='imageContainer'>
-            <img className='icon' alt='languageIcon' src={html_Icon}></img>
-            <img className='icon' alt='languageIcon' src={css_Icon}></img>
-            <img className='icon' alt='languageIcon' src={JS_Icon}></img>
-            <img className='icon' id='typescript_Logo' alt='languageIcon' src={typescript_Logo}></img>
-            <img className='icon' id='java_Logo' alt='languageIcon' src={java_Logo}></img>
-            <img className='icon' id='cSharp_Logo' alt='languageIcon' src={cSharp_Logo}></img>
-            <img className='icon' id='cPlusPlusLogo' alt='languageIcon' src={cPlusPlusLogo}></img>
-            <img className='icon' id='pythonLogo' alt='languageIcon' src={pythonLogo}></img>
+            <img className='icon' alt='languageIcon' src={html_Icon} data-tooltip-id="htmlLogo" data-tooltip-content='HTML'></img>
+            <ReactTooltip  id='htmlLogo'/>
+            <img className='icon' alt='languageIcon' src={css_Icon} data-tooltip-id="cssLogo" data-tooltip-content='CSS'></img>
+            <ReactTooltip  id='cssLogo'/>
+            <img className='icon' alt='languageIcon' src={JS_Icon} data-tooltip-id="jsLogo" data-tooltip-content='JAVASCRIPT'></img>
+            <ReactTooltip  id='jsLogo'/>
+            <img className='icon' id='typescript_Logo' alt='languageIcon' src={typescript_Logo} data-tooltip-id="typeLogo" data-tooltip-content='TYPESCRIPT'></img>
+            <ReactTooltip  id='typeLogo'/>
+            <img className='icon' id='java_Logo' alt='languageIcon' src={java_Logo} data-tooltip-id="javaLogo" data-tooltip-content='JAVA'></img>
+            <ReactTooltip  id='javaLogo'/>
+            <img className='icon' id='cSharp_Logo' alt='languageIcon' src={cSharp_Logo} data-tooltip-id="csharpLogo" data-tooltip-content='C#'></img>
+            <ReactTooltip  id='csharpLogo'/>
+            <img className='icon' id='cPlusPlusLogo' alt='languageIcon' src={cPlusPlusLogo} data-tooltip-id="cplusLogo" data-tooltip-content='C++'></img>
+            <ReactTooltip  id='cplusLogo'/>
+            <img className='icon' id='pythonLogo' alt='languageIcon' src={pythonLogo} data-tooltip-id="pythonLogo" data-tooltip-content='PYHTON'></img>
+            <ReactTooltip  id='pythonLogo'/>
           </div>
         </div>
         <div>

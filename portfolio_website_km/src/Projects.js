@@ -13,6 +13,18 @@ import recipeImg3 from './recipeImg3.png'
 import './Projects.css'
 import ProjectInfo from './ProjectInfo'
 import CDSIMG1 from './CDSIMG1.JPG'
+import CSharp from './csharp.png'
+import CPlus from './c++.png'
+import mongoDB from './mongodb_Logo.png'
+import node from './nodeLogo.png'
+import javascript from './javascriptIcon.png'
+import api from './apiLogo.png'
+import python from './pythonlogo.png'
+import html from './htmlLogo.png'
+import css from './cssLogo.png'
+import unity from './unitylogo.png'
+import typescript from './typescriptLogo.png'
+import model from './model.png'
 
 export default function Projects({DLObj}) {
 
@@ -46,7 +58,7 @@ export default function Projects({DLObj}) {
     }
   },[DLObj])
   
-  const [selectedProjectInfo, changeProjectInfo] = useState({title: '', img: [], desc: '', tool1: '', tool2: '', tool3: '', isOpen: false, demoUrl: '', codeUrl: ''})
+  const [selectedProjectInfo, changeProjectInfo] = useState({title: '', img: [], desc: '', tool1: '', tool2: '', tool3: '', isOpen: false, demoUrl: '', codeUrl: '', logos: []})
 
   //When user clicks on project we add onclick method, one method that takes a parameter called name probably or info
   //In method we say dependent on name we will change the data in the object of selectedProjectInfo using the useState method
@@ -70,6 +82,7 @@ export default function Projects({DLObj}) {
         newProject.tool3 = info1.tool3
         newProject.demoUrl = 'https://recipeat.herokuapp.com/'
         newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat_PUBLIC'
+        newProject.logos = [mongoDB, node, typescript]
         changeProjectInfo(newProject)
         console.log('Image passed is: ' + JSON.stringify(selectedProjectInfo))
         changeState(!state)
@@ -83,6 +96,7 @@ export default function Projects({DLObj}) {
         newProject.tool3 = info2.tool3
         newProject.demoUrl = 'https://kaimcfarlane.github.io/WeatherApp/'
         newProject.codeUrl = 'https://github.com/kaimcfarlane/MyClimi'
+        newProject.logos = [html, javascript, api]
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -95,6 +109,7 @@ export default function Projects({DLObj}) {
         newProject.tool3 = info3.tool3
         newProject.demoUrl = 'https://github.com/kaimcfarlane/CDS'
         newProject.codeUrl = 'https://github.com/kaimcfarlane/CDS'
+        newProject.logos = [python, api, CPlus]
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -107,6 +122,7 @@ export default function Projects({DLObj}) {
         newProject.tool3 = info4.tool3
         newProject.demoUrl = 'https://kiwielgato.com/'
         newProject.codeUrl = 'https://github.com/kaimcfarlane/KiwiELGato_Website'
+        newProject.logos = [html, css, javascript]
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -119,6 +135,7 @@ export default function Projects({DLObj}) {
         newProject.tool3 = info5.tool3
         newProject.demoUrl = 'https://play.unity.com/mg/other/kiwi-pong-webgl'
         newProject.codeUrl = 'https://github.com/kaimcfarlane/UnityPongGame'
+        newProject.logos = [model, unity, CSharp]
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -131,6 +148,7 @@ export default function Projects({DLObj}) {
         newProject.tool3 = info6.tool3
         newProject.demoUrl = 'https://kaimcfarlane.github.io/ReactTS/'
         newProject.codeUrl = 'https://github.com/kaimcfarlane/React_TS'
+        newProject.logos = [html, css, javascript]
         changeProjectInfo(newProject)
         changeState(!state)
       }

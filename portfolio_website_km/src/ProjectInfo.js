@@ -48,7 +48,7 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
 
     const addArrowHoverCSS = () => {
         // closeBtn.current.style.animation = 'none';
-        btnSpan.current.style.boxShadow = 'rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px'
+        btnSpan.current.style.boxShadow = 'rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(0, 0, 0) 0px 0px 0px 3px'
     }
 
     const removeArrowHoverCSS = () => {
@@ -67,6 +67,11 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
                     </div>
                     <div ref={closeBtn} id="closeBtnContainer" class="arrow arrow--left" onClick={closeProject} onMouseOver={addArrowHoverCSS} onMouseLeave={removeArrowHoverCSS}>
                         <span ref={btnSpan}></span>
+                    </div>
+                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '24px'}}>
+                        <img alt='logo' src={selectedProjectInfo.logos[0] && selectedProjectInfo.logos[0]} style={{width: '30px', height: '30px'}}></img>
+                        <img alt='logo' src={selectedProjectInfo.logos[1] && selectedProjectInfo.logos[1]} style={{width: selectedProjectInfo.title === 'Kiwi Pong' ? '27px' : '30px', height: selectedProjectInfo.title === 'Kiwi Pong' ? '27px' : '30px'}}></img>
+                        <img alt='logo' src={selectedProjectInfo.logos[2] && selectedProjectInfo.logos[2]} style={{width: selectedProjectInfo.title === 'Recipeat' ? '26px' : '30px', height: selectedProjectInfo.title === 'Recipeat' ? '26px' : '30px', marginLeft: selectedProjectInfo.title === 'Recipeat' && '5px'}}></img>
                     </div>
                 </div>
   )

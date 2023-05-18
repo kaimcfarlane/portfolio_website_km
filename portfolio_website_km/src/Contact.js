@@ -84,7 +84,7 @@ export default function Contact({DLObj}) {
     <div ref={contact}>
         <section ref={contactTitleContainer} id='titleContainer'>
             <h1 ref={contactTitle} id='contactTitle'>I'm Excited to Hear From You</h1>
-            <p ref={contactSubtitle} id='contactSubtitle'>-Don't Be Shy-</p>
+            <p ref={contactSubtitle} id='contactSubtitle'>-Come Say Hi-</p>
         </section>
         <section ref={formContainer} id='formContainer'>
             <form id="form" action="https://formsubmit.co/kaimcfarlane43@gmail.com" method="POST">

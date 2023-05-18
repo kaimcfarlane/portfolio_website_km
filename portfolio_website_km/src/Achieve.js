@@ -297,7 +297,7 @@ export default function Achieve({DLObj}) {
                     <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Developed educational website with digital art, designs, animations, and code</p>
                 </div>
                 <div ref={job2} className='job' id='job2'>
-                    <h1 ref={jobTitle2} className='jobh1'>Lead Software Devloper Intern</h1>
+                    <h1 ref={jobTitle2} className='jobh1'>Lead Software Developer Intern</h1>
                     <h2 ref={jobSub2} className='jobh2'>Musuem of Discovery and Science</h2>
                     <img ref={img2} id='modsvr_Pic' src={vr3} alt='' onClick={() => openJobDesc(2)} onMouseEnter={() => backgroundHoverEnter(img2)} onMouseLeave={() => backgroundHoverLeave(img2)}></img>
                     <p ref={jobDesc2} className='jobDesc' id='jobDesc2'>Programmed virtual reality images and animations with C# and Unity to explain natural phenomena</p>
