@@ -168,6 +168,11 @@ export default function Projects({DLObj}) {
   // useEffect(()=> {
   //   console.log("Value passed to inner project component" + selectedProjectInfo.img)
   // },[selectedProjectInfo, selectedProjectInfo.img, state])
+
+    useEffect(()=>{
+        projectInfoBox.current.style.backgroundColor = '#ffffff00'
+    }, [DLObj.isLight])
+
   
 
   return (

@@ -14,7 +14,7 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
     const projectInfoImg = useRef()
     const closeBtn = useRef()
     const btnSpan = useRef()
-
+    
     const closeProject = () => {
         var newProject = selectedProjectInfo
         newProject.isOpen = true
