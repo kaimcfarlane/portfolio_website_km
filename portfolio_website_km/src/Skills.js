@@ -65,41 +65,54 @@ export default function Skills({DLObj}) {
             <ReactTooltip  id='htmlLogo'/>
             <img className='icon' alt='languageIcon' src={css_Icon} data-tooltip-id="cssLogo" data-tooltip-content='CSS'></img>
             <ReactTooltip  id='cssLogo'/>
-            <img className='icon' alt='languageIcon' src={JS_Icon} data-tooltip-id="jsLogo" data-tooltip-content='JAVASCRIPT'></img>
+            <img className='icon' alt='languageIcon' src={JS_Icon} data-tooltip-id="jsLogo" data-tooltip-content='Javascript'></img>
             <ReactTooltip  id='jsLogo'/>
-            <img className='icon' id='typescript_Logo' alt='languageIcon' src={typescript_Logo} data-tooltip-id="typeLogo" data-tooltip-content='TYPESCRIPT'></img>
+            <img className='icon' id='typescript_Logo' alt='languageIcon' src={typescript_Logo} data-tooltip-id="typeLogo" data-tooltip-content='Typescript'></img>
             <ReactTooltip  id='typeLogo'/>
-            <img className='icon' id='java_Logo' alt='languageIcon' src={java_Logo} data-tooltip-id="javaLogo" data-tooltip-content='JAVA'></img>
+            <img className='icon' id='java_Logo' alt='languageIcon' src={java_Logo} data-tooltip-id="javaLogo" data-tooltip-content='Java'></img>
             <ReactTooltip  id='javaLogo'/>
             <img className='icon' id='cSharp_Logo' alt='languageIcon' src={cSharp_Logo} data-tooltip-id="csharpLogo" data-tooltip-content='C#'></img>
             <ReactTooltip  id='csharpLogo'/>
             <img className='icon' id='cPlusPlusLogo' alt='languageIcon' src={cPlusPlusLogo} data-tooltip-id="cplusLogo" data-tooltip-content='C++'></img>
             <ReactTooltip  id='cplusLogo'/>
-            <img className='icon' id='pythonLogo' alt='languageIcon' src={pythonLogo} data-tooltip-id="pythonLogo" data-tooltip-content='PYHTON'></img>
+            <img className='icon' id='pythonLogo' alt='languageIcon' src={pythonLogo} data-tooltip-id="pythonLogo" data-tooltip-content='Python'></img>
             <ReactTooltip  id='pythonLogo'/>
           </div>
         </div>
         <div>
         <SkillsRTitle name={'Libraries'} DLObj={DLObj}/>
           <div className='imageContainer'>
-            <img className='icon' id='react_Logo' alt='libraryIcon' src={react_Logo}></img>
-            <img className='icon' id='express_Logo' alt='libraryIcon' src={express_Logo}></img>
-            <img className='icon' id='mui_Logo' alt='libraryIcon' src={mui_Logo}></img>
-            <img className='icon' id='node_Logo' alt='libraryIcon' src={node_Logo}></img>
-            <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={chartjs_Logo}></img>
-            <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={sqlLogo}></img>
-            <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={bootstrapLogo}></img>
+            <img className='icon' id='react_Logo' alt='libraryIcon' src={react_Logo} data-tooltip-id="reactLogo" data-tooltip-content='React.js'></img>
+            <ReactTooltip  id='reactLogo'/>
+            <img className='icon' id='express_Logo' alt='libraryIcon' src={express_Logo} data-tooltip-id="expressLogo" data-tooltip-content='Express.js'></img>
+            <ReactTooltip  id='expressLogo'/>
+            <img className='icon' id='mui_Logo' alt='libraryIcon' src={mui_Logo} data-tooltip-id="muiLogo" data-tooltip-content='MaterialUI'></img>
+            <ReactTooltip  id='muiLogo'/>
+            <img className='icon' id='node_Logo' alt='libraryIcon' src={node_Logo} data-tooltip-id="nodeLogo" data-tooltip-content='Node.js'></img>
+            <ReactTooltip  id='nodeLogo'/>
+            <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={chartjs_Logo} data-tooltip-id="chartLogo" data-tooltip-content='Chart.js'></img>
+            <ReactTooltip  id='chartLogo'/>
+            <img className='icon' id='sqlLogo' alt='libraryIcon' src={sqlLogo} data-tooltip-id="sqlLogo" data-tooltip-content='SQL'></img>
+            <ReactTooltip  id='sqlLogo'/>
+            <img className='icon' id='bootstrap_Logo' alt='libraryIcon' src={bootstrapLogo} data-tooltip-id="bootstrapLogo" data-tooltip-content='Bootstrap'></img>
+            <ReactTooltip  id='bootstrapLogo'/>
           </div>
         </div>
         <div>
         <SkillsRTitle name={'Learned'} DLObj={DLObj}/>
           <div className='imageContainer'>
-            <img className='icon' alt='learnedIcon' src={mongodb_Logo}></img>
-            <img className='icon' alt='learnedIcon' src={api_Logo}></img>
-            <img className='icon' alt='learnedIcon' src={git_Logo}></img>
-            <img className='icon' alt='learnedIcon' src={gitlab_Logo}></img>
-            <img className='icon' alt='learnedIcon' src={heroku_Logo}></img>
-            <img className='icon' alt='learnedIcon' src={jiraLogo}></img>
+            <img className='icon' alt='learnedIcon' src={mongodb_Logo} data-tooltip-id="mongoLogo" data-tooltip-content='MongoDB'></img>
+            <ReactTooltip  id='mongoLogo'/>
+            <img className='icon' alt='learnedIcon' src={api_Logo} data-tooltip-id="apiLogo" data-tooltip-content='API'></img>
+            <ReactTooltip  id='apiLogo'/>
+            <img className='icon' alt='learnedIcon' src={git_Logo} data-tooltip-id="gitLogo" data-tooltip-content='Git'></img>
+            <ReactTooltip  id='gitLogo'/>
+            <img className='icon' alt='learnedIcon' src={gitlab_Logo} data-tooltip-id="gitlabLogo" data-tooltip-content='Gitlab'></img>
+            <ReactTooltip  id='gitlabLogo'/>
+            <img className='icon' alt='learnedIcon' src={heroku_Logo} data-tooltip-id="herokuLogo" data-tooltip-content='Hekrou'></img>
+            <ReactTooltip  id='herokuLogo'/>
+            <img className='icon' alt='learneIcon' src={jiraLogo} data-tooltip-id="jiraLogo" data-tooltip-content='Jira'></img>
+            <ReactTooltip  id='jiraLogo'/>
           </div>
         </div>
       </div>
