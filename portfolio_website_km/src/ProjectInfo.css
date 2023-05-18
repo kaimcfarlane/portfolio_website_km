@@ -179,7 +179,9 @@
 }
 
 #demoBtn:hover {
-  text-decoration: none;
+  /* text-decoration: none; */
+  background-color: #16161a;
+  color: white;
 }
 
 #demoBtn:active {

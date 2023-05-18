@@ -14,6 +14,60 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
     const projectInfoImg = useRef()
     const closeBtn = useRef()
     const btnSpan = useRef()
+    const proTitle = useRef()
+    const proDesc = useRef()
+    const btnsContainer = useRef()
+    const logoBox = useRef()
+    const projectInfoContainer = useRef()
+    const rocket = useRef()
+    const codeBtn = useRef()
+    const demoBtn = useRef()
+    const world = useRef()
+
+    useEffect(()=>{
+        if(DLObj.isLight)
+        {
+            closeBtn.current.style.backgroundColor = '#ffffff00'
+            proTitle.current.style.backgroundColor = 'white'
+            proTitle.current.style.color = '#16161a'
+            proDesc.current.style.backgroundColor = 'white'
+            proDesc.current.style.color = '#16161a'
+            btnsContainer.current.style.backgroundColor = 'white'
+            logoBox.current.style.backgroundColor = 'white'
+            projectInfoContainer.current.style.backgroundColor = 'white'
+            rocket.current.style.backgroundColor = '#fff0'
+            world.current.style.backgroundColor = '#fff0'
+            demoBtn.current.style.backgroundColor = 'black'
+            demoBtn.current.style.color = 'white'
+            demoBtn.current.style.border = '1px solid #ffffff'
+            demoBtn.current.style.boxShadow = '#000 4px 4px 0 0, #fff 4px 4px 0 1px'
+            codeBtn.current.style.backgroundColor = 'black'
+            codeBtn.current.style.color = 'white'
+            codeBtn.current.style.border = '1px solid #ffffff'
+            codeBtn.current.style.boxShadow = '#000 4px 4px 0 0, #fff 4px 4px 0 1px'
+        }
+        else{
+            closeBtn.current.style.backgroundColor = '#ffffff00'
+            proTitle.current.style.backgroundColor = '#16161a'
+            proTitle.current.style.color = 'white'
+            proDesc.current.style.backgroundColor = '#16161a'
+            proDesc.current.style.color = 'white'
+            btnsContainer.current.style.backgroundColor = '#16161a'
+            logoBox.current.style.backgroundColor = '#16161a'
+            projectInfoContainer.current.style.backgroundColor = '#16161a'
+            rocket.current.style.backgroundColor = 'white'
+            world.current.style.backgroundColor = '#fff0'
+            demoBtn.current.style.backgroundColor = 'white'
+            demoBtn.current.style.color = '#16161a'
+            demoBtn.current.style.border = '1px solid #ffffff'
+            demoBtn.current.style.boxShadow = '#000 4px 4px 0 0, #fff 4px 4px 0 1px'
+            codeBtn.current.style.backgroundColor = '#16161a'
+            codeBtn.current.style.color = 'white'
+            codeBtn.current.style.border = '1px solid #ffffff'
+            codeBtn.current.style.boxShadow = '#000 4px 4px 0 0, #fff 4px 4px 0 1px'
+        }
+    }, [DLObj.isLight])
+
     
     const closeProject = () => {
         var newProject = selectedProjectInfo
@@ -57,18 +111,18 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
     }
 
   return (
-                <div id='projectInfoContainer'> 
+                <div ref={projectInfoContainer} id='projectInfoContainer'> 
                     <img ref={projectInfoImg} id='projectInfoImg' alt='' src={selectedProjectInfo.img[imgIndex]}></img>
-                    <h1 id='projectInfoTitle'>{selectedProjectInfo.title}</h1>
-                    <p id='projectInfoDesc'>{selectedProjectInfo.desc}</p>
-                    <div id='buttonsContainer'>
-                            <button id='demoBtn' role="button" onClick={() => {urlBtnClick(selectedProjectInfo.demoUrl)}}>Live Demo <span>&#128640;</span></button>
-                            <button id='codeBtn' onClick={() => {urlBtnClick(selectedProjectInfo.codeUrl)}}>Code <span>&#127757;</span></button>
+                    <h1 ref={proTitle} id='projectInfoTitle'>{selectedProjectInfo.title}</h1>
+                    <p ref={proDesc} id='projectInfoDesc'>{selectedProjectInfo.desc}</p>
+                    <div ref={btnsContainer} id='buttonsContainer'>
+                            <button ref={demoBtn} id='demoBtn' role="button" onClick={() => {urlBtnClick(selectedProjectInfo.demoUrl)}}>Live Demo <span ref={rocket}>&#128640;</span></button>
+                            <button ref={codeBtn} id='codeBtn' onClick={() => {urlBtnClick(selectedProjectInfo.codeUrl)}}>Code <span ref={world}>&#127757;</span></button>
                     </div>
                     <div ref={closeBtn} id="closeBtnContainer" class="arrow arrow--left" onClick={closeProject} onMouseOver={addArrowHoverCSS} onMouseLeave={removeArrowHoverCSS}>
                         <span ref={btnSpan}></span>
                     </div>
-                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '24px'}}>
+                    <div ref={logoBox} style={{display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '24px'}}>
                         <img alt='logo' src={selectedProjectInfo.logos[0] && selectedProjectInfo.logos[0]} style={{width: '30px', height: '30px'}}></img>
                         <img alt='logo' src={selectedProjectInfo.logos[1] && selectedProjectInfo.logos[1]} style={{width: selectedProjectInfo.title === 'Kiwi Pong' ? '27px' : '30px', height: selectedProjectInfo.title === 'Kiwi Pong' ? '27px' : '30px'}}></img>
                         <img alt='logo' src={selectedProjectInfo.logos[2] && selectedProjectInfo.logos[2]} style={{width: selectedProjectInfo.title === 'Recipeat' ? '26px' : '30px', height: selectedProjectInfo.title === 'Recipeat' ? '26px' : '30px', marginLeft: selectedProjectInfo.title === 'Recipeat' && '5px'}}></img>
