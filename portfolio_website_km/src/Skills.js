@@ -82,14 +82,22 @@ export default function Skills({DLObj}) {
 // });
 
 const { ref, inView, entry } = useInView({threshold: 0,})
+const imageContainer1 = useRef()
+const imageContainer2 = useRef()
+const imageContainer3 = useRef()
 
 useEffect(()=>{
   if(inView) {
     skillsText.current.classList.add("snappedLB")
-    console.log("SKILLS IN VIEWPORT")
+    imageContainer1.current.classList.add("snappedRS1")
+    imageContainer2.current.classList.add("snappedRS2")
+    imageContainer3.current.classList.add("snappedRS3")
   }
   else{
     skillsText.current.classList.remove("snappedLB")
+    imageContainer1.current.classList.remove("snappedRS1")
+    imageContainer2.current.classList.remove("snappedRS2")
+    imageContainer3.current.classList.remove("snappedRS3")
   }
 },[inView])
 
@@ -106,8 +114,8 @@ useEffect(()=>{
       </div>
       <div id='skillsContent' ref={ref}>
         <div>
-          <SkillsRTitle name={'Langauges'} DLObj={DLObj}/>
-          <div className='imageContainer'>
+          <SkillsRTitle inView={inView}  name={'Languages'} DLObj={DLObj}/>
+          <div ref={imageContainer1} className='imageContainer'>
             <img className='icon' alt='languageIcon' src={html_Icon} data-tooltip-id="htmlLogo" data-tooltip-content='HTML'></img>
             <ReactTooltip  id='htmlLogo'/>
             <img className='icon' alt='languageIcon' src={css_Icon} data-tooltip-id="cssLogo" data-tooltip-content='CSS'></img>
@@ -127,8 +135,8 @@ useEffect(()=>{
           </div>
         </div>
         <div>
-        <SkillsRTitle name={'Libraries'} DLObj={DLObj}/>
-          <div className='imageContainer'>
+        <SkillsRTitle inView={inView} name={'Libraries'} DLObj={DLObj}/>
+          <div ref={imageContainer2} className='imageContainer'>
             <img className='icon' id='react_Logo' alt='libraryIcon' src={react_Logo} data-tooltip-id="reactLogo" data-tooltip-content='React.js'></img>
             <ReactTooltip  id='reactLogo'/>
             <img className='icon' id='express_Logo' alt='libraryIcon' src={express_Logo} data-tooltip-id="expressLogo" data-tooltip-content='Express.js'></img>
@@ -146,8 +154,8 @@ useEffect(()=>{
           </div>
         </div>
         <div>
-        <SkillsRTitle name={'Learned'} DLObj={DLObj}/>
-          <div className='imageContainer'>
+        <SkillsRTitle inView={inView} name={'Learned'} DLObj={DLObj}/>
+          <div ref={imageContainer3} className='imageContainer'>
             <img className='icon' alt='learnedIcon' src={mongodb_Logo} data-tooltip-id="mongoLogo" data-tooltip-content='MongoDB'></img>
             <ReactTooltip  id='mongoLogo'/>
             <img className='icon' alt='learnedIcon' src={api_Logo} data-tooltip-id="apiLogo" data-tooltip-content='API'></img>
