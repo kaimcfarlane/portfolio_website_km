@@ -10,6 +10,10 @@
     font-size: 40px;
 }
 
+.snappedLB{
+    animation: 4s ease-out 0s 1 loadFromBtm;
+}
+
 #skillsContent{
     font-size: 20px;
 }
@@ -63,3 +67,31 @@
 #chartjs_Logo{
     margin-right: 20px;
 }
+
+@keyframes slideLeft {
+    100% { 
+      /* left: 86.5%;  */
+      left: "";
+      right: 0;
+    }
+  }
+  
+  @keyframes slideRight {
+    0%{
+      /* left: 86.5%; */
+      right: 0;
+    }
+    100%{
+      left: 100%;
+      right: "";
+    }
+  }
+
+  @keyframes loadFromBtm {
+    0% {
+        transform: translateY(400px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+  }

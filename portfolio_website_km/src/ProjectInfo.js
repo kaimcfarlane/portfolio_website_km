@@ -45,8 +45,18 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
             codeBtn.current.style.color = 'white'
             codeBtn.current.style.border = '1px solid #ffffff'
             codeBtn.current.style.boxShadow = '#000 4px 4px 0 0, #fff 4px 4px 0 1px'
+            projectInfoContainer.current.style.borderStyle = 'none'
+            // projectInfoContainer.current.style.borderRadius = '4px'
+            // projectInfoContainer.current.style.borderWidth = '7px'
+            // projectInfoContainer.current.style.borderColor = 'black'
+            projectInfoContainer.current.style.boxShadow = 'none'
         }
         else{
+            // projectInfoContainer.current.style.borderRadius = '4px'
+            // projectInfoContainer.current.style.borderWidth = '5px'
+            // projectInfoContainer.current.style.borderColor = 'white'
+            // projectInfoContainer.current.style.borderStyle = 'double'
+            projectInfoContainer.current.style.boxShadow = 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px'
             closeBtn.current.style.backgroundColor = '#ffffff00'
             proTitle.current.style.backgroundColor = '#16161a'
             proTitle.current.style.color = 'white'

@@ -28,6 +28,7 @@ import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 export default function Skills({DLObj}) {
 
+  const skillsText = useRef()
   const titleOne = useRef()
   const titleTwo = useRef()
   const subtitle = useRef()
@@ -47,11 +48,44 @@ export default function Skills({DLObj}) {
     }
 },[DLObj])
 
+let callback = (entries, observer) => {
+  entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+          /* remove class when snap target becomes invisible */
+          entry.current.target.classList.remove("snappedLB");
+      } else {
+        console.log("OBESERVER BEING RUN")
+          /* add class when snap target becomes visible */
+          entry.current.target.classList.add("snappedLB");
+      }
+  });
+};
+// projectInfoBackground.current.classList.remove('projectShadow')
+
+/* only 50% of the element needs to be visible */
+let options = {
+  threshold: 0.5
+}
+
+let observer = new IntersectionObserver(callback, options);
+
+// /* do this to #section-2 specifically */
+// let section2 = document.querySelector("#section-2")
+// console.log(skillsText)
+// if(skillsText) {
+  
+// }
+
+document.addEventListener("DOMContentLoaded", function(){
+  observer.observe(skillsText);
+});
+
+
 
   return (
   <>
     <section id='skillsContainer'>
-      <div id='skillsText'>
+      <div ref={skillsText} id='skillsText'>
         {/* Skillset I'm Skilled My Talent Im talented */}
         <h1 ref={titleOne}>I'm</h1>
         <h1 ref={titleTwo}>Experienced</h1>
