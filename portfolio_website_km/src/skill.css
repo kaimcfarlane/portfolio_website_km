@@ -11,7 +11,7 @@
 }
 
 .snappedLB{
-    animation: 4s ease-out 0s 1 loadFromBtm;
+    animation: 1s ease-out 0s 1 loadFromBtm;
 }
 
 #skillsContent{

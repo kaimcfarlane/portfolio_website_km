@@ -286,7 +286,7 @@ export default function Achieve({DLObj}) {
     <>
         <div id='titleContainer'>
             <h1 ref={achieveTitle}>I'm an Innovator</h1>
-            <p ref={achieveSubtitle} id='achieveSubtitle'>-Work and Awards-</p>
+            <p ref={achieveSubtitle} id='achieveSubtitle'>&lt;Work and Awards/&gt;</p>
             <img alt='' src=''></img>
         </div>
         <div id='workContainer'>

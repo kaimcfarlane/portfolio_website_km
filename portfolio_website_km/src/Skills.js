@@ -25,6 +25,7 @@ import sqlLogo from './sqlLogo.png'
 import bootstrapLogo from './bootstraplogo.png'
 // import { Tooltip } from 'react-tooltip'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
+import { useInView } from 'react-intersection-observer'
 
 export default function Skills({DLObj}) {
 
@@ -48,26 +49,26 @@ export default function Skills({DLObj}) {
     }
 },[DLObj])
 
-let callback = (entries, observer) => {
-  entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-          /* remove class when snap target becomes invisible */
-          entry.current.target.classList.remove("snappedLB");
-      } else {
-        console.log("OBESERVER BEING RUN")
-          /* add class when snap target becomes visible */
-          entry.current.target.classList.add("snappedLB");
-      }
-  });
-};
+// let callback = (entries, observer) => {
+//   entries.forEach(entry => {
+//       if (!entry.isIntersecting) {
+//           /* remove class when snap target becomes invisible */
+//           entry.current.target.classList.remove("snappedLB");
+//       } else {
+//         console.log("OBESERVER BEING RUN")
+//           /* add class when snap target becomes visible */
+//           entry.current.target.classList.add("snappedLB");
+//       }
+//   });
+// };
 // projectInfoBackground.current.classList.remove('projectShadow')
 
 /* only 50% of the element needs to be visible */
-let options = {
-  threshold: 0.5
-}
+// let options = {
+//   threshold: 0.5
+// }
 
-let observer = new IntersectionObserver(callback, options);
+// let observer = new IntersectionObserver(callback, options);
 
 // /* do this to #section-2 specifically */
 // let section2 = document.querySelector("#section-2")
@@ -76,22 +77,34 @@ let observer = new IntersectionObserver(callback, options);
   
 // }
 
-document.addEventListener("DOMContentLoaded", function(){
-  observer.observe(skillsText);
-});
+// document.addEventListener("DOMContentLoaded", function(){
+//   observer.observe(skillsText);
+// });
+
+const { ref, inView, entry } = useInView({threshold: 0,})
+
+useEffect(()=>{
+  if(inView) {
+    skillsText.current.classList.add("snappedLB")
+    console.log("SKILLS IN VIEWPORT")
+  }
+  else{
+    skillsText.current.classList.remove("snappedLB")
+  }
+},[inView])
 
 
 
   return (
   <>
-    <section id='skillsContainer'>
+    <section inView={inView} id='skillsContainer'>
       <div ref={skillsText} id='skillsText'>
         {/* Skillset I'm Skilled My Talent Im talented */}
         <h1 ref={titleOne}>I'm</h1>
         <h1 ref={titleTwo}>Experienced</h1>
         <p ref={subtitle}>- 3 Years of Code -</p>
       </div>
-      <div id='skillsContent'>
+      <div id='skillsContent' ref={ref}>
         <div>
           <SkillsRTitle name={'Langauges'} DLObj={DLObj}/>
           <div className='imageContainer'>

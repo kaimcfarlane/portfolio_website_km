@@ -179,7 +179,7 @@ export default function Projects({DLObj}) {
     <>
       <section ref={titleContainer} id='projectTitleContainer'>
         <h1 ref={title} id='projectTitle'>I'm a Creator</h1>
-        <p ref={subTitle} id='projectSubTitle'>-Front and Backend-</p>
+        <p ref={subTitle} id='projectSubTitle'>&lt;Front and Backend/&gt;</p>
       </section>
       <section ref={projectContainer} id='projectContainer'>
         <div className='projectSubBox' ref={topProjects} id='topProjects'>
