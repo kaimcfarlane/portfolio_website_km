@@ -1,4 +1,16 @@
 #contactTitleContainer{
+  /* padding-top: 70px; */
+  /* padding-top: 45px; */
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+#contactTitleContainer{
     display: flex;
     flex-direction: column;
 }

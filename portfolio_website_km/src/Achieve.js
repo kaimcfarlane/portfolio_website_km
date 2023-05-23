@@ -1,4 +1,5 @@
 import {React, useRef, useEffect, useState} from 'react'
+import { useInView } from 'react-intersection-observer'
 import './achieve.css'
 import purple_Logo from './purpleawardLogo.png'
 import kiwi_WebsitePic from './kiwiWebsitePic.png'
@@ -282,19 +283,40 @@ export default function Achieve({DLObj}) {
         }
    }
 
+   const { ref, inView, entry } = useInView({threshold: 0,})
+   const titleContainer = useRef()
+   const awardsContainer = useRef()
+
+   useEffect(()=>{
+    if(inView) {
+      titleContainer.current.classList.add("snappedLBTitle")
+      awardsContainer.current.classList.add("snappedLBLate")
+      job1.current.classList.add("snappedRS1")
+      job2.current.classList.add("snappedRS2")
+      job3.current.classList.add("snappedRS3")
+    }
+    else{
+      titleContainer.current.classList.remove("snappedLB")
+      awardsContainer.current.classList.remove("snappedLBLate")
+      job1.current.classList.remove("snappedRS1")
+      job2.current.classList.remove("snappedRS2")
+      job3.current.classList.remove("snappedRS3")
+    }
+  },[inView])
+
   return (
     <>
-        <div id='titleContainer'>
+        <div ref={titleContainer} id='titleContainer'>
             <h1 ref={achieveTitle}>I'm an Innovator</h1>
             <p ref={achieveSubtitle} id='achieveSubtitle'>&lt;Work and Awards/&gt;</p>
             <img alt='' src=''></img>
         </div>
-        <div id='workContainer'>
+        <div ref={ref} id='workContainer'>
                 <div ref={job1} className='job' id='job1'>
                     <h1 ref={jobTitle1} className='jobh1'>Website Developer and Founder</h1>
                     <h2 ref={jobSub1} className='jobh2'>Kiwi-El-Gato</h2>
                     <img ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
-                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Developed educational website with digital art, designs, animations, and code</p>
+                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Created e-learning organization and educational website through digital art, designs, animations, and code</p>
                 </div>
                 <div ref={job2} className='job' id='job2'>
                     <h1 ref={jobTitle2} className='jobh1'>Lead Software Developer Intern</h1>
@@ -306,11 +328,11 @@ export default function Achieve({DLObj}) {
                     <h1 ref={jobTitle3} className='jobh1'>Website Application Developer Intern</h1>
                     <h2 ref={jobSub3} className='jobh2'>UF Information Technology</h2>
                     <img name={'imgA'} ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
-                    <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Redesigning and implementing new cards feature for the personal UF Workspace with javascript frameworks</p>
+                    <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Redesigned and implemented new cards feature for the personal UF Workspace with React.js, Node.js, and SQL</p>
                 </div>
             </div>
         <section id='achievePageContainer'>
-            <div id='awardsContainer'>
+            <div ref={awardsContainer} id='awardsContainer'>
                 <div className='award'>
                     <img className='awardImg' alt='awardLogo' src={purple_Logo}></img>
                     <p ref={awardTop1} className='awardText1'>Miami Herald's Silver Knight Award</p>

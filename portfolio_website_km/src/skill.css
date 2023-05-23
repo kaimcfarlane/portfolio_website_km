@@ -8,26 +8,28 @@
 
 #skillsText{
     font-size: 40px;
+    opacity: 0;
 }
 
 .snappedLB{
-    animation: 1s ease-out 0s 1 loadFromBtm;
+    animation: 1s ease-out 0.5s 1 loadFromBtm;
+    animation-fill-mode: forwards; 
 }
 
 .snappedRS1{
-    animation: 1s ease-out 1s 1 slideRight;
+    animation: 1s ease-out 1.5s 1 slideRight;
     animation-fill-mode: forwards;  
     opacity: 0;
 }
 
 .snappedRS2{
-    animation: 1s ease-out 2s 1 slideRight;
+    animation: 1s ease-out 2.5s 1 slideRight;
     animation-fill-mode: forwards;  
     opacity: 0;
 }
 
 .snappedRS3{
-    animation: 1s ease-out 3s 1 slideRight;
+    animation: 1s ease-out 3.5s 1 slideRight;
     animation-fill-mode: forwards;  
     opacity: 0;
 }
@@ -108,8 +110,10 @@
   @keyframes loadFromBtm {
     0% {
         transform: translateY(400px);
+        opacity: 0;
       }
       100% {
         transform: translateY(0);
+        opacity: 100%;
       }
   }

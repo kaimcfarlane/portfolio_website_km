@@ -20,27 +20,27 @@ export default function SkillsRTitle({inView, name, DLObj}) {
         if(inView){
           h1.current.classList.add("snappedRS1")
         }
-        else{
-          h1.current.classList.remove("snappedRS1")
-        }
+        // else{
+        //   h1.current.classList.remove("snappedRS1")
+        // }
       }
       else if(name === 'Libraries')
       {
         if(inView){
           h1.current.classList.add("snappedRS2")
         }
-        else{
-          h1.current.classList.remove("snappedRS2")
-        }
+        // else{
+        //   h1.current.classList.remove("snappedRS2")
+        // }
       }
       else if(name === 'Learned')
       {
         if(inView){
           h1.current.classList.add("snappedRS3")
         }
-        else{
-          h1.current.classList.remove("snappedRS3")
-        }
+        // else{
+        //   h1.current.classList.remove("snappedRS3")
+        // }
       }
     },[inView])
 

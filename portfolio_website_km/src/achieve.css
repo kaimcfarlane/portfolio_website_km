@@ -12,6 +12,7 @@
     align-items: center;
     font-size: 30px;
     padding-bottom: 20px;
+    opacity: 0;
 }
 
 #workContainer{
@@ -71,16 +72,19 @@
 #job1{
     /* padding-left: 20px;
     padding-right: 20px; */
+    opacity: 0;
 }
 
 #job2{
     /* padding-left: 20px;
     padding-right: 20px; */
+    opacity: 0;
 }
 
 #job3{
     /* padding-left: 21px;
     padding-right: 21px; */
+    opacity: 0;
 }
 
 .jobh1{
@@ -184,6 +188,7 @@
     display: flex;
     justify-content: space-around;
     margin-top: 25px;
+    opacity: 0;
 }
 
 #achieveSubtitle{
@@ -210,4 +215,36 @@
 .awardText2{
     font-weight: 400;
     margin-top: -13px;
+}
+
+@keyframes loadFromBtmTitle {
+    0% {
+        transform: translateY(400px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 100%;
+      }
+  }
+
+@keyframes loadFromBtm {
+    0% {
+        transform: translateY(400px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 100%;
+      }
+  }
+
+.snappedLBTitle{
+    animation: 1s ease-out 0.5s 1 loadFromBtmTitle;
+    animation-fill-mode: forwards;  
+}
+
+.snappedLBLate{
+    animation: 1s ease-out 4.5s 1 loadFromBtm;
+    animation-fill-mode: forwards;  
 }

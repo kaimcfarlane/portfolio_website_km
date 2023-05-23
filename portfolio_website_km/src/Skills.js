@@ -93,12 +93,12 @@ useEffect(()=>{
     imageContainer2.current.classList.add("snappedRS2")
     imageContainer3.current.classList.add("snappedRS3")
   }
-  else{
-    skillsText.current.classList.remove("snappedLB")
-    imageContainer1.current.classList.remove("snappedRS1")
-    imageContainer2.current.classList.remove("snappedRS2")
-    imageContainer3.current.classList.remove("snappedRS3")
-  }
+  // else{
+  //   skillsText.current.classList.remove("snappedLB")
+  //   imageContainer1.current.classList.remove("snappedRS1")
+  //   imageContainer2.current.classList.remove("snappedRS2")
+  //   imageContainer3.current.classList.remove("snappedRS3")
+  // }
 },[inView])
 
 

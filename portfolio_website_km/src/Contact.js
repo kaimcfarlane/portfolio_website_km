@@ -82,7 +82,7 @@ export default function Contact({DLObj}) {
     },[DLObj])
   return (
     <div ref={contact}>
-        <section ref={contactTitleContainer} id='titleContainer'>
+        <section ref={contactTitleContainer} id='contactTitleContainer'>
             <h1 ref={contactTitle} id='contactTitle'>I'm Excited to Hear From You</h1>
             <p ref={contactSubtitle} id='contactSubtitle'>&lt;Come Say Hi/&gt;</p>
         </section>
