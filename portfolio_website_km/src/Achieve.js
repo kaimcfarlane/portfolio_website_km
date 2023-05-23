@@ -17,8 +17,31 @@ import UF_Logo from './UF_Logo.png'
 import codingPic1 from './codingPic1.jpg'
 import ufitPic2 from './ufitPic2.jpg'
 import vrPic1 from './virtualRealityPic1.jpg'
-import vr3 from './vr3.jpg'
+
 import code3 from './code3.jpg'
+
+import vr3 from './vr3.jpg'
+import mods1 from './modstankimg1.png'
+import mods2 from './mods2.png'
+import mods3 from './mods3.png'
+import mods4 from './mods4.png'
+import mods5 from './mods5.png'
+import mods6 from './mods6.png'
+import mods7 from './mods7.png'
+import mods8 from './mods8.png'
+
+import kiwi1 from './kiwi1.png'
+import kiwi2 from './kiwi2.png'
+import kiwi3 from './kiwi3.png'
+import kiwi4 from './kiwi4.png'
+import kiwi5 from './kiwi5.png'
+import kiwi6 from './kiwi6.png'
+import kiwi7 from './kiwi7.png'
+import kiwi8 from './kiwi8.png'
+import kiwi9 from './kiwi9.png'
+import kiwi10 from './kiwi11.png'
+import kiwi11 from './kiwi10.png'
+import kiwi12 from './kiwi12.png'
 
 
 //It works but we want seperate images to display upon clicking an arrow on the img
