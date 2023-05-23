@@ -50,6 +50,7 @@ import ufit5 from './ufit5.jpeg'
 import ufit6 from './ufit6.jpeg'
 import ufit7 from './ufit7.jpeg'
 import ufit8 from './ufit8.jpeg'
+import ufit9 from './ufit3.png'
 
 
 //It works but we want seperate images to display upon clicking an arrow on the img
@@ -285,21 +286,25 @@ export default function Achieve({DLObj}) {
     // }
     
     const kiwiPicArr = [kiwi1,kiwi2,kiwi3,kiwi4,kiwi5,kiwi6,kiwi7,kiwi8,kiwi9,kiwi10,kiwi11,kiwi12]
-    const modsPicArr = [mods1,mods2,mods3,mods4,mods5,mods6,mods7,mods8]
-    const ufitPicArr = [ufit3,ufit4,ufit5,ufit6,ufit7]
+    const modsPicArr = [mods2,mods3,mods4,mods5,mods6,mods8]
+    const ufitPicArr = [ufit3,ufit4,ufit5,ufit6,ufit7,ufit9]
     const pictureSwap = (element, picArr) => {
             var i=0
             setInterval(()=> {
-                if(i === picArr.length)
+                if(i === picArr.length-1)
                 {
                     i=0
                 }
                 element.current.style.opacity = 0;
-                element.current.src = picArr[i]
-                element.current.style.opacity = 100;
+                setTimeout(()=> {
+                    element.current.src = picArr[i]
+                    setTimeout(()=>{
+                        element.current.style.opacity = 100;
+                    },100)
+                },500)
                 i++
                 console.log('NEW PICTURE SRC ' + picArr[i])
-            },5000)
+            },6000)
     }
 
     
