@@ -179,8 +179,8 @@ export default function Projects({DLObj}) {
     useEffect(()=>{
       if(inView) {
         titleContainer.current.classList.add("snappedLB")
-        topProjects.current.classList.add("snappedRS1")
-        botProjects.current.classList.add("snappedRS2")
+        // topProjects.current.classList.add("snappedRS1")
+        // botProjects.current.classList.add("snappedRS2")
         // imageContainer3.current.classList.add("snappedRS3")
       }
       else{
@@ -199,14 +199,14 @@ export default function Projects({DLObj}) {
       </section>
       <section ref={projectContainer} id='projectContainer'>
         <div className='projectSubBox' ref={topProjects} id='topProjects'>
-              <Project DLObj={DLObj} info={info1} projectClick={projectClick} index={1}/>
-              <Project DLObj={DLObj}  info={info2} projectClick={projectClick} index={2}/>
-              <Project DLObj={DLObj} info={info3} projectClick={projectClick} index={3}/>
+              <Project DLObj={DLObj} inView={inView} info={info1} projectClick={projectClick} index={1}/>
+              <Project DLObj={DLObj} inView={inView}  info={info2} projectClick={projectClick} index={2}/>
+              <Project DLObj={DLObj} inView={inView} info={info3} projectClick={projectClick} index={3}/>
         </div>
         <div className='projectSubBox' ref={botProjects} id='botProjects'>
-            <Project DLObj={DLObj} info={info4} projectClick={projectClick} index={4}/>
-            <Project DLObj={DLObj} info={info5} projectClick={projectClick} index={5}/>
-            <Project DLObj={DLObj} info={info6} projectClick={projectClick} index={6}/>
+            <Project DLObj={DLObj} inView={inView} info={info4} projectClick={projectClick} index={4}/>
+            <Project DLObj={DLObj} inView={inView} info={info5} projectClick={projectClick} index={5}/>
+            <Project DLObj={DLObj} inView={inView} info={info6} projectClick={projectClick} index={6}/>
         </div>
       </section>
       <section ref={projectInfoBackground} id='projectInfoBackground'>

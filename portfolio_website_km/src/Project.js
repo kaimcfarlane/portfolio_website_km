@@ -2,7 +2,7 @@ import { hover } from '@testing-library/user-event/dist/hover'
 import {React, useEffect, useRef} from 'react'
 import './project.css'
 
-export default function Project({info, DLObj, projectClick, index}) {
+export default function Project({info, DLObj, projectClick, index, inView}) {
 
   const project = useRef()
   const projectImg = useRef()
@@ -11,6 +11,49 @@ export default function Project({info, DLObj, projectClick, index}) {
   const tool1 = useRef()
   const tool2 = useRef()
   const tool3 = useRef()
+
+  useEffect(()=>{
+    if(inView) {
+      if(index===1){
+        project.current.classList.add("snappedLBP1")
+      }
+      else if(index===2) {
+        project.current.classList.add("snappedLBP2")
+      }
+      else if(index===3) {
+        project.current.classList.add("snappedLBP3")
+      }
+      else if(index===4) {
+        project.current.classList.add("snappedLBP4")
+      }
+      else if(index===5) {
+        project.current.classList.add("snappedLBP5")
+      }
+      else if(index===6) {
+        project.current.classList.add("snappedLBP6")
+      }
+    }
+    else{
+      if(index===1){
+        project.current.classList.remove("snappedLBP1")
+      }
+      else if(index===2) {
+        project.current.classList.remove("snappedLBP2")
+      }
+      else if(index===3) {
+        project.current.classList.remove("snappedLBP3")
+      }
+      else if(index===4) {
+        project.current.classList.remove("snappedLBP4")
+      }
+      else if(index===5) {
+        project.current.classList.remove("snappedLBP5")
+      }
+      else if(index===6) {
+        project.current.classList.remove("snappedLBP6")
+      }
+    }
+  },[inView])
 
   //Use Icons or projcts images
 
