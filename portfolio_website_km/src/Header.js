@@ -368,7 +368,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
     
     <>
     <section id={styles.header}>
-    <a href='#mainPage' id={styles.logoHREF}>
+    <a href='' id={styles.logoHREF}>
         <div ref={logoText} id={styles.logoText} onClick={HomeBtn}>KM</div>
     </a>
     <div id={styles.burgerMenu}>

@@ -304,7 +304,7 @@ export default function Achieve({DLObj}) {
                 },500)
                 i++
                 console.log('NEW PICTURE SRC ' + picArr[i])
-            },6000)
+            },7000)
     }
 
     
