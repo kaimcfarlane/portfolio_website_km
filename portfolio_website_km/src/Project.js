@@ -34,24 +34,24 @@ export default function Project({info, DLObj, projectClick, index, inView}) {
       }
     }
     else{
-      if(index===1){
-        project.current.classList.remove("snappedLBP1")
-      }
-      else if(index===2) {
-        project.current.classList.remove("snappedLBP2")
-      }
-      else if(index===3) {
-        project.current.classList.remove("snappedLBP3")
-      }
-      else if(index===4) {
-        project.current.classList.remove("snappedLBP4")
-      }
-      else if(index===5) {
-        project.current.classList.remove("snappedLBP5")
-      }
-      else if(index===6) {
-        project.current.classList.remove("snappedLBP6")
-      }
+      // if(index===1){
+      //   project.current.classList.remove("snappedLBP1")
+      // }
+      // else if(index===2) {
+      //   project.current.classList.remove("snappedLBP2")
+      // }
+      // else if(index===3) {
+      //   project.current.classList.remove("snappedLBP3")
+      // }
+      // else if(index===4) {
+      //   project.current.classList.remove("snappedLBP4")
+      // }
+      // else if(index===5) {
+      //   project.current.classList.remove("snappedLBP5")
+      // }
+      // else if(index===6) {
+      //   project.current.classList.remove("snappedLBP6")
+      // }
     }
   },[inView])
 

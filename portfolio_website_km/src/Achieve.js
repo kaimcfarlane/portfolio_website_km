@@ -284,21 +284,44 @@ export default function Achieve({DLObj}) {
     //     projectClick(index)
     // }
     
-    useEffect(() => {
-        setInterval(() => {
-            if(img3.current.name === 'imgA') 
-            {
-                img3.current.src = vr3
-                img3.current.name = 'imgB'
-            } 
-            else
-            {
-                img3.current.src = code3
-                img3.current.name = 'imgA'
-            }
-            console.log(img3.current.src)
-        }, 6000)
-    },[])
+    const kiwiPicArr = [kiwi1,kiwi2,kiwi3,kiwi4,kiwi5,kiwi6,kiwi7,kiwi8,kiwi9,kiwi10,kiwi11,kiwi12]
+    const modsPicArr = [mods1,mods2,mods3,mods4,mods5,mods6,mods7,mods8]
+    const ufitPicArr = [ufit3,ufit4,ufit5,ufit6,ufit7]
+    const pictureSwap = (element, picArr) => {
+            var i=0
+            setInterval(()=> {
+                if(i === picArr.length)
+                {
+                    i=0
+                }
+                element.current.style.opacity = 0;
+                element.current.src = picArr[i]
+                element.current.style.opacity = 100;
+                i++
+                console.log('NEW PICTURE SRC ' + picArr[i])
+            },5000)
+    }
+
+    
+
+    
+
+    // useEffect(() => {
+    //     // setInterval(() => {
+    //     //     if(img3.current.name === 'imgA') 
+    //     //     {
+    //     //         img3.current.src = vr3
+    //     //         img3.current.name = 'imgB'
+    //     //     } 
+    //     //     else
+    //     //     {
+    //     //         img3.current.src = code3
+    //     //         img3.current.name = 'imgA'
+    //     //     }
+    //     //     console.log(img3.current.src)
+    //     // }, 6000)
+       
+    // },[inView])
     
 
     const backgroundHoverLeave = (name) => {
@@ -325,6 +348,9 @@ export default function Achieve({DLObj}) {
       job1.current.classList.add("snappedRS1")
       job2.current.classList.add("snappedRS2")
       job3.current.classList.add("snappedRS3")
+      pictureSwap(img1,kiwiPicArr)
+      pictureSwap(img2,modsPicArr)
+      pictureSwap(img3,ufitPicArr)
     }
     else{
     //   titleContainer.current.classList.remove("snappedLB")
