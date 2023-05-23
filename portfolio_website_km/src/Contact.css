@@ -8,6 +8,7 @@
   align-items: center;
   font-size: 30px;
   padding-bottom: 20px;
+  opacity: 0;
 }
 
 #contactTitleContainer{
@@ -28,6 +29,7 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    opacity: 0;
 }
 
 #form{
@@ -316,6 +318,7 @@
     justify-content: center;
     align-items: center;
     gap: 28px;
+    opacity: 0;
 }
 
 .rectSpan{
@@ -383,6 +386,7 @@
     justify-content: center;
     margin-top: 5px;
     user-select: none;
+    opacity: 0;
 }
 
 /* .whiteUnderline:focus-visible{
@@ -393,4 +397,12 @@
     border-bottom-color: #000000;
 } */
 
+.snappedLBContact{
+  animation: 1s ease-out 1.5s 1 loadFromBtm;
+  animation-fill-mode: forwards; 
+}
 
+.snappedLBContact2{
+  animation: 1s ease-out 2.0s 1 loadFromBtm;
+  animation-fill-mode: forwards; 
+}

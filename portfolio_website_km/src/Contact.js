@@ -1,4 +1,5 @@
 import {React, useRef, useEffect} from 'react'
+import { useInView } from 'react-intersection-observer'
 import './Contact.css'
 import purpleCopyright_Logo from './purpleCopyrightLogo.png'
 
@@ -17,6 +18,8 @@ export default function Contact({DLObj}) {
     const footerGithub = useRef()
     const footerLinkedin = useRef()
     const submitBtn = useRef()
+    const footerText = useRef()
+    const copyrightContainer = useRef()
 
     const name = useRef()
     const nameTitle = useRef()
@@ -80,6 +83,29 @@ export default function Contact({DLObj}) {
     submitSpan.current.classList.remove('Header_lightMode__Po-Zo')
     submitSpan.current.classList.remove('Header_darkMode__vKGtH')
     },[DLObj])
+
+    const { ref, inView, entry } = useInView({threshold: 0,})
+    
+    useEffect(()=>{
+      if(inView) {
+        contactTitleContainer.current.classList.add("snappedLB")
+        formContainer.current.classList.add('snappedLBContact')
+        footerText.current.classList.add('snappedLBContact2')
+        copyrightContainer.current.classList.add('snappedLBContact2')
+        // topProjects.current.classList.add("snappedRS1")
+        // botProjects.current.classList.add("snappedRS2")
+        // imageContainer3.current.classList.add("snappedRS3")
+      }
+      else{
+        // contactTitleContainer.current.classList.remove("snappedLB")
+        // formContainer.current.classList.remove('snappedLBContact')
+        // footerText.current.classList.remove('snappedLBContact2')
+        // copyrightContainer.current.classList.remove('snappedLBContact2')
+        // topProjects.current.classList.remove("snappedRS1")
+        // botProjects.current.classList.remove("snappedRS2")
+      }
+    },[inView])
+
   return (
     <div ref={contact}>
         <section ref={contactTitleContainer} id='contactTitleContainer'>
@@ -88,7 +114,7 @@ export default function Contact({DLObj}) {
         </section>
         <section ref={formContainer} id='formContainer'>
             <form id="form" action="https://formsubmit.co/kaimcfarlane43@gmail.com" method="POST">
-                <div id='contactInfo'>
+                <div ref={ref} id='contactInfo'>
                     <div id='nameContainer'>
                         <label ref={nameTitle} id='nameTitle'>
                             Name
@@ -115,7 +141,7 @@ export default function Contact({DLObj}) {
                 </div>}
             </form>
         </section>
-        <section id='footerText'>
+        <section ref={footerText} id='footerText'>
                 <a ref={footerLinkedin} id='footerLinkedin' href='https://www.linkedin.com/in/kaimcfarlane/' target='_blank' rel='noreferrer'>LinkedIn</a>
                 <span ref={rectSpan1} className='rectSpan'></span>
                 {/* <p id='footerEmail'>kaimcfarlane43@gmail.com</p> */}
@@ -123,7 +149,7 @@ export default function Contact({DLObj}) {
                 <span ref={rectSpan2} className='rectSpan'></span>
                 <a ref={footerGithub} id='footerGithub' href='https://github.com/kaimcfarlane' target='_blank' rel='noreferrer'>GitHub</a>
         </section>
-        <section id='copyrightContainer'>
+        <section ref={copyrightContainer} id='copyrightContainer'>
             <img id='copyrightLogo' src={purpleCopyright_Logo} alt='copyrightLogo'></img>
             <p ref={copyrightName} id='copyrightName'>Kai McFarlane 2023</p>
         </section>

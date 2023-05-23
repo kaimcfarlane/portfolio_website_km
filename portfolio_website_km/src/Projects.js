@@ -1,4 +1,5 @@
 import {React, useEffect, useRef, useState} from 'react'
+import { useInView } from 'react-intersection-observer'
 import Project from './Project'
 import tankPicture from './modstankPic.png'
 import recipeImg1 from './recipeatImg1.png'
@@ -173,13 +174,28 @@ export default function Projects({DLObj}) {
         projectInfoBox.current.style.backgroundColor = '#ffffff00'
     }, [DLObj.isLight])
 
-  
+    const { ref, inView, entry } = useInView({threshold: 0,})
+    
+    useEffect(()=>{
+      if(inView) {
+        titleContainer.current.classList.add("snappedLB")
+        topProjects.current.classList.add("snappedRS1")
+        botProjects.current.classList.add("snappedRS2")
+        // imageContainer3.current.classList.add("snappedRS3")
+      }
+      else{
+        // titleContainer.current.classList.remove("snappedLB")
+        // topProjects.current.classList.remove("snappedRS1")
+        // botProjects.current.classList.remove("snappedRS2")
+      }
+    },[inView])
 
   return (
     <>
       <section ref={titleContainer} id='projectTitleContainer'>
         <h1 ref={title} id='projectTitle'>I'm a Creator</h1>
         <p ref={subTitle} id='projectSubTitle'>&lt;Front and Backend/&gt;</p>
+        <span ref={ref}></span>
       </section>
       <section ref={projectContainer} id='projectContainer'>
         <div className='projectSubBox' ref={topProjects} id='topProjects'>

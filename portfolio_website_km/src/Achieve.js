@@ -43,6 +43,14 @@ import kiwi10 from './kiwi11.png'
 import kiwi11 from './kiwi10.png'
 import kiwi12 from './kiwi12.png'
 
+import ufit2 from './ufit2.png'
+import ufit3 from './ufit3.jpeg'
+import ufit4 from './ufit4.jpeg'
+import ufit5 from './ufit5.jpeg'
+import ufit6 from './ufit6.jpeg'
+import ufit7 from './ufit7.jpeg'
+import ufit8 from './ufit8.jpeg'
+
 
 //It works but we want seperate images to display upon clicking an arrow on the img
 //Weve tried with just clicking the image for the functionality but our we are not mapping the array with thenew source correctly
@@ -319,11 +327,11 @@ export default function Achieve({DLObj}) {
       job3.current.classList.add("snappedRS3")
     }
     else{
-      titleContainer.current.classList.remove("snappedLB")
-      awardsContainer.current.classList.remove("snappedLBLate")
-      job1.current.classList.remove("snappedRS1")
-      job2.current.classList.remove("snappedRS2")
-      job3.current.classList.remove("snappedRS3")
+    //   titleContainer.current.classList.remove("snappedLB")
+    //   awardsContainer.current.classList.remove("snappedLBLate")
+    //   job1.current.classList.remove("snappedRS1")
+    //   job2.current.classList.remove("snappedRS2")
+    //   job3.current.classList.remove("snappedRS3")
     }
   },[inView])
 
