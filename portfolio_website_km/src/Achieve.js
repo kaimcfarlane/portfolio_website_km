@@ -50,7 +50,7 @@ import ufit5 from './ufit5.jpeg'
 import ufit6 from './ufit6.jpeg'
 import ufit7 from './ufit7.jpeg'
 import ufit8 from './ufit8.jpeg'
-import ufit9 from './ufit3.png'
+import ufit9 from './ufit3.jpeg'
 
 
 //It works but we want seperate images to display upon clicking an arrow on the img
@@ -291,7 +291,7 @@ export default function Achieve({DLObj}) {
     const pictureSwap = (element, picArr) => {
             var i=0
             setInterval(()=> {
-                if(i === picArr.length-1)
+                if(i === picArr.length)
                 {
                     i=0
                 }
@@ -303,7 +303,6 @@ export default function Achieve({DLObj}) {
                         i++
                     },100)
                 },500)
-                console.log('NEW PICTURE SRC ' + picArr[i])
             },7000)
     }
 
