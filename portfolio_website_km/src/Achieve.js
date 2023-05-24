@@ -39,8 +39,8 @@ import kiwi6 from './kiwi6.png'
 import kiwi7 from './kiwi7.png'
 import kiwi8 from './kiwi8.png'
 import kiwi9 from './kiwi9.png'
-import kiwi10 from './kiwi11.png'
-import kiwi11 from './kiwi10.png'
+import kiwi10 from './kiwi10.png'
+import kiwi11 from './kiwi11.png'
 import kiwi12 from './kiwi12.png'
 
 import ufit2 from './ufit2.png'
@@ -285,9 +285,9 @@ export default function Achieve({DLObj}) {
     //     projectClick(index)
     // }
     
-    const kiwiPicArr = [kiwi1,kiwi2,kiwi3,kiwi4,kiwi5,kiwi6,kiwi7,kiwi8,kiwi9,kiwi10,kiwi11,kiwi12]
-    const modsPicArr = [mods2,mods3,mods4,mods5,mods6,mods8]
-    const ufitPicArr = [ufit3,ufit4,ufit5,ufit6,ufit7,ufit9]
+    const kiwiPicArr = [kiwi7,kiwi9,kiwi10,kiwi11,kiwi12,kiwi5,kiwi4,kiwi2,kiwi1]
+    const modsPicArr = [mods4,mods8,mods7,mods2,mods3]
+    const ufitPicArr = [ufit4,ufit5,ufit6,ufit7,ufit9]
     const pictureSwap = (element, picArr) => {
             var i=0
             setInterval(()=> {
@@ -300,9 +300,9 @@ export default function Achieve({DLObj}) {
                     element.current.src = picArr[i]
                     setTimeout(()=>{
                         element.current.style.opacity = 100;
+                        i++
                     },100)
                 },500)
-                i++
                 console.log('NEW PICTURE SRC ' + picArr[i])
             },7000)
     }
