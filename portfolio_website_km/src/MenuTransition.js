@@ -13,7 +13,11 @@ export default function MenuTransition({navClicked, changeNavClicked, burgerMenu
         transitionBox.current.style.transform = "translateX(100%)"
         menuContent.current.style.opacity = "0"
         burgerMenu.current.style.backgroundColor = "rgb(167 167 250 / 0%)"
-        burgerMenuClick()
+        if(menuContent.current.style.display === "none")
+        {
+          burgerMenuClick()
+          console.log("BURGER IS BEING OPENED")
+        }
         if(hrefs[6] === 0)
           {
             window.location.href = hrefs[0]

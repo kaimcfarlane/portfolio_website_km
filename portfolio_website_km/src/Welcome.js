@@ -77,7 +77,7 @@ export default function Welcome({DLObj}) {
                     console.log("Profile Pic Object: " + profilePic);
                 }
             }
-        },4000)
+        },6300)
         
 
     const mainLoadAnimation = () => {
@@ -94,14 +94,14 @@ export default function Welcome({DLObj}) {
             profilePic.current.style.opacity = "100%"
             // title.current.style.display = "block";
             subtitle.current.style.opacity = "100%";
-         },1000)
+         },3000)
          setTimeout(() => {
             title.current.style.opacity = "100%";
-        },2000)
+        },4200)
         setTimeout(() => {
             paragraph1.current.style.opacity = "100%";
             paragraph2.current.style.opacity = "100%";
-        },3000)
+        },5200)
         // }
     }  
 
@@ -112,10 +112,10 @@ export default function Welcome({DLObj}) {
             SMContainer.current.style.display = "none";
          setTimeout(() => {
             mouseContainer.current.style.display = "block";
-         },3800)
+         },6300)
          setTimeout(() => {
             SMContainer.current.style.display = "block";
-         }, 3600)
+         }, 6100)
         }
     }  
 

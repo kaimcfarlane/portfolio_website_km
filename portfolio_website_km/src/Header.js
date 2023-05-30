@@ -42,6 +42,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
     const logoText = useRef();
     const tooglenight = useRef();
     const i = useRef();
+    const entireMenu = useRef();
 
     const [iColor, setIColor] = useState('white');
 
@@ -291,6 +292,13 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
         {
           console.log("User has no data in localStorage")
         }
+
+        entireMenu.current.style.opacity = "0"
+        setTimeout(()=> {
+            entireMenu.current.style.opacity = "100%"
+        },1500)
+        
+
     },[])
 
     const LOCAL_STORAGE_KEY = 'DLStorageKey';
@@ -392,13 +400,15 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
         setHrefs(newHrefs)
     }
 
+    
+
   return (
     <>
     <section id={styles.header}>
     <a href='' id={styles.logoHREF}>
         <div ref={logoText} id={styles.logoText} onClick={HomeBtn}>KM</div>
     </a>
-    <div id={styles.burgerMenu}>
+    <div ref={entireMenu} id={styles.burgerMenu}>
         <div className='content'>
             <i ref={i} className='fas fa sun' style={{color: iColor}}></i>
             &nbsp;&nbsp;&nbsp;

@@ -19,8 +19,9 @@
   padding-left: 30px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  animation: 1s ease-out 0s 1 loadFromBtm;
-  
+  animation: 1s ease-out 1.5s 1 loadFromBtm;
+  animation-fill-mode: forwards;  
+  opacity: 0;
   /* text-shadow: -2px 2px 0px #ffffff; */
   /* text-shadow: 2px 1px 0px #ffffff; */
 }
@@ -90,7 +91,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    animation: 1s ease-out 0s 1 loadFromBtm;
+    animation: 1s ease-out 1.5s 1 loadFromBtm;
+    transition: 0.3s ease-in-out;
 }
 
 #menuContent{
@@ -298,6 +300,7 @@ transition: all .2s ease-in;
       }
       100% {
         transform: translateY(0);
+        opacity: 100%;
       }
   }
 

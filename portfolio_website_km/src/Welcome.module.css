@@ -111,8 +111,8 @@
     -webkit-box-shadow: 9px 10px 3px 0px rgba(98,70,234,0.76);
     -moz-box-shadow: 9px 10px 3px 0px rgba(98,70,234,0.76);
     transform: translateX(0px);
-    animation: 1s ease-out 0s 1 loadFromBtm;
-    animation-delay: 1s;
+    animation: 1s ease-out 0s 1 loadFromBtmW;
+    animation-delay: 3s;
 
     margin-left: 50px;
 
@@ -127,8 +127,8 @@
   opacity: 0%;
   /* font-size: 40px; */
   font-size: 40px;
-  animation: 1s ease-out 0s 1 loadFromBtm;
-  animation-delay: 1s;
+  animation: 1s ease-out 0s 1 loadFromBtmW;
+  animation-delay: 3s;
 }
 
 #title{
@@ -137,8 +137,8 @@
   opacity: 0%;
   /* Half Screen
   font-size: 48px; */
-  animation: 1s ease-out 0s 1 loadFromBtm;
-  animation-delay: 2s;
+  animation: 1s ease-out 0s 1 loadFromBtmW;
+  animation-delay: 3.7s;
   /* font-size: 58px; */
   font-size: 58px;
   color: #6246ea;
@@ -155,8 +155,8 @@
     opacity: 0%;
     color: #2b2c34;
     font-weight: bold;
-    animation: 1s ease-out 0s 1 loadFromBtm;
-    animation-delay: 3s;
+    animation: 0.7s ease-out 0s 1 loadFromBtmW;
+    animation-delay: 5s;
     /* font-size: 20px; */
     /* animation-delay: 1s; */
 }
@@ -168,15 +168,15 @@
   color: #2b2c34;
   /* transition: ease-in-out 3s; */
   max-width: 500px;
-  animation: 1s ease-out 0s 1 loadFromBtm;
-  animation-delay: 3s;
+  animation: 0.7s ease-out 0s 1 loadFromBtmW;
+  animation-delay: 5s;
   /* font-size: 20px; */
     /* animation-delay: 1s; */
 }
 
 #mouseContainer{
     display: none;
-    animation: 1s ease-out 0s 1 loadFromBtm;
+    animation: 1s ease-out 0s 1 loadFromBtmW;
 }
 
 .icon-scroll {
@@ -235,7 +235,7 @@
     }
   }
 
-  @keyframes loadFromBtm {
+  @keyframes loadFromBtmW {
     0% {
         transform: translateY(100px);
       }
