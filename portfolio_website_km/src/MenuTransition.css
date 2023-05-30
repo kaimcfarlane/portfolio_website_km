@@ -6,6 +6,13 @@
     transition: ease-in-out .3s;
     width: 100%;
     background-color: blueviolet;
+    /* opacity: 0; */
     transform: translateX(-100%);
     z-index: 3;
+}
+
+#transitionBoxTitle{
+    font-size: 300px;
+    color: white;
+    text-align: center;
 }

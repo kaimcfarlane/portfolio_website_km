@@ -415,7 +415,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
             </ul>
         </div>
     </section>
-    <MenuTransition navClicked={navClicked} changeNavClicked={changeNavClicked}/>
+    <MenuTransition menuContent={menuContent} burgerMenu={burgerMenu} burgerMenuClick={burgerMenuClick} navClicked={navClicked} changeNavClicked={changeNavClicked}/>
     </>
   )
 }
