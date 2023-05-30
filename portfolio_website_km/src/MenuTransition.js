@@ -1,10 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './MenuTransition.css'
 
-export default function MenuTransition({navClicked, changeNavClicked, burgerMenu, menuContent, burgerMenuClick, hrefs}) {
+export default function MenuTransition({navClicked, changeNavClicked, burgerMenu, menuContent, burgerMenuClick, hrefs, DLObj}) {
 
   const transitionBox = useRef()
+  const transitionBoxTitle = useRef()
+
   useEffect(()=>{
+    console.log(navClicked)
       transitionBox.current.style.transform = "translateX(0%)"
       setTimeout(()=> {
         transitionBox.current.style.transform = "translateX(100%)"
@@ -45,9 +48,16 @@ export default function MenuTransition({navClicked, changeNavClicked, burgerMenu
       },800)
   },[navClicked])
 
+  useEffect(()=> {
+    if(DLObj.isLight)
+    {
+      transitionBoxTitle.current.style.backgroundColor = '#6246ea'
+    }
+  },[])
+
   return (
     <div ref={transitionBox} id='transitionBox'>
-      <h1 id='transitionBoxTitle'>KM</h1>
+      <h1 ref={transitionBoxTitle} id='transitionBoxTitle'>KM</h1>
     </div>
   )
 }

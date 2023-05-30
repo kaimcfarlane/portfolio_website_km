@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Kalam&family=Yellowtail&display=swap');
+
 #transitionBox{
     position: fixed;
     height: 100vh;
@@ -5,7 +7,7 @@
     right: 0;
     transition: ease-in-out .3s;
     width: 100%;
-    background-color: blueviolet;
+    background-color: #6246ea;
     /* opacity: 0; */
     transform: translateX(-100%);
     z-index: 3;
@@ -15,4 +17,6 @@
     font-size: 300px;
     color: white;
     text-align: center;
+    /* font-family: 'Kalam', cursive; */
+    font-family: 'Yellowtail', cursive;
 }

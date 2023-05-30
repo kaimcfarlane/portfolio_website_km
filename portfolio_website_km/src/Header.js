@@ -357,6 +357,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
     }
 
     const [navClicked, changeNavClicked] = useState(false)
+    console.log(navClicked)
 
         // const triggerNavTransition = () => {
         //     // var nav  = !navClicked
@@ -424,7 +425,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
             </ul>
         </div>
     </section>
-    <MenuTransition hrefs={hrefs} menuContent={menuContent} burgerMenu={burgerMenu} burgerMenuClick={burgerMenuClick} navClicked={navClicked} changeNavClicked={changeNavClicked}/>
+    <MenuTransition DLObj={DLObj} hrefs={hrefs} menuContent={menuContent} burgerMenu={burgerMenu} burgerMenuClick={burgerMenuClick} navClicked={navClicked} changeNavClicked={changeNavClicked}/>
     </>
   )
 }
