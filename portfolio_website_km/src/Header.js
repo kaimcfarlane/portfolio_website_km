@@ -4,6 +4,7 @@ import styles from "./Header.module.css"
 import "./burgerMenu.css"
 import './nightDay.css'
 import Pdf from './kaimcfarlane_resume_current.pdf'
+import MenuTransition from './MenuTransition'
 // import "https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 // {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 //      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"></link> */}
@@ -355,6 +356,18 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
         }
     }
 
+    const [navClicked, changeNavClicked] = useState(false)
+
+        // const triggerNavTransition = () => {
+        //     // var nav  = !navClicked
+        //     // console.log('RUNNING')
+        //     // changeNavClicked(nav)
+        //     changeNavClicked(!navClicked)
+        // }
+
+
+    
+
 
     // const scrollTo = () => {
     //     console.log("running scroll function")
@@ -364,8 +377,12 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
     //         inline: 'center'
     //     })
     // }
-  return (
+
+//on header butto click do this changeNavClicked(!navClicked)
+       
     
+
+  return (
     <>
     <section id={styles.header}>
     <a href='' id={styles.logoHREF}>
@@ -390,14 +407,15 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
         <div id={styles.menuContent} ref={menuContent}>
             <ul id={styles.dropdown}>
                 {/* Create naivation component or use inline stlyes w/t object */}
-                <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} onClick={animateMenu()} href='#mainPage' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
-                <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} onClick={animateMenu()} href='#skillsPage' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
-                <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} onClick={animateMenu()} href='#projectsPage' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
-                <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} onClick={animateMenu()} href='#contactPage' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
-                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} onClick={animateMenu()} href={Pdf} target="_blank" className={styles.hLink}>&lt;resumé/&gt;</a></li>
+                <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} onClick={() => {changeNavClicked(!navClicked)}} href='#mainPage' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
+                <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} onClick={() => {changeNavClicked(!navClicked)}} href='#skillsPage' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
+                <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} onClick={() => {changeNavClicked(!navClicked)}} href='#projectsPage' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
+                <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} onClick={() => {changeNavClicked(!navClicked)}} href='#contactPage' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
+                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} onClick={() => {changeNavClicked(!navClicked)}} href={Pdf} target="_blank" className={styles.hLink}>&lt;resumé/&gt;</a></li>
             </ul>
         </div>
     </section>
+    <MenuTransition navClicked={navClicked} changeNavClicked={changeNavClicked}/>
     </>
   )
 }
