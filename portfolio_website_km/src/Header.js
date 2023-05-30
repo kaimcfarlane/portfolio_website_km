@@ -380,7 +380,16 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
 
 //on header butto click do this changeNavClicked(!navClicked)
        
-    
+    const [hrefs, setHrefs] = useState(['#mainPage', '#skillsPage','#projectsPage', '#contactPage', '_blank', Pdf, 0])
+
+    const changeNavIndex = (index) =>{
+        console.log('Change Nav Index Working')
+        var newHrefs = [...hrefs]
+        // console.log(newHrefs)
+        newHrefs[6] = index
+        // console.log(index)
+        setHrefs(newHrefs)
+    }
 
   return (
     <>
@@ -407,15 +416,15 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
         <div id={styles.menuContent} ref={menuContent}>
             <ul id={styles.dropdown}>
                 {/* Create naivation component or use inline stlyes w/t object */}
-                <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} onClick={() => {changeNavClicked(!navClicked)}} href='#mainPage' className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
-                <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} onClick={() => {changeNavClicked(!navClicked)}} href='#skillsPage' className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
-                <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} onClick={() => {changeNavClicked(!navClicked)}} href='#projectsPage' className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
-                <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} onClick={() => {changeNavClicked(!navClicked)}} href='#contactPage' className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
-                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} onClick={() => {changeNavClicked(!navClicked)}} href={Pdf} target="_blank" className={styles.hLink}>&lt;resumé/&gt;</a></li>
+                <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(0)}}  className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
+                <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(1)}}  className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
+                <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(2)}}  className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
+                <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(3)}}  className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
+                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(4)}}  target={hrefs[4]} className={styles.hLink}>&lt;resumé/&gt;</a></li>
             </ul>
         </div>
     </section>
-    <MenuTransition menuContent={menuContent} burgerMenu={burgerMenu} burgerMenuClick={burgerMenuClick} navClicked={navClicked} changeNavClicked={changeNavClicked}/>
+    <MenuTransition hrefs={hrefs} menuContent={menuContent} burgerMenu={burgerMenu} burgerMenuClick={burgerMenuClick} navClicked={navClicked} changeNavClicked={changeNavClicked}/>
     </>
   )
 }

@@ -1,17 +1,37 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './MenuTransition.css'
 
-export default function MenuTransition({navClicked, changeNavClicked, burgerMenu, menuContent, burgerMenuClick}) {
+export default function MenuTransition({navClicked, changeNavClicked, burgerMenu, menuContent, burgerMenuClick, hrefs}) {
 
   const transitionBox = useRef()
   useEffect(()=>{
       transitionBox.current.style.transform = "translateX(0%)"
       setTimeout(()=> {
         transitionBox.current.style.transform = "translateX(100%)"
-       menuContent.current.style.opacity = "0"
-       burgerMenu.current.style.backgroundColor = "rgb(167 167 250 / 0%)"
+        menuContent.current.style.opacity = "0"
+        burgerMenu.current.style.backgroundColor = "rgb(167 167 250 / 0%)"
         burgerMenuClick()
-        setTimeout(()=>{
+        if(hrefs[6] === 0)
+          {
+            window.location.href = hrefs[0]
+          }
+          else if(hrefs[6] === 1)
+          {
+            window.location.href = hrefs[1]
+          }
+          else if(hrefs[6] === 2)
+          {
+            window.location.href = hrefs[2]
+          }
+          else if(hrefs[6] === 3)
+          {
+            window.location.href = hrefs[3]
+          }
+          else if(hrefs[6] === 4)
+          {
+            window.location.href = hrefs[5]
+          }
+         setTimeout(()=>{
           transitionBox.current.style.opacity = "0"
           setTimeout(()=>{
             transitionBox.current.style.transform = "translateX(-100%)"

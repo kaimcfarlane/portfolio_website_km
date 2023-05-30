@@ -60,7 +60,7 @@
   letter-spacing: 0.1em;
   /* background-color: #6246ead9; */
   background-color: #a7a7fa;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 .hLink{
@@ -69,6 +69,7 @@
   /* background-color: #7a61f0d9; */
   background-color: #a7a7fa;
   transition-duration: 0.5s;
+  
 
 
 
@@ -81,6 +82,7 @@
   color: white;
   background-color: black;
   border-style: outset;
+  cursor: pointer
 }
 
 
