@@ -431,7 +431,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
                 <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(1)}}  className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
                 <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(2)}}  className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
                 <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(3)}}  className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
-                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(4)}}  target={hrefs[4]} className={styles.hLink}>&lt;resumé/&gt;</a></li>
+                <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(4)}} href={hrefs[5]} target={hrefs[4]} className={styles.hLink}>&lt;resumé/&gt;</a></li>
             </ul>
         </div>
     </section>
