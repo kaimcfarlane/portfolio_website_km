@@ -389,7 +389,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
 
 //on header butto click do this changeNavClicked(!navClicked)
        
-    const [hrefs, setHrefs] = useState(['#mainPage', '#skillsPage','#projectsPage', '#contactPage', '_blank', Pdf, 0])
+    const [hrefs, setHrefs] = useState(['#mainPage', '#skillsPage','#projectsPage', '#contactPage', '_blank', Pdf, null])
 
     const changeNavIndex = (index) =>{
         console.log('Change Nav Index Working')
