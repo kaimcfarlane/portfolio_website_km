@@ -406,3 +406,31 @@
   animation: 1s ease-out 2.0s 1 loadFromBtm;
   animation-fill-mode: forwards; 
 }
+
+@media(max-width: 970px) {
+
+  #contactTitleContainer{
+    padding-bottom: 0;
+  }
+
+  #footerText{
+    margin-top: 150px;
+  }
+
+  #contactInfo{
+    gap: 5%;
+  }
+
+  #email,#name{
+    width: 250px;
+  }
+
+  #message{
+    width: 573px;
+  }
+
+  #contactText{
+    margin-left: -247px;
+    padding-left: 215px;
+  }
+}
