@@ -256,4 +256,12 @@
     .job img {
         width: 26vw !important;
     }
+
+    .awardText1{
+        text-align: center;
+    }
+    
+    .awardText2{
+        text-align: center;
+    }
 }

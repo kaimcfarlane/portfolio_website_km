@@ -365,10 +365,25 @@ export default function Achieve({DLObj}) {
     }
   },[inView])
 
-  if(window.innerWidth < '970px') {
-    console.log("IN INNER WIDTH")
-    jobSub3.current.innerHTML = 'UFIT'
-  }
+    const updateDimension = () => {
+        if(window.innerWidth < '970') {
+            jobTitle3.current.innerHTML = "Web-App Developer Intern"
+            jobSub3.current.innerHTML = 'UFIT'
+            jobTitle1.current.innerHTML = "Web-Dev and Founder"
+            jobSub2.current.innerHTML = "MODS"
+        }
+        else{
+            jobTitle3.current.innerHTML = "Website Application Developer Intern"
+            jobSub3.current.innerHTML = 'UF Information Technology'
+            jobTitle1.current.innerHTML = "Website Developer and Founder"
+            jobSub2.current.innerHTML = "Musuem of Discovery and Science"
+
+        }
+    }
+
+    window.addEventListener('resize', updateDimension);
+
+      
 
   return (
     <>
@@ -393,6 +408,7 @@ export default function Achieve({DLObj}) {
                 <div ref={job3} className='job' id='job3'>
                     <h1 ref={jobTitle3} className='jobh1'>Website Application Developer Intern</h1>
                     <h2 ref={jobSub3} className='jobh2'>UF Information Technology</h2>
+                    {/* {window.innerWidth > '970px' ? 'UF Information Technology' : 'UFIT'} */}
                     <img name={'imgA'} ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
                     <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Redesigned and implemented new cards feature for the personal UF Workspace with React.js, Node.js, and SQL</p>
                 </div>
