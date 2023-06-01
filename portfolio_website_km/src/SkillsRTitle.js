@@ -1,4 +1,5 @@
 import {React, useEffect, useRef} from 'react'
+import './skillsRTitle.css'
 
 export default function SkillsRTitle({inView, name, DLObj}) {
 
@@ -45,6 +46,6 @@ export default function SkillsRTitle({inView, name, DLObj}) {
     },[inView])
 
   return (
-    <h1 ref={h1} style={{color: 'black'}}>{name}</h1>
+    <h1 id='title' ref={h1} style={{color: 'black'}}>{name}</h1>
   )
 }

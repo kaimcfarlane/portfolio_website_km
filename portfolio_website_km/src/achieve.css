@@ -247,3 +247,13 @@
     animation: 1s ease-out 4.5s 1 loadFromBtm;
     animation-fill-mode: forwards;  
 }
+
+@media(max-width: 970px){
+    .job{
+        max-width: 30vw;
+    }
+
+    .job img {
+        width: 26vw !important;
+    }
+}

@@ -261,3 +261,14 @@
         opacity: 0;
     }
   }
+
+  @media (max-width: 970px) {
+    #paragraph1, #paragraph2{
+      font-size: 1.8vw;
+    }
+
+    #profilePic{
+      width: 48vw;
+    }
+
+  }

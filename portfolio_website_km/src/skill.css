@@ -117,3 +117,43 @@
         opacity: 100%;
       }
   }
+
+#skillsTitleContainer{
+    display: none;
+}
+
+@media (max-width: 970px) {
+    #skillsContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 0px;
+    }
+
+    #skillsText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #word1Half,#word2Half{
+        margin-bottom: 0px;
+        padding-left: 20px;
+    }
+
+    #word1,#word2{
+        display: none;
+    }
+
+    .imageContainer{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 15px;
+        justify-content: center;
+    }
+
+    #skillsTitleContainer{
+        display: flex;
+        margin-top: 15px;
+    }
+}

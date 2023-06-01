@@ -365,6 +365,11 @@ export default function Achieve({DLObj}) {
     }
   },[inView])
 
+  if(window.innerWidth < '970px') {
+    console.log("IN INNER WIDTH")
+    jobSub3.current.innerHTML = 'UFIT'
+  }
+
   return (
     <>
         <div ref={titleContainer} id='titleContainer'>
@@ -402,7 +407,7 @@ export default function Achieve({DLObj}) {
                 <div className='award'>
                     <img className='awardImg' alt='awardLogo' src={[purple_Logo]}></img>
                     <p ref={awardTop2}  className='awardText1'>Principal's Award</p>
-                    <p ref={awardBot2}className='awardText2'>-Founder and Creator of Kiwi-El-Gato-</p>
+                    <p ref={awardBot2}  className='awardText2'>-Founder and Creator of Kiwi-El-Gato-</p>
                 </div>
                 <div className='award'>
                     <img className='awardImg' alt='awardLogo' src={purple_Logo}></img>

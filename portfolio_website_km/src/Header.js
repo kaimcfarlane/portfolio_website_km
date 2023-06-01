@@ -34,11 +34,13 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
     const styleLink3 = useRef();
     const styleLink4 = useRef();
     const styleLink5 = useRef();
+    const styleLink6 = useRef();
     const hLink1 = useRef();
     const hLink2 = useRef();
     const hLink3 = useRef();
     const hLink4 = useRef();
     const hLink5 = useRef();
+    const hLink6 = useRef();
     const logoText = useRef();
     const tooglenight = useRef();
     const i = useRef();
@@ -100,6 +102,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
                     styleLink3.current.style.backgroundColor = "";
                     styleLink4.current.style.backgroundColor = "";
                     styleLink5.current.style.backgroundColor = "";
+                    styleLink6.current.style.backgroundColor = "";
                     
                     hLink1.current.style.backgroundColor = "";
                     hLink1.current.style.borderStyle = "";
@@ -126,6 +129,11 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
                     hLink5.current.style.borderColor = "white";
                     hLink5.current.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset";
                     burgerMenuRight.current.style.backgroundColor = "#ffffff00";
+
+                    hLink6.current.style.backgroundColor = "";
+                    hLink6.current.style.borderStyle = "";
+                    hLink6.current.style.borderColor = "white";
+                    hLink6.current.style.boxShadow = "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset";
                     
                 }
                 else
@@ -145,6 +153,8 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
                     styleLink4.current.style.backgroundColor = "#6246ead9";
                     
                     styleLink5.current.style.backgroundColor = "#6246ead9";
+
+                    styleLink6.current.style.backgroundColor = "#6246ead9";
 
                     
                     hLink1.current.style.backgroundColor = "6246ead9";
@@ -176,6 +186,11 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
                     hLink5.current.style.borderStyle = "solid";
                     hLink5.current.style.borderColor = "black";
                     hLink5.current.style.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
+
+                    hLink6.current.style.backgroundColor = "6246ead9";
+                    hLink6.current.style.borderStyle = "solid";
+                    hLink6.current.style.borderColor = "black";
+                    hLink6.current.style.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
 
                     console.log("Dark Mode activated giving mobile menu black background menu");
                     burgerMenu.current.style.backgroundColor = "rgb(98 70 234 / 19%)";
@@ -389,7 +404,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
 
 //on header butto click do this changeNavClicked(!navClicked)
        
-    const [hrefs, setHrefs] = useState(['#mainPage', '#skillsPage','#projectsPage', '#contactPage', '_blank', Pdf, null])
+    const [hrefs, setHrefs] = useState(['#mainPage', '#skillsPage','#projectsPage', '#contactPage', '_blank', Pdf, null, '#achievePage'])
 
     const changeNavIndex = (index) =>{
         console.log('Change Nav Index Working')
@@ -429,6 +444,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
                 {/* Create naivation component or use inline stlyes w/t object */}
                 <li ref={styleLink1} className={styles.headerItem}><a ref={hLink1} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(0)}}  className={styles.hLink}>&lt;ABOUT/&gt;</a></li>
                 <li ref={styleLink2} className={styles.headerItem}><a ref={hLink2} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(1)}}  className={styles.hLink}>&lt;SKILLS/&gt;</a></li>
+                <li ref={styleLink6} className={styles.headerItem}><a ref={hLink6} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(7)}}  className={styles.hLink}>&lt;WORK/&gt;</a></li>
                 <li ref={styleLink3} className={styles.headerItem}><a ref={hLink3} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(2)}}  className={styles.hLink}>&lt;PROJECTS/&gt;</a></li>
                 <li ref={styleLink4} className={styles.headerItem}><a ref={hLink4} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(3)}}  className={styles.hLink}>&lt;CONTACT/&gt;</a></li>
                 <li ref={styleLink5} className={styles.headerItem}><a ref={hLink5} onClick={() => {changeNavClicked(!navClicked); changeNavIndex(4)}} href={hrefs[5]} target={hrefs[4]} className={styles.hLink}>&lt;resumé/&gt;</a></li>

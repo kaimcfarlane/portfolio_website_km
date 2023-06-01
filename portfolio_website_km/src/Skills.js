@@ -33,6 +33,8 @@ export default function Skills({DLObj}) {
   const titleOne = useRef()
   const titleTwo = useRef()
   const subtitle = useRef()
+  const titleOneH = useRef()
+  const titleTwoH = useRef()
 
   useEffect(() =>{
     if(!DLObj.isLight)
@@ -40,12 +42,17 @@ export default function Skills({DLObj}) {
         titleOne.current.style.color = "#fffffe";
         titleTwo.current.style.color = "#fffffe";
         subtitle.current.style.color = "#fffffe";
+        titleOneH.current.style.color = "#fffffe";
+        titleTwoH.current.style.color = "#fffffe";
+
     }
     else
     {
       titleOne.current.style.color = "black";
-        titleTwo.current.style.color = "black";
-        subtitle.current.style.color = "black";
+      titleTwo.current.style.color = "black";
+      subtitle.current.style.color = "black";  
+      titleOneH.current.style.color = "black";
+      titleTwoH.current.style.color = "black";
     }
 },[DLObj])
 
@@ -108,9 +115,13 @@ useEffect(()=>{
     <section inView={inView} id='skillsContainer'>
       <div ref={skillsText} id='skillsText'>
         {/* Skillset I'm Skilled My Talent Im talented */}
-        <h1 ref={titleOne}>I'm</h1>
-        <h1 ref={titleTwo}>Experienced</h1>
-        <p ref={subtitle}>- 3 Years of Code -</p>
+        <div id='skillsTitleContainer'>
+          <h1 ref={titleOneH} id='word1Half'>I'm</h1>
+          <h1 ref={titleTwoH} id='word2Half'>Experienced</h1>
+        </div>
+          <h1 ref={titleOne} id='word1'>I'm</h1>
+          <h1 ref={titleTwo} id='word2'>Experienced</h1>
+        <p ref={subtitle} id='word3'>- 3 Years of Code -</p>
       </div>
       <div id='skillsContent' ref={ref}>
         <div>

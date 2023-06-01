@@ -38,10 +38,10 @@ export default function MenuTransition({navClicked, changeNavClicked, burgerMenu
           {
             window.location.href = hrefs[3]
           }
-          // else if(hrefs[6] === 4)
-          // {
-          //   window.location.href = hrefs[5]
-          // }
+          else if(hrefs[6] === 7)
+          {
+            window.location.href = hrefs[7]
+          }
          setTimeout(()=>{
           transitionBox.current.style.opacity = "0"
           setTimeout(()=>{
