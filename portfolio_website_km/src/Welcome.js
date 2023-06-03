@@ -91,6 +91,7 @@ export default function Welcome({DLObj}) {
             welcomeSubtextMob.current.style.display = 'flex'
             paragraph1Mob.current.style.display = 'block'
             paragraph2Mob.current.style.display = 'block'
+            //Make SM Container invisible if not on about page and if in mobile view
             setTimeout(()=> {
                 SMContainer.current.style.position = 'relative'
                 welcomeAll.current.style.marginTop = '-110px'
