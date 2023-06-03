@@ -24,7 +24,9 @@ export default function Welcome({DLObj}) {
     const linkedinPicture = useRef();
     const githubPicture = useRef();
     const SMContainer = useRef();
-    
+    const paragraph1Mob = useRef();
+    const paragraph2Mob = useRef();
+    const welcomeSubtextMob = useRef();
 
 
     useEffect(() =>{
@@ -81,6 +83,13 @@ export default function Welcome({DLObj}) {
             }
         },6300)
         }
+        else{
+            paragraph1.current.style.display = 'none';
+            paragraph2.current.style.display = 'none';
+            welcomeSubtextMob.current.style.display = 'flex'
+            paragraph1Mob.current.style.display = 'block'
+            paragraph2Mob.current.style.display = 'block'
+        }
             
         
 
@@ -104,7 +113,9 @@ export default function Welcome({DLObj}) {
         },4200)
         setTimeout(() => {
             paragraph1.current.style.opacity = "100%";
+            paragraph1Mob.current.style.opacity = "100%"
             paragraph2.current.style.opacity = "100%";
+            paragraph2Mob.current.style.opacity = "100%";
         },5200)
         // }
     }  
@@ -192,6 +203,10 @@ export default function Welcome({DLObj}) {
     </div>
     <div>
         <img ref={profilePic} id={styles.profilePic} alt='Logo' src={imageC}></img>
+    </div>
+    <div ref={welcomeSubtextMob} id={styles.welcomeSubtextMob}>
+        <p2 ref={paragraph1Mob} id={styles.paragraph1Mob}>Full-Stack Developer - CS Student</p2>
+        <p1 ref={paragraph2Mob} id={styles.paragraph2Mob}>I am a software developer driven by a love for creating exciting and impactful projects. I'm currently exploring Web-Development and pursuing a degree in computer science from the University of Florida.</p1>
     </div>
     </section>
     <div ref={mouseContainer} id={styles.mouseContainer}>

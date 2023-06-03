@@ -273,6 +273,33 @@
 
   }
 
+  #welcomeSubtextMob{
+    display: none;
+    flex-direction: column;
+    font-size: 3.5vw;
+    max-width: 315px;
+  }
+
+  #paragraph1Mob{
+    display: none;
+    pointer-events: none;
+    opacity: 0%;
+    color: #2b2c34;
+    font-weight: bold;
+    animation: 0.7s ease-out 0s 1 loadFromBtmW;
+    animation-delay: 5s;
+}
+
+#paragraph2Mob{
+  display: none;
+  pointer-events: none;
+  opacity: 0%;
+  color: #2b2c34;
+  max-width: 500px;
+  animation: 0.7s ease-out 0s 1 loadFromBtmW;
+  animation-delay: 5s;
+}
+
   @media (max-width: 500px) {
     #welcomeAll{
       flex-direction: column;
@@ -285,6 +312,17 @@
     #title{
       margin-top: 0;
       margin-bottom: 20px;
+    }
+
+    #profilePic{
+      margin-left: 0;
+      margin-top: 37px;
+      margin-bottom: 37px;
+    }
+
+    #mouseContainer{
+      position: relative;
+      top: -7%;
     }
   }
 
