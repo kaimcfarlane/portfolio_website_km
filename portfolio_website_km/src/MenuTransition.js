@@ -45,7 +45,12 @@ export default function MenuTransition({navClicked, changeNavClicked, burgerMenu
          setTimeout(()=>{
           transitionBox.current.style.opacity = "0"
           setTimeout(()=>{
-            transitionBox.current.style.transform = "translateX(-100%)"
+            if(window.innerWidth < '500') {
+              transitionBox.current.style.transform = "translateX(-150%)"
+            }
+            else{
+              transitionBox.current.style.transform = "translateX(-100%)"
+            }
             setTimeout(()=>{
               transitionBox.current.style.opacity = "100"
               menuContent.current.style.opacity = "100"

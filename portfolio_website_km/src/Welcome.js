@@ -52,6 +52,8 @@ export default function Welcome({DLObj}) {
 
     
     useEffect(() => {
+        if(window.innerWidth > '500')
+        {
             setInterval(() => {
                 document.addEventListener('mousemove', parrallax);
             function parrallax(e) {
@@ -78,6 +80,8 @@ export default function Welcome({DLObj}) {
                 }
             }
         },6300)
+        }
+            
         
 
     const mainLoadAnimation = () => {

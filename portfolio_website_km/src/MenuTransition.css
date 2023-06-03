@@ -20,3 +20,12 @@
     /* font-family: 'Kalam', cursive; */
     font-family: 'Yellowtail', cursive;
 }
+
+@media(max-width: 500px) {
+    #transitionBoxTitle{
+        position: relative;
+        top: 20%;
+        font-size: 200px;
+        left: -4%;
+    }
+}
