@@ -303,6 +303,7 @@
   @media (max-width: 500px) {
     #welcomeAll{
       flex-direction: column;
+      /* margin-top: -113px; */
     }
 
     #welcomeContent{
@@ -320,15 +321,17 @@
       margin-bottom: 37px;
     }
 
+    #SMContainer{
+      top: 50%;
+      /* position: relative; */
+    }
+
     #mouseContainer{
       position: relative;
       top: -7%;
     }
   }
 
-  /* For acheive page make sure we check for screen size on load as well */
-  /* Reduce size of KM to fit screen sze prob just use adjusting vw */
-  /* Create another div for img between header and paragraph text to change on screen size */
   /* Stop horizontal scroll */
   /* Everything needs to be much smaller, icons and grpahics manual but text the smae size, i'd say as large as about page title text */
   /* Remove linkedin and github logo */

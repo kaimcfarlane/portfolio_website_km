@@ -14,6 +14,8 @@ export default function Welcome({DLObj}) {
     //or we can remove the margins off both the img and div surrounding our text then put the main content div with justify content space around.
     //then we can make the mouse have no margin as it doesn't need horizontally centering
 
+
+    const welcomeAll = useRef();
     const profilePic = useRef();
     const subtitle = useRef();
     const title = useRef();
@@ -89,6 +91,10 @@ export default function Welcome({DLObj}) {
             welcomeSubtextMob.current.style.display = 'flex'
             paragraph1Mob.current.style.display = 'block'
             paragraph2Mob.current.style.display = 'block'
+            setTimeout(()=> {
+                SMContainer.current.style.position = 'relative'
+                welcomeAll.current.style.marginTop = '-110px'
+            },7000)
         }
             
         
@@ -193,7 +199,7 @@ export default function Welcome({DLObj}) {
             </a>
         </div>
     </div>
-    <section id={styles.welcomeAll}>
+    <section ref={welcomeAll} id={styles.welcomeAll}>
     <div id={styles.welcomeContent}>
         <h2 ref={subtitle} id={styles.subtitle}>Hey I'm,</h2>
         <h1 ref={title} id={styles.title}>Kai McFarlane</h1>

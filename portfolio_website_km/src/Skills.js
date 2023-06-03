@@ -23,7 +23,6 @@ import cPlusPlusLogo from './c++.png'
 import jiraLogo from './jiralogo.png'
 import sqlLogo from './sqlLogo.png'
 import bootstrapLogo from './bootstraplogo.png'
-// import { Tooltip } from 'react-tooltip'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import { useInView } from 'react-intersection-observer'
 
