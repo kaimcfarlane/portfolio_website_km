@@ -413,8 +413,8 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
             &nbsp;&nbsp;&nbsp;
             <input type="checkbox"
             // id="tooglenight" class="cbx hidden" 
-             id="toogleNight" ref={tooglenight} className='cbx hidden' onClick={tooglenightBtn} checked={DLChecked}/>
-            <label for="tooglenight" className='switch' onClick={DLBtnClick} id="DLswitch" ref={DLSwitch}></label>
+             id="toogleNight" ref={tooglenight} className='cbx hidden' readOnly onClick={tooglenightBtn} checked={DLChecked}/>
+            <label htmlFor="tooglenight" className='switch' onClick={DLBtnClick} id="DLswitch" ref={DLSwitch}></label>
             &nbsp;&nbsp;&nbsp;
             <i ref={i} className="fas fa-moon"></i>
         </div>

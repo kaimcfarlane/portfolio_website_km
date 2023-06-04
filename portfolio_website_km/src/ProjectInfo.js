@@ -125,7 +125,7 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
                             <button ref={demoBtn} id='demoBtn' role="button" onClick={() => {urlBtnClick(selectedProjectInfo.demoUrl)}}>Live Demo <span ref={rocket}>&#128640;</span></button>
                             <button ref={codeBtn} id='codeBtn' onClick={() => {urlBtnClick(selectedProjectInfo.codeUrl)}}>Code <span ref={world}>&#127757;</span></button>
                     </div>
-                    <div ref={closeBtn} id="closeBtnContainer" class="arrow arrow--left" onClick={closeProject} onMouseOver={addArrowHoverCSS} onMouseLeave={removeArrowHoverCSS}>
+                    <div ref={closeBtn} id="closeBtnContainer" className="arrow arrow--left" onClick={closeProject} onMouseOver={addArrowHoverCSS} onMouseLeave={removeArrowHoverCSS}>
                         <span ref={btnSpan}></span>
                     </div>
                     <div ref={logoBox} id='logoBox' style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>

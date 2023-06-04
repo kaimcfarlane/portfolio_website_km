@@ -135,9 +135,9 @@ export default function Contact({DLObj}) {
                     <input ref={message} type="text" id="message" name="message" placeholder='Hey Kai, I have an idea for a app...'></input>
                 </div>
                 {DLObj.isLight ? <div id='sendBtnContainer'>
-                    <button ref={submitBtn} id='sendBtn' type="submit" onclick=""><span ref={submitSpan}>SEND</span><i></i></button>
+                    <button ref={submitBtn} id='sendBtn' type="submit"><span ref={submitSpan}>SEND</span><i></i></button>
                 </div> : <div id='sendBtnContainer'>
-                    <button ref={submitBtn} id='sendBtnDark' type="submit" onclick=""><span ref={submitSpan}>SEND</span><i></i></button>
+                    <button ref={submitBtn} id='sendBtnDark' type="submit"><span ref={submitSpan}>SEND</span><i></i></button>
                 </div>}
             </form>
         </section>

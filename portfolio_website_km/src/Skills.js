@@ -111,7 +111,7 @@ useEffect(()=>{
 
   return (
   <>
-    <section inView={inView} id='skillsContainer'>
+    <section inview={inView} id='skillsContainer'>
       <div ref={skillsText} id='skillsText'>
         {/* Skillset I'm Skilled My Talent Im talented */}
         <div id='skillsTitleContainer'>
@@ -124,7 +124,7 @@ useEffect(()=>{
       </div>
       <div id='skillsContent' ref={ref}>
         <div>
-          <SkillsRTitle inView={inView}  name={'Languages'} DLObj={DLObj}/>
+          <SkillsRTitle inview={inView}  name={'Languages'} DLObj={DLObj}/>
           <div ref={imageContainer1} className='imageContainer'>
             <img className='icon' alt='languageIcon' src={html_Icon} data-tooltip-id="htmlLogo" data-tooltip-content='HTML'></img>
             <ReactTooltip  id='htmlLogo'/>
@@ -145,7 +145,7 @@ useEffect(()=>{
           </div>
         </div>
         <div>
-        <SkillsRTitle inView={inView} name={'Libraries'} DLObj={DLObj}/>
+        <SkillsRTitle inview={inView} name={'Libraries'} DLObj={DLObj}/>
           <div ref={imageContainer2} className='imageContainer'>
             <img className='icon' id='react_Logo' alt='libraryIcon' src={react_Logo} data-tooltip-id="reactLogo" data-tooltip-content='React.js'></img>
             <ReactTooltip  id='reactLogo'/>
@@ -164,7 +164,7 @@ useEffect(()=>{
           </div>
         </div>
         <div>
-        <SkillsRTitle inView={inView} name={'Learned'} DLObj={DLObj}/>
+        <SkillsRTitle inview={inView} name={'Learned'} DLObj={DLObj}/>
           <div ref={imageContainer3} className='imageContainer'>
             <img className='icon' alt='learnedIcon' src={mongodb_Logo} data-tooltip-id="mongoLogo" data-tooltip-content='MongoDB'></img>
             <ReactTooltip  id='mongoLogo'/>

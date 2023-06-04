@@ -38,7 +38,7 @@ export default function Welcome({DLObj}) {
             paragraph1.current.style.color = "#fffffe";
             paragraph2.current.style.color = "#94a1b2";
             paragraph1Mob.current.style.color = "#fffffe"
-            paragraph2Mob.current.style.color = "#fffffe"
+            paragraph2Mob.current.style.color = "#94a1b2"
             subtitle.current.style.color = "#fffffe";
             profilePic.current.style.borderColor = "#fffffe";
             mouse.current.style.backgroundColor = "rgb(22, 22, 26)";

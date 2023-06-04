@@ -1,7 +1,7 @@
 import {React, useEffect, useRef} from 'react'
 import './skillsRTitle.css'
 
-export default function SkillsRTitle({inView, name, DLObj}) {
+export default function SkillsRTitle({inview, name, DLObj}) {
 
     const h1 = useRef() 
     useEffect(() =>{
@@ -18,7 +18,7 @@ export default function SkillsRTitle({inView, name, DLObj}) {
     useEffect(()=> {
       if(name === 'Languages')
       {
-        if(inView){
+        if(inview){
           h1.current.classList.add("snappedRS1")
         }
         // else{
@@ -27,7 +27,7 @@ export default function SkillsRTitle({inView, name, DLObj}) {
       }
       else if(name === 'Libraries')
       {
-        if(inView){
+        if(inview){
           h1.current.classList.add("snappedRS2")
         }
         // else{
@@ -36,14 +36,14 @@ export default function SkillsRTitle({inView, name, DLObj}) {
       }
       else if(name === 'Learned')
       {
-        if(inView){
+        if(inview){
           h1.current.classList.add("snappedRS3")
         }
         // else{
         //   h1.current.classList.remove("snappedRS3")
         // }
       }
-    },[inView])
+    },[inview])
 
   return (
     <h1 id='title' ref={h1} style={{color: 'black'}}>{name}</h1>
