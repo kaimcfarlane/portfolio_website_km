@@ -73,3 +73,31 @@
     transition: ease-in-out 0.4s;
     justify-content: center;
 }
+
+@media (max-width: 500px) {
+    #projectTitleContainer{
+      padding-top: 75px;
+    }
+  
+    #projectTitle{
+      font-size: 9vw;
+      margin-bottom: 60px;
+    }
+  
+    #projectSubTitle{
+      font-size: 7vw;
+    }
+
+    .projectSubBox{
+        flex-wrap: wrap;
+    }
+
+    #projectImg{
+      width: 180px;
+      height: 80px;
+    }
+
+    #projectContainer{
+        flex-direction: row;
+    }
+}
