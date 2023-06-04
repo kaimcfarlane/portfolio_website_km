@@ -260,7 +260,9 @@
     /* animation: blink 2s linear infinite; */
  }
 
- 
+ #logoBox{
+  margin-top: 24px;
+}
 
    .arrow span, .arrow:before, .arrow:after {
     background: #fff;
@@ -306,4 +308,31 @@
  }
    .arrow.arrow--left:hover span,  .arrow.arrow--left:hover:before, .arrow.arrow--left:hover:after {
     left: -21.216407355px;
+   }
+
+   @media(max-width: 500px) {
+      #projectInfoBox{
+        height: 71vh;
+      }
+
+      #buttonsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 25px;
+        margin-bottom: 8px;
+      }
+
+      #projectInfoImg{
+        border-radius: 4px;
+      }
+
+      #logoBox{
+        margin-top: 5px;
+      }
+
+      #projectInfoContainer{
+        width: 90%;
+        border-radius: 4px;
+      }
    }
