@@ -36,6 +36,8 @@ export default function Welcome({DLObj}) {
         {
             paragraph1.current.style.color = "#fffffe";
             paragraph2.current.style.color = "#94a1b2";
+            paragraph1Mob.current.style.color = "#fffffe"
+            paragraph2Mob.current.style.color = "#fffffe"
             subtitle.current.style.color = "#fffffe";
             profilePic.current.style.borderColor = "#fffffe";
             mouse.current.style.backgroundColor = "rgb(22, 22, 26)";
@@ -46,6 +48,8 @@ export default function Welcome({DLObj}) {
         {
             paragraph1.current.style.color = "black";
             paragraph2.current.style.color = "#2b2c34";
+            paragraph1Mob.current.style.color = "black";
+            paragraph2Mob.current.style.color = "#2b2c34";
             subtitle.current.style.color = "black";
             profilePic.current.style.borderColor = "black";
             mouse.current.style.backgroundColor = "#a7a7fa";
@@ -97,6 +101,30 @@ export default function Welcome({DLObj}) {
                 welcomeAll.current.style.marginTop = '-110px'
             },7000)
         }
+
+        const updateDimension = () => {
+            if(window.innerWidth > '500') {
+                paragraph1.current.style.display = 'block';
+                paragraph2.current.style.display = 'block';
+                welcomeSubtextMob.current.style.display = 'none'
+                paragraph1Mob.current.style.display = 'none'
+                paragraph2Mob.current.style.display = 'none'
+                SMContainer.current.style.position = 'absolute'
+                welcomeAll.current.style.marginTop = '0'
+            }
+            else{
+                paragraph1.current.style.display = 'none';
+                paragraph2.current.style.display = 'none';
+                welcomeSubtextMob.current.style.display = 'flex'
+                paragraph1Mob.current.style.display = 'block'
+                paragraph2Mob.current.style.display = 'block'
+                SMContainer.current.style.position = 'relative'
+                welcomeAll.current.style.marginTop = '-110px'
+            }
+        }
+    
+        window.addEventListener('resize', updateDimension);
+    
             
         
 
