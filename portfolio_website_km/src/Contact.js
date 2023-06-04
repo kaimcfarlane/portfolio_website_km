@@ -121,7 +121,7 @@ export default function Contact({DLObj}) {
                         </label>
                         <input ref={name} type="text" id="name" name="name" placeholder='Enter your name'></input>
                     </div>
-                    <div>
+                    <div id='emailContainer'>
                         <label ref={emailTitle} id='emailTitle'>
                             Email
                         </label>

@@ -435,3 +435,52 @@
     padding-left: 215px;
   }
 }
+
+@media (max-width: 500px) {
+  #contactTitleContainer{
+    padding-top: 75px;
+  }
+
+  #contactTitle{
+    font-size: 9vw;
+    margin-bottom: 60px;
+  }
+
+  #contactSubtitle{
+    font-size: 7vw;
+  }
+
+  #nameContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  #emailContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  #contactText{
+    margin-top: 0;
+    margin-left: 0; 
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  #contactInfo{
+    flex-direction: column;
+  }
+
+  #message{
+    width: 254px;
+  }
+
+  #footerText{
+    margin-top: 100px;
+  }
+}
