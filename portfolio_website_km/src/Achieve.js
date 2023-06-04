@@ -97,8 +97,8 @@ export default function Achieve({DLObj}) {
     var clicked3 = false;
 
     const openJobDesc = (item) => {
-        
-        if (item === 1)
+        if(window.innerWidth > 500) {
+            if (item === 1)
         {
             if(!clicked1)
             {
@@ -172,6 +172,21 @@ export default function Achieve({DLObj}) {
                 jobDesc3.current.style.opacity = "0%"
                 clicked3 = false
             }
+        }
+        }
+        else{
+            img1.current.style.height = "115px"
+            img1.current.style.minHeight = "115px"
+            jobDesc1.current.style.opacity = "0%"
+            clicked1 = false
+            img3.current.style.height = "115px"
+            img3.current.style.minHeight = "115px"
+            jobDesc3.current.style.opacity = "0%"
+            clicked3 = false
+            img2.current.style.height = "115px"
+            img2.current.style.minHeight = "115px"
+            jobDesc2.current.style.opacity = "0%"
+            clicked2 = false
         }
     }
 
