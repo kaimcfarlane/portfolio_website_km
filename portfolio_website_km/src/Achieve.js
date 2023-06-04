@@ -387,8 +387,8 @@ export default function Achieve({DLObj}) {
 
   return (
     <>
-        <div ref={titleContainer} id='titleContainer'>
-            <h1 ref={achieveTitle}>I'm an Innovator</h1>
+        <div ref={titleContainer} id='achieveTitleContainer'>
+            <h1 id='achieveTitle' ref={achieveTitle}>I'm an Innovator</h1>
             <p ref={achieveSubtitle} id='achieveSubtitle'>&lt;Work and Awards/&gt;</p>
             <img alt='' src=''></img>
         </div>
@@ -396,20 +396,20 @@ export default function Achieve({DLObj}) {
                 <div ref={job1} className='job' id='job1'>
                     <h1 ref={jobTitle1} className='jobh1'>Website Developer and Founder</h1>
                     <h2 ref={jobSub1} className='jobh2'>Kiwi-El-Gato</h2>
-                    <img ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
+                    <img className='achieveImg' ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
                     <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Created e-learning organization and educational website through digital art, designs, animations, and code</p>
                 </div>
                 <div ref={job2} className='job' id='job2'>
                     <h1 ref={jobTitle2} className='jobh1'>Lead Software Developer Intern</h1>
                     <h2 ref={jobSub2} className='jobh2'>Musuem of Discovery and Science</h2>
-                    <img ref={img2} id='modsvr_Pic' src={vr3} alt='' onClick={() => openJobDesc(2)} onMouseEnter={() => backgroundHoverEnter(img2)} onMouseLeave={() => backgroundHoverLeave(img2)}></img>
+                    <img className='achieveImg' ref={img2} id='modsvr_Pic' src={vr3} alt='' onClick={() => openJobDesc(2)} onMouseEnter={() => backgroundHoverEnter(img2)} onMouseLeave={() => backgroundHoverLeave(img2)}></img>
                     <p ref={jobDesc2} className='jobDesc' id='jobDesc2'>Programmed virtual reality images and animations with C# and Unity to explain natural phenomena</p>
                 </div>
                 <div ref={job3} className='job' id='job3'>
                     <h1 ref={jobTitle3} className='jobh1'>Website Application Developer Intern</h1>
                     <h2 ref={jobSub3} className='jobh2'>UF Information Technology</h2>
                     {/* {window.innerWidth > '970px' ? 'UF Information Technology' : 'UFIT'} */}
-                    <img name={'imgA'} ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
+                    <img className='achieveImg' name={'imgA'} ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
                     <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Redesigned and implemented new cards feature for the personal UF Workspace with React.js, Node.js, and SQL</p>
                 </div>
             </div>

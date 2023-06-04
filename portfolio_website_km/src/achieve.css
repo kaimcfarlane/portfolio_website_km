@@ -2,7 +2,7 @@
     
 }
 
-#titleContainer{
+#achieveTitleContainer{
     /* padding-top: 70px; */
     /* padding-top: 45px; */
     padding-top: 25px;
@@ -263,5 +263,46 @@
     
     .awardText2{
         text-align: center;
+    }
+}
+
+@media(max-width: 500px) {
+    #achieveTitleContainer{
+        font-size: 6vw;
+        padding-top: 110px;
+        text-align: center;
+    }
+
+    #achieveTitle{
+        font-size: 9vw;
+        margin-bottom: 60px;
+    }
+
+    #acheiveSubtitle{
+        font-size: 7vw;
+    }
+
+    #workContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .job{
+        width: 60vw;
+        max-width: 60vw;
+        height: 20vh;
+    }
+
+    .jobh1{
+        margin: 0;
+    }
+
+    .jobh2{
+        margin-top: 0;
+    }
+
+    .achieveImg {
+        width: 50vw !important;
+        margin-top: 0;
     }
 }
