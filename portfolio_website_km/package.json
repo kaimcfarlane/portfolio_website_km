@@ -2,7 +2,7 @@
   "name": "portfolio_website_km",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://{kaimcfarlane}.github.io/{portfolio_website_km}",
+  "homepage": "https://{kaimcfarlane}.github.io/{portfolio_website_km}",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
