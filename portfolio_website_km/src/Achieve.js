@@ -355,6 +355,12 @@ export default function Achieve({DLObj}) {
       pictureSwap(img1,kiwiPicArr)
       pictureSwap(img2,modsPicArr)
       pictureSwap(img3,ufitPicArr)
+      if(window.innerWidth < '970') {
+        jobTitle3.current.innerHTML = "Web-App Developer Intern"
+        jobSub3.current.innerHTML = 'UFIT'
+        jobTitle1.current.innerHTML = "Web-Dev and Founder"
+        jobSub2.current.innerHTML = "MODS"
+    }
     }
     else{
     //   titleContainer.current.classList.remove("snappedLB")
@@ -366,7 +372,7 @@ export default function Achieve({DLObj}) {
   },[inView])
 
     const updateDimension = () => {
-        if(window.innerWidth < '970') {
+        if(window.innerWidth < '970' && window.innerWidth > '500') {
             jobTitle3.current.innerHTML = "Web-App Developer Intern"
             jobSub3.current.innerHTML = 'UFIT'
             jobTitle1.current.innerHTML = "Web-Dev and Founder"
