@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import styles from './Welcome.module.css';
 import imageC from './selfPictures/selfie2.jpg';
+import imageD from './selfPictures/IMG_8652.jpg'
 import githubPic from  './githubLogo1.png';
 import linkedinPic from './linkedinLogo1.png';
 import imageS from './KaiMcFarlaneSeniorPicture2.jpeg';
@@ -82,10 +83,6 @@ export default function Welcome({DLObj}) {
                 // console.log("Mouse Moved Bro");
                 // console.log("Page X speed is " + e.pageX);
                 // console.log("X value: " + x);
-                if(profilePic)
-                {
-                    console.log("Profile Pic Object: " + profilePic);
-                }
             }
         },6300)
         }

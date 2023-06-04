@@ -83,7 +83,6 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
         var newProject = selectedProjectInfo
         newProject.isOpen = true
         changeProjectInfo(newProject)
-        console.log('Close Project Btn Clicked, selectedPorjectInfo is now ' + selectedProjectInfo.isOpen)
         changeState(!state)
     }
 
@@ -103,9 +102,6 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
             imgIndex--
             projectInfoImg.src = selectedProjectInfo.img[imgIndex]
         }
-        console.log("IMG HAS CHANGED:")
-        console.log(selectedProjectInfo.img[imgIndex])
-        console.log("IMG INDEX: " + imgIndex)
     }, [8000])
 
     useEffect(()=> {},[imgIndex])

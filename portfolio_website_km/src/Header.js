@@ -49,7 +49,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
     const [iColor, setIColor] = useState('white');
 
     const HomeBtn = () => {
-        console.log("Home Button Clicked");
         // window.location.reload();
         // window.scrollTo({ top: 100, behavior: 'smooth' });
         // var scrollToTop = window.setInterval(() => {
@@ -76,7 +75,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
 
     const burgerMenuClick = () => {
         burgerMenu.current.classList.toggle('open');
-        console.log(menuContent.current.style.display);
         if(menuContent.current.style.display === "none" || menuContent.current.style.display === '')
         {
             // menuContent.current.style.opacity = "0"
@@ -90,7 +88,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
                 // burgerMenu.current.style.backgroundColor = "#a7a7fa";
                 if(DLObj.isLight)
                 {
-                    console.log("Light Mode activated giving mobile menu purple background menu")
                     burgerMenu.current.style.backgroundColor = 'rgb(167, 167, 250)';
                     // menuContent.current.style.backgroundColor = 'rgb(167, 167, 250) !important';
                     // styleLink.current.style.backgroundColor = 'rgb(167, 167, 250) !important';
@@ -192,7 +189,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
                     hLink6.current.style.borderColor = "black";
                     hLink6.current.style.boxShadow = "rgb(0 0 0 / 24%) 0px 3px 8px";
 
-                    console.log("Dark Mode activated giving mobile menu black background menu");
                     burgerMenu.current.style.backgroundColor = "rgb(98 70 234 / 19%)";
 
                     burgerMenuRight.current.style.backgroundColor = "#ffffff00";
@@ -230,7 +226,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
             
         }
         
-        console.log("burgerMenu Clicked!");
     } 
     var NDClicked= false;
 
@@ -239,7 +234,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
         var allElements = document.getElementsByTagName("*");
                 if(!NDClicked) {
                     //add code to make body background black
-                    console.log("toogle night btn clicked");
                     // document.body.style.backgroundColor = "blue";
                     setIColor('black');
                     // console.log("tooglenight.checked: " + tooglenight.checked);
@@ -252,7 +246,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
                     // i.setState({color: 'white'});
                 }else{
                     //add code to make background white again
-                    console.log("toogle night btn clicked");
                     // console.log("tooglenight.checked: " + tooglenight.checked);
                     document.body.style.backgroundColor = "white";
                     setIColor('white');
@@ -301,11 +294,9 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
         if(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) != null)
         {
           JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) ? makeDarkMode() : setCheck(false) && DLBtnClick()
-          console.log(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)))
         }
         else
         {
-          console.log("User has no data in localStorage")
         }
 
         entireMenu.current.style.opacity = "0"
@@ -320,17 +311,13 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
 
 
     const DLBtnClick = () => {
-        console.log("CSS Switch Clicked")
         const tBtn = document.getElementById("toogleNight");
-        console.log("DLChecked: " + DLChecked)
-        console.log("DLSwitch element below: " + DLSwitch);
         var allElements = document.getElementsByTagName("*");
         if(!DLChecked) 
         {
             localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(true))
             
             toggleDL();
-            console.log("DLOBJ is now " + DLObj.isLight);
             setCheck(true);
             // tooglenight.checked = true;
             // tBtn.checked = true;
@@ -355,7 +342,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
             localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(false))
 
             toggleDL();
-            console.log("DLOBJ is now " + DLObj.isLight);
             setCheck(false);
             // tooglenight.checked = false;
             // tBtn.checked = false;
@@ -380,7 +366,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
     }
 
     const [navClicked, changeNavClicked] = useState(false)
-    console.log(navClicked)
 
         // const triggerNavTransition = () => {
         //     // var nav  = !navClicked
@@ -407,7 +392,6 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
     const [hrefs, setHrefs] = useState(['#mainPage', '#skillsPage','#projectsPage', '#contactPage', '_blank', Pdf, null, '#achievePage'])
 
     const changeNavIndex = (index) =>{
-        console.log('Change Nav Index Working')
         var newHrefs = [...hrefs]
         // console.log(newHrefs)
         newHrefs[6] = index

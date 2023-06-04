@@ -61,7 +61,6 @@ export default function Project({info, DLObj, projectClick, index, inView}) {
     if(DLObj.isLight) {
       project.current.style.background = 'white'
       // project.current.style.boxShadow = '9px 10px 3px 0px rgb(98 70 234 / 76%)'
-      console.log((project.current.classList))
       // project.current.classList.add('projectLightHover')
       proTitle.current.style.backgroundColor = 'white'
       proTitle.current.style.color = 'black'
@@ -98,7 +97,6 @@ export default function Project({info, DLObj, projectClick, index, inView}) {
 
   const unhoverProject = () => {
       // project.current.style.boxShadow = ''
-      console.log("Project " + index + " Btn Clicked!")
       projectClick(index)
   }
 

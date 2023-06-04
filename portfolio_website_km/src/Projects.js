@@ -69,7 +69,6 @@ export default function Projects({DLObj}) {
 
   const projectClick = (index) => {
     //set original project info to new project variable for changes
-      console.log("Inner Project Function Clicked!")
       projectInfoBox.current.style.transform = 'translateX(0%)'
       projectInfoBackground.current.classList.add('projectShadow')
       // projectInfoBackground.current.classList === 'projectShadow' ? projectInfoBackground.current.classList.remove('projectShadow') : projectInfoBackground.current.classList.add('projectShadow')
@@ -85,7 +84,6 @@ export default function Projects({DLObj}) {
         newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat_PUBLIC'
         newProject.logos = [mongoDB, node, typescript]
         changeProjectInfo(newProject)
-        console.log('Image passed is: ' + JSON.stringify(selectedProjectInfo))
         changeState(!state)
       }
       else if(index === 2) {
@@ -158,7 +156,6 @@ export default function Projects({DLObj}) {
     //FIX codeURL on INDEX6 because it is not working just openign websit epage again
 
   useEffect(() => {
-    console.log("Project Button closed so value here in object should trigger a close")
     if (selectedProjectInfo.isOpen === true) {
       projectInfoBox.current.style.transform = 'translateX(-100%)'
       projectInfoBackground.current.classList.remove('projectShadow')

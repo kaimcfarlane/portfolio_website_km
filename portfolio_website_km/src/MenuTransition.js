@@ -8,19 +8,15 @@ export default function MenuTransition({navClicked, changeNavClicked, burgerMenu
 
 
   useEffect(()=>{
-    console.log(navClicked)
       transitionBox.current.style.transform = "translateX(0%)"
       setTimeout(()=> {
         transitionBox.current.style.transform = "translateX(100%)"
         menuContent.current.style.opacity = "0"
         burgerMenu.current.style.backgroundColor = "rgb(167 167 250 / 0%)"
         //On load call burger menu click but a
-        console.log(menuContent.current.style.display)
         if(menuContent.current.style.display !== "none" && hrefs[6] !== null)
         {
           burgerMenuClick()
-          console.log("BURGER IS BEING OPENED")
-          console.log(menuContent.current.style.display)
         }
         if(hrefs[6] === 0)
           {
