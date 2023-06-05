@@ -158,7 +158,7 @@
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 500px) and (min-height: 851px) {
     #skillsTitleContainer{
         font-size: 6vw;
         margin-top: 110px;
@@ -207,3 +207,57 @@
         margin-top: 50px;
     }
 }
+
+@media(max-height: 850px) {
+    #skillsTitleContainer{
+        font-size: 6vw;
+        margin-top: 100px;
+    }
+
+    #word1Half, #word2Half{
+        padding-left: 10px;
+    }
+
+    #word3{
+        font-size: 7.645vw;
+    }
+
+    #title{
+        font-size: 5.2vw;
+    }
+
+    .icon{
+        width: 8vw;
+        height: 8vw;
+    }
+
+    #typescript_Logo{
+        height: 5vw;
+        width: 5vw;
+        margin-top: 7px;
+    }
+
+    #java_Logo{
+        height: 6vw;
+        width: 6vw;
+    }
+
+    #cShapr_Logo, #cPlusPlusLogo, #pythonLogo{
+        width: 7vw;
+        height: 7vw;
+        margin-top: 3px;
+    }
+
+    #react_Logo{
+        height: 7vw;
+        width: 7vw;
+    }
+
+    #skillsContent{
+        margin-top: 50px;
+    }
+    #skillsText{
+        margin-top: -55px;
+      }
+    }
+
