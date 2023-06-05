@@ -42,8 +42,9 @@
 #contactInfo{
     display: flex;
     flex-direction: row;
-    gap: 30%;
+    /* gap: 30%; */
     justify-content: space-around;
+    gap: 36%;
 }
 
 #name{
@@ -90,7 +91,8 @@
     border-top-color: #ffffff00;
     border-left-color: #ffffff00;
     border-bottom-color: #6246ea;
-    width: 812px;
+    /* width: 812px; */
+    width: 820px;
 }
 
 #message:focus-visible{
@@ -110,8 +112,16 @@
     margin-right: 10px;
 }
 
-#nameContianer{
-    margin-right: 50px;
+#nameContainer{
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+}
+
+#emailContainer{
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
 }
 
 #contactText{
@@ -121,8 +131,9 @@
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    margin-left: -142px;
+    /* margin-left: -142px; */
     padding-left: 146px;
+    margin-left: -149px;
 }
 
 #sendBtnContainer{
@@ -419,7 +430,9 @@
   }
 
   #contactInfo{
-    gap: 5%;
+    /* gap: 5%; */
+    gap: 14%;
+    margin-right: 32.5px;
   }
 
   #email,#name{
@@ -455,6 +468,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    flex-direction: column;
   }
 
   #emailContainer{
@@ -462,6 +476,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    flex-direction: column;
   }
 
   #contactText{
