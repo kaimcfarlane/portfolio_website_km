@@ -449,7 +449,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) and (min-height: 851px) {
   #contactTitleContainer{
     padding-top: 75px;
   }
@@ -489,6 +489,58 @@
 
   #contactInfo{
     flex-direction: column;
+  }
+
+  #message{
+    width: 254px;
+  }
+
+  #footerText{
+    margin-top: 100px;
+  }
+}
+
+@media(max-height: 850px) {
+  #contactTitleContainer{
+    padding-top: 45px;
+  }
+
+  #contactTitle{
+    font-size: 9vw;
+    margin-bottom: 60px;
+  }
+
+  #contactSubtitle{
+    font-size: 7vw;
+  }
+
+  #nameContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+
+  #emailContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+
+  #contactText{
+    margin-top: 0;
+    margin-left: 0; 
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  #contactInfo{
+    flex-direction: column;
+    margin-right: 0px;
   }
 
   #message{

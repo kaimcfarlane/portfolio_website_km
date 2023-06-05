@@ -74,7 +74,7 @@
     justify-content: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) and (min-height: 851px) {
     #projectTitleContainer{
       padding-top: 75px;
     }
@@ -100,4 +100,51 @@
     #projectContainer{
         flex-direction: row;
     }
+}
+
+@media(max-width: 500px) {
+    #projectTitleContainer{
+        padding-top: 40px;
+      }
+
+      #projectContainer{
+        margin-top: -25px;
+      }
+    
+      #projectTitle{
+        font-size: 9vw;
+        margin-bottom: 60px;
+      }
+    
+      #projectSubTitle{
+        font-size: 7vw;
+        margin-top: -45px;
+      }
+  
+      .projectSubBox{
+          flex-wrap: wrap;
+      }
+  
+      #projectImg{
+        width: 180px;
+        height: 80px;
+      }
+  
+      #projectContainer{
+          flex-direction: row;
+      }
+
+      #project{
+        margin-bottom: 20px;
+      }
+
+      #proTitle{
+        font-size: 5vw;
+        margin: 13px;
+        margin-top: 5px;
+      }
+
+      .tool{
+        padding-bottom: 0;
+      }
 }
