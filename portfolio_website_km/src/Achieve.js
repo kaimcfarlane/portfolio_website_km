@@ -174,7 +174,7 @@ export default function Achieve({DLObj}) {
             }
         }
         }
-        else{
+        else if(window.innerWidth<501 && window.innerHeight>850){
             img1.current.style.height = "115px"
             img1.current.style.minHeight = "115px"
             jobDesc1.current.style.opacity = "0%"
@@ -185,6 +185,20 @@ export default function Achieve({DLObj}) {
             clicked3 = false
             img2.current.style.height = "115px"
             img2.current.style.minHeight = "115px"
+            jobDesc2.current.style.opacity = "0%"
+            clicked2 = false
+        }
+        else{
+            img1.current.style.height = "70px"
+            img1.current.style.minHeight = "70px"
+            jobDesc1.current.style.opacity = "0%"
+            clicked1 = false
+            img3.current.style.height = "70px"
+            img3.current.style.minHeight = "70px"
+            jobDesc3.current.style.opacity = "0%"
+            clicked3 = false
+            img2.current.style.height = "70px"
+            img2.current.style.minHeight = "70px"
             jobDesc2.current.style.opacity = "0%"
             clicked2 = false
         }

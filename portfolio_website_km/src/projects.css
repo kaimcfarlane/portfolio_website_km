@@ -103,6 +103,10 @@
 }
 
 @media(max-width: 500px) {
+    #projectInfoBox{
+        top: 10%;
+    }
+
     #projectTitleContainer{
         padding-top: 40px;
       }

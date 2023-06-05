@@ -34,7 +34,7 @@
 
 @media(max-height: 850px) {
 #transitionBoxTitle{
-    top: 10%;
+    top: 15%;
     font-size: 200px;
     left: -4%;
     position: relative;

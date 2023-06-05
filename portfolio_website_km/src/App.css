@@ -74,3 +74,10 @@ html{
 ::selection {
   background: #6d55e9;
 }
+
+@media(max-width: 500px){
+  #achievePage, #projectsPage, #contactPage, #skillsPage, #mainPage {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
