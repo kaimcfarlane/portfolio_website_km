@@ -300,7 +300,7 @@
   animation-delay: 5s;
 }
 
-  @media (max-width: 500px) {
+  @media (max-width: 500px) and (min-height: 851px) {
     #welcomeAll{
       flex-direction: column;
       /* margin-top: -113px; */
@@ -329,6 +329,57 @@
     #mouseContainer{
       position: relative;
       top: -7%;
+    }
+  }
+
+  /* Iphone 13 is 653px tall */
+  @media(max-height: 850px) {
+    #welcomeAll{
+      flex-direction: column;
+    }
+
+    #welcomeContent{
+      margin-top: 50px;
+      margin-left: -53px;
+    }
+
+    #title{
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 10vw;
+    }
+
+    #subtitle{
+      font-size: 8vw;
+    }
+
+    #profilePic{
+      margin-left: 0;
+      margin-top: 37px;
+      margin-bottom: 37px;
+    }
+
+    #SMContainer{
+      top: 50%;
+    }
+
+    #mouseContainer{
+      top: -7%;
+    }
+
+    #profilePic{
+      margin-top: 25px;
+      margin-left: 0;
+      margin-bottom: 37px;
+    }
+
+    #SMContainer{
+      top: 40%;
+    }
+
+    #mouseContainer{
+      position: relative;
+      top: -13%;
     }
   }
 

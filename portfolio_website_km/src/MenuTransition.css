@@ -21,11 +21,22 @@
     font-family: 'Yellowtail', cursive;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 500px) and (min-height: 851px) {
     #transitionBoxTitle{
         position: relative;
         top: 20%;
         font-size: 200px;
         left: -4%;
     }
+}
+
+
+
+@media(max-height: 850px) {
+#transitionBoxTitle{
+    top: 10%;
+    font-size: 200px;
+    left: -4%;
+    position: relative;
+  }
 }
