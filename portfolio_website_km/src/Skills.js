@@ -174,7 +174,7 @@ useEffect(()=>{
             <ReactTooltip  id='gitLogo'/>
             <img className='icon' alt='learnedIcon' src={gitlab_Logo} data-tooltip-id="gitlabLogo" data-tooltip-content='Gitlab'></img>
             <ReactTooltip  id='gitlabLogo'/>
-            <img className='icon' alt='learnedIcon' src={heroku_Logo} data-tooltip-id="herokuLogo" data-tooltip-content='Hekrou'></img>
+            <img className='icon' alt='learnedIcon' src={heroku_Logo} data-tooltip-id="herokuLogo" data-tooltip-content='Heroku'></img>
             <ReactTooltip  id='herokuLogo'/>
             <img className='icon' alt='learneIcon' src={jiraLogo} data-tooltip-id="jiraLogo" data-tooltip-content='Jira'></img>
             <ReactTooltip  id='jiraLogo'/>
