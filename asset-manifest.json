@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b085a20e.css",
-    "main.js": "/static/js/main.c3d407ae.js",
+    "main.js": "/static/js/main.a7791582.js",
     "static/js/787.311e56ff.chunk.js": "/static/js/787.311e56ff.chunk.js",
     "static/media/weatherappImg1.png": "/static/media/weatherappImg1.22c42bd778e72079a0ea.png",
     "static/media/virtualRealityPic1.jpg": "/static/media/virtualRealityPic1.5aea9be4bbcfc88924e8.jpg",
@@ -78,11 +78,11 @@
     "static/media/purpleawardLogo.png": "/static/media/purpleawardLogo.f76a7398bd0b723e6887.png",
     "index.html": "/index.html",
     "main.b085a20e.css.map": "/static/css/main.b085a20e.css.map",
-    "main.c3d407ae.js.map": "/static/js/main.c3d407ae.js.map",
+    "main.a7791582.js.map": "/static/js/main.a7791582.js.map",
     "787.311e56ff.chunk.js.map": "/static/js/787.311e56ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b085a20e.css",
-    "static/js/main.c3d407ae.js"
+    "static/js/main.a7791582.js"
   ]
 }
