@@ -113,7 +113,7 @@ export default function Contact({DLObj}) {
             <p ref={contactSubtitle} id='contactSubtitle'>&lt;Come Say Hi/&gt;</p>
         </section>
         <section ref={formContainer} id='formContainer'>
-            <form id="form" action="https://formsubmit.co/kaimcfarlane43@gmail.com" method="POST">
+            <form id="form" action="https://formsubmit.co/3f0b7bfbe162e6d1115219c9fd65e3d6" method="POST">
                 <div ref={ref} id='contactInfo'>
                     <div id='nameContainer'>
                         <label ref={nameTitle} id='nameTitle'>
