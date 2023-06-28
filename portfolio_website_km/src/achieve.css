@@ -353,7 +353,7 @@
     }
 }
 
-@media(max-height: 850px) {
+@media(max-height: 850px) and (max-width: 500px) {
     #achieveTitleContainer{
         font-size: 6vw;
         /* padding-top: 110px; */

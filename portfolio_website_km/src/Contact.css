@@ -500,7 +500,7 @@
   }
 }
 
-@media(max-height: 850px) {
+@media(max-height: 850px) and (max-width: 500px) {
   #contactTitleContainer{
     padding-top: 45px;
   }

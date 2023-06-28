@@ -32,7 +32,7 @@
 
 
 
-@media(max-height: 850px) {
+@media(max-height: 850px) and (max-width: 500px) {
 #transitionBoxTitle{
     top: 15%;
     font-size: 200px;

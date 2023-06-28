@@ -208,7 +208,7 @@
     }
 }
 
-@media(max-height: 850px) {
+@media(max-height: 850px) and (max-width: 500px) {
     #skillsTitleContainer{
         font-size: 6vw;
         margin-top: 100px;

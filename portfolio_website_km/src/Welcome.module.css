@@ -333,7 +333,7 @@
   }
 
   /* Iphone 13 is 653px tall */
-  @media(max-height: 850px) {
+  @media(max-height: 850px) and (max-width: 500px) {
     #welcomeAll{
       flex-direction: column;
     }
