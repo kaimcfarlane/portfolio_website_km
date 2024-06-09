@@ -120,7 +120,7 @@ useEffect(()=>{
         </div>
           <h1 ref={titleOne} id='word1'>I'm</h1>
           <h1 ref={titleTwo} id='word2'>Experienced</h1>
-        <p ref={subtitle} id='word3'>- 3 Years of Code -</p>
+        <p ref={subtitle} id='word3'>- 4 Years of Code -</p>
       </div>
       <div id='skillsContent' ref={ref}>
         <div>
