@@ -253,10 +253,16 @@
     }
       
 
-    #react_Logo{
+    #react_Logo {
         height: 8vw;
         width: 7vw;
         margin-left: 15px;
+    }
+
+    #next_Logo {
+        margin-top: 0;
+        width: 35px;
+        height: 35px;
     }
 
     #skillsContent{

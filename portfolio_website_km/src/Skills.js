@@ -88,11 +88,11 @@ export default function Skills({DLObj}) {
       nextLogo.current.style.background = "";
       nextLogo.current.style.padding = "";
       nextLogo.current.style.borderRadius =""
-      nextLogo.current.style.padding = "3px";
+      nextLogo.current.style.marginTop = "3px";
+      nextLogo.current.style.padding = "";
       if (window.screen.width > 500) {
         nextLogo.current.style.width = "40px";
         nextLogo.current.style.height = "40px";
-        nextLogo.current.style.marginTop = "5px";
         nextLogo.current.style.marginTop = "5px";
         nextLogo.current.style.padding = "";
       }
