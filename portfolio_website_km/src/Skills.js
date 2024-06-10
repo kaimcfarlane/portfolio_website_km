@@ -25,6 +25,10 @@ import sqlLogo from './sqlLogo.png'
 import bootstrapLogo from './bootstraplogo.png'
 import { Tooltip as ReactTooltip } from 'react-tooltip'
 import { useInView } from 'react-intersection-observer'
+import angular_Logo from './angular_logo.png'
+import flask_Logo from './Flask_logo.png'
+import AWS_Logo from './AWS_logo.png'
+import docker_Logo from './docker_logo.png'
 
 export default function Skills({DLObj}) {
 
@@ -34,16 +38,27 @@ export default function Skills({DLObj}) {
   const subtitle = useRef()
   const titleOneH = useRef()
   const titleTwoH = useRef()
+  const flaskLogo = useRef()
 
   useEffect(() =>{
     if(!DLObj.isLight)
     {
-        titleOne.current.style.color = "#fffffe";
-        titleTwo.current.style.color = "#fffffe";
-        subtitle.current.style.color = "#fffffe";
-        titleOneH.current.style.color = "#fffffe";
-        titleTwoH.current.style.color = "#fffffe";
-
+      titleOne.current.style.color = "#fffffe";
+      titleTwo.current.style.color = "#fffffe";
+      subtitle.current.style.color = "#fffffe";
+      titleOneH.current.style.color = "#fffffe";
+      titleTwoH.current.style.color = "#fffffe";
+      flaskLogo.current.style.background = "white";
+      flaskLogo.current.style.padding = "3px";
+      flaskLogo.current.style.borderRadius = "10px";
+      flaskLogo.current.style.marginRight = "20px";
+      flaskLogo.current.style.marginTop = "3px";
+      if (window.screen.width > 500) {
+        flaskLogo.current.style.width = "40px";
+        flaskLogo.current.style.height = "40px";
+        flaskLogo.current.style.marginTop = "";
+        flaskLogo.current.style.marginTop = "5px";
+      }
     }
     else
     {
@@ -52,6 +67,12 @@ export default function Skills({DLObj}) {
       subtitle.current.style.color = "black";  
       titleOneH.current.style.color = "black";
       titleTwoH.current.style.color = "black";
+      flaskLogo.current.style.background = "";
+      flaskLogo.current.style.padding = "";
+      flaskLogo.current.style.width = "";
+      flaskLogo.current.style.height = "";
+      flaskLogo.current.style.marginTop = "";
+      flaskLogo.current.style.marginRight = "";
     }
 },[DLObj])
 
@@ -149,12 +170,16 @@ useEffect(()=>{
           <div ref={imageContainer2} className='imageContainer'>
             <img className='icon' id='react_Logo' alt='libraryIcon' src={react_Logo} data-tooltip-id="reactLogo" data-tooltip-content='React.js'></img>
             <ReactTooltip  id='reactLogo'/>
+            <img className='icon' id='angular_Logo' alt='libraryIcon' src={angular_Logo} data-tooltip-id="angularLogo" data-tooltip-content='AngularJS'></img>
+            <ReactTooltip  id='angularLogo'/>
+            <img ref={flaskLogo} className='icon' id='flask_Logo' alt='libraryIcon' src={flask_Logo} data-tooltip-id="flaskLogo" data-tooltip-content='Flask'></img>
+            <ReactTooltip  id='flaskLogo'/>
+            <img className='icon' id='node_Logo' alt='libraryIcon' src={node_Logo} data-tooltip-id="nodeLogo" data-tooltip-content='Node.js'></img>
+            <ReactTooltip  id='nodeLogo'/>
             <img className='icon' id='express_Logo' alt='libraryIcon' src={express_Logo} data-tooltip-id="expressLogo" data-tooltip-content='Express.js'></img>
             <ReactTooltip  id='expressLogo'/>
             <img className='icon' id='mui_Logo' alt='libraryIcon' src={mui_Logo} data-tooltip-id="muiLogo" data-tooltip-content='MaterialUI'></img>
             <ReactTooltip  id='muiLogo'/>
-            <img className='icon' id='node_Logo' alt='libraryIcon' src={node_Logo} data-tooltip-id="nodeLogo" data-tooltip-content='Node.js'></img>
-            <ReactTooltip  id='nodeLogo'/>
             <img className='icon' id='chartjs_Logo' alt='libraryIcon' src={chartjs_Logo} data-tooltip-id="chartLogo" data-tooltip-content='Chart.js'></img>
             <ReactTooltip  id='chartLogo'/>
             <img className='icon' id='sqlLogo' alt='libraryIcon' src={sqlLogo} data-tooltip-id="sqlLogo" data-tooltip-content='SQL'></img>
@@ -166,6 +191,10 @@ useEffect(()=>{
         <div>
         <SkillsRTitle inview={inView} name={'Learned'} DLObj={DLObj}/>
           <div ref={imageContainer3} className='imageContainer'>
+            <img className='icon' id='docker_Logo' alt='learnedIcon' src={docker_Logo} data-tooltip-id="dockerLogo" data-tooltip-content='Docker'></img>
+            <ReactTooltip  id='dockerLogo'/>
+            <img className='icon' id='AWS_Logo' alt='learnedIcon' src={AWS_Logo} data-tooltip-id="AWSLogo" data-tooltip-content='AWS'></img>
+            <ReactTooltip  id='AWSLogo'/>
             <img className='icon' alt='learnedIcon' src={mongodb_Logo} data-tooltip-id="mongoLogo" data-tooltip-content='MongoDB'></img>
             <ReactTooltip  id='mongoLogo'/>
             <img className='icon' alt='learnedIcon' src={api_Logo} data-tooltip-id="apiLogo" data-tooltip-content='API'></img>
