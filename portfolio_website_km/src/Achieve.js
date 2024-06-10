@@ -409,13 +409,13 @@ export default function Achieve({DLObj}) {
             jobTitle3.current.innerHTML = "Software Engineer Intern"
             jobSub3.current.innerHTML = 'June 2024 - Present'
             jobTitle1.current.innerHTML = "Web-App Developer Intern"
-            jobSub2.current.innerHTML = "January 2023 - Janauary 2024"
+            jobSub2.current.innerHTML = "January 2024 - June 2024"
         }
         else{
             jobTitle3.current.innerHTML = "Software Engineer Intern"
             jobSub3.current.innerHTML = 'June 2024 - Present'
             jobTitle1.current.innerHTML = "Web-App Developer Intern"
-            jobSub2.current.innerHTML = "January 2023 - Janauary 2024"
+            jobSub2.current.innerHTML = "January 2024 - June 2024"
 
         }
     }
@@ -434,7 +434,7 @@ export default function Achieve({DLObj}) {
         <div ref={ref} id='workContainer'>
                 <div ref={job1} className='job' id='job1'>
                     <h1 ref={jobTitle1} className='jobh1'>Web-App Developer Intern</h1>
-                    <h2 ref={jobSub1} className='jobh2'>Janaury 2023 - January 2024</h2>
+                    <h2 ref={jobSub1} className='jobh2'>January 2023 - January 2024</h2>
                     <img id='ufit_logo' src={UFIT_Logo}></img>
                     <img className='achieveImg' ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
                     <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Redesigned and implemented new cards feature for the personal UF Workspace with React.js, Node.js, and SQL</p>
