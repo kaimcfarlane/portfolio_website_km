@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import styles from './Welcome.module.css';
 import imageC from './selfPictures/selfie2.jpg';
+import img1 from './kai_professional4.JPG'
 import imageD from './selfPictures/IMG_8652.jpg'
 import githubPic from  './githubLogo1.png';
 import linkedinPic from './linkedinLogo1.png';
@@ -41,6 +42,9 @@ export default function Welcome({DLObj}) {
             paragraph2Mob.current.style.color = "#94a1b2"
             subtitle.current.style.color = "#fffffe";
             profilePic.current.style.borderColor = "#fffffe";
+            profilePic.current.style.borderStyle = "dashed";
+            profilePic.current.style.borderWidth = "3px";
+            // profilePic.current.style.borderColor = "black";
             mouse.current.style.backgroundColor = "rgb(22, 22, 26)";
             linkedinPicture.current.style.backgroundColor = "white";
             githubPicture.current.style.backgroundColor = "white";
@@ -53,6 +57,8 @@ export default function Welcome({DLObj}) {
             paragraph2Mob.current.style.color = "#2b2c34";
             subtitle.current.style.color = "black";
             profilePic.current.style.borderColor = "black";
+            profilePic.current.style.borderStyle = "solid";
+            profilePic.current.style.borderWidth = "";
             mouse.current.style.backgroundColor = "#a7a7fa";
             linkedinPicture.current.style.backgroundColor = "";
             githubPicture.current.style.backgroundColor = "";
@@ -234,7 +240,7 @@ export default function Welcome({DLObj}) {
         {/* I'm a Software Developer that loves to create exciting projects through code. */}
     </div>
     <div>
-        <img ref={profilePic} id={styles.profilePic} alt='Logo' src={imageC}></img>
+        <img ref={profilePic} id={styles.profilePic} alt='Logo' src={img1}></img>
     </div>
     <div ref={welcomeSubtextMob} id={styles.welcomeSubtextMob}>
         <p2 ref={paragraph1Mob} id={styles.paragraph1Mob}>Full-Stack Developer - CS Student</p2>
