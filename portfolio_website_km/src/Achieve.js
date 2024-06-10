@@ -392,7 +392,7 @@ export default function Achieve({DLObj}) {
         jobTitle3.current.innerHTML = "Software Engineer Intern"
         jobSub3.current.innerHTML = 'June 2024 - Present'
         jobTitle1.current.innerHTML = "Web-App Developer Intern"
-        jobSub2.current.innerHTML = "January 2023 - Janauary 2024"
+        jobSub2.current.innerHTML = "January 2024 - June 2024"
     }
     }
     else{

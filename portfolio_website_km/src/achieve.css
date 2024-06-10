@@ -403,7 +403,7 @@
     }
 
     .job {
-        height: 22.5vh;
+        height: 20.2vh;
     }
 }
 
@@ -434,7 +434,7 @@
     .job{
         width: 60vw;
         max-width: 60vw;
-        height: 21vh;
+        height: 20.2vh;
     }
 
     .jobh1{
@@ -494,10 +494,6 @@
         width: 70px;
         height: 40px;
         margin-top: -10px;
-    }
-
-    .job {
-        height: 22.5vh;
     }
 }
 
