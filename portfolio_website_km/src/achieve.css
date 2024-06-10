@@ -100,7 +100,7 @@
 }
 
 #kiwi_WebsitePic{
-    margin-top: 19px;
+    margin-top: 10px;
     border-radius: 10px;
     transition: ease-in-out 0.3s;
     height: 177px;
@@ -131,7 +131,7 @@
     height: 200px;
     background-color: #6146ea00; */
 
-    margin-top: 19px;
+    margin-top: 3px;
     border-radius: 10px;
     transition: ease-in-out 0.3s;
 
@@ -152,6 +152,31 @@
     box-shadow: rgba(98, 70, 234, 0.76) 5px 6px 7px 0px;
 }
 
+#infotech_logo {
+    width: 150px;
+    max-height: 100px;
+    margin-top: 1px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#ufit_logo {
+    width: 85px;
+    height: 50px;
+    margin-top: 1px;
+    border-radius: 3px;
+}
+
+#disney_logo {
+    width: 120px;
+    height: 90px;
+    margin-top: 1px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
 #ufit_Pic{
     /* margin-top: 19px;
     min-height: 177px;
@@ -162,7 +187,7 @@
 
     background-color: #6146ea00; */
 
-    margin-top: 19px;
+    margin-top: 10px;
     border-radius: 10px;
     transition: ease-in-out 0.3s;
 
@@ -246,6 +271,12 @@
 .snappedLBLate{
     animation: 1s ease-out 4.5s 1 loadFromBtm;
     animation-fill-mode: forwards;  
+}
+
+@media(max-width: 1800px) {
+    .job {
+        height: 370px;
+    }
 }
 
 @media(max-width: 970px){
@@ -351,6 +382,29 @@
     #awardsContainer{
         display: none;
     }
+
+    #infotech_logo {
+        width: 100px;
+        max-height: 50px;
+        margin-top: -10px;
+    }
+    
+    #ufit_logo {
+        width: 70px;
+        height: 35px;
+        margin-top: -8px;
+        margin-bottom: 3px;
+    }
+    
+    #disney_logo {
+        width: 70px;
+        height: 40px;
+        margin-top: -10px;
+    }
+
+    .job {
+        height: 22.5vh;
+    }
 }
 
 @media(max-height: 850px) and (max-width: 500px) {
@@ -422,6 +476,28 @@
 
     #awardsContainer{
         display: none;
+    }
+    #infotech_logo {
+        width: 100px;
+        max-height: 50px;
+        margin-top: -10px;
+    }
+    
+    #ufit_logo {
+        width: 70px;
+        height: 35px;
+        margin-top: -8px;
+        margin-bottom: 3px;
+    }
+    
+    #disney_logo {
+        width: 70px;
+        height: 40px;
+        margin-top: -10px;
+    }
+
+    .job {
+        height: 22.5vh;
     }
 }
 
