@@ -296,8 +296,15 @@
     }
 
     #react_Logo{
-        height: 7vw;
-        width: 7vw;
+        display: none;
+    }
+
+    #bootstrap_Logo {
+        display: none;
+    }
+
+    #tailwindcss_Logo {
+        display: none;
     }
 
     #skillsContent{
