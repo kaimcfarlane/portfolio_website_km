@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f0178842.css",
-    "main.js": "/static/js/main.2aa639bd.js",
+    "main.css": "/static/css/main.36a8d097.css",
+    "main.js": "/static/js/main.42e7a057.js",
     "static/js/787.311e56ff.chunk.js": "/static/js/787.311e56ff.chunk.js",
     "static/media/weatherappImg1.png": "/static/media/weatherappImg1.22c42bd778e72079a0ea.png",
     "static/media/virtualRealityPic1.jpg": "/static/media/virtualRealityPic1.5aea9be4bbcfc88924e8.jpg",
@@ -64,6 +64,7 @@
     "static/media/javaLogo.png": "/static/media/javaLogo.0c66e88b871f91eb4188.png",
     "static/media/reactLogo.png": "/static/media/reactLogo.e293bb8e29685c5dccd6.png",
     "static/media/pythonlogo.png": "/static/media/pythonlogo.448fb2a83595fa5c5c8a.png",
+    "static/media/tailwindcss_logo.png": "/static/media/tailwindcss_logo.ae40dbca0686d9cfdca0.png",
     "static/media/mongodb_Logo.png": "/static/media/mongodb_Logo.4d1763a20af23f3dbc1d.png",
     "static/media/purpleCopyrightLogo.png": "/static/media/purpleCopyrightLogo.e2b529002a5ed640249e.png",
     "static/media/unitylogo.png": "/static/media/unitylogo.4f269642df7ff30fcc36.png",
@@ -80,12 +81,12 @@
     "static/media/cssLogo.png": "/static/media/cssLogo.e8880e3282bdc9a71248.png",
     "static/media/purpleawardLogo.png": "/static/media/purpleawardLogo.f76a7398bd0b723e6887.png",
     "index.html": "/index.html",
-    "main.f0178842.css.map": "/static/css/main.f0178842.css.map",
-    "main.2aa639bd.js.map": "/static/js/main.2aa639bd.js.map",
+    "main.36a8d097.css.map": "/static/css/main.36a8d097.css.map",
+    "main.42e7a057.js.map": "/static/js/main.42e7a057.js.map",
     "787.311e56ff.chunk.js.map": "/static/js/787.311e56ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0178842.css",
-    "static/js/main.2aa639bd.js"
+    "static/css/main.36a8d097.css",
+    "static/js/main.42e7a057.js"
   ]
 }
