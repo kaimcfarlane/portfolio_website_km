@@ -261,3 +261,12 @@
       }
     }
 
+@media(min-height: 870px) {
+    #skillsContainer{
+        align-items: center;
+        display: flex;
+        justify-content: space-around;  
+        padding-top: 200px;
+    }
+}
+

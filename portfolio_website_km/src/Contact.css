@@ -552,3 +552,13 @@
     margin-top: 100px;
   }
 }
+
+@media(min-height: 870px) {
+  #formContainer {
+    margin-top: 50px;
+  }
+
+  #footerText {
+    margin-top: 180px;
+  }
+}

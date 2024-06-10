@@ -383,6 +383,12 @@
     }
   }
 
+  @media(min-height: 870px) {
+    #welcomeAll{
+      padding-top: 3%;
+    }
+  }
+
   /* Stop horizontal scroll */
   /* Everything needs to be much smaller, icons and grpahics manual but text the smae size, i'd say as large as about page title text */
   /* Remove linkedin and github logo */

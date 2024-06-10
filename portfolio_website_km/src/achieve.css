@@ -424,3 +424,13 @@
         display: none;
     }
 }
+
+@media(min-height: 870px) {
+    #workContainer {
+        display: flex;
+        font-size: 10px;
+        justify-content: space-around;
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+}
