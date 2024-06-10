@@ -553,7 +553,7 @@
   }
 }
 
-@media(min-height: 870px) {
+@media(min-height: 870px) and (min-width: 500px) {
   #formContainer {
     margin-top: 50px;
   }

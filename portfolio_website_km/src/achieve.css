@@ -425,7 +425,7 @@
     }
 }
 
-@media(min-height: 870px) {
+@media(min-height: 870px) and (min-width: 500px) {
     #workContainer {
         display: flex;
         font-size: 10px;

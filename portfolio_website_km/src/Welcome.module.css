@@ -383,7 +383,7 @@
     }
   }
 
-  @media(min-height: 870px) {
+  @media(min-height: 870px) and (min-width: 500px) {
     #welcomeAll{
       padding-top: 3%;
     }
