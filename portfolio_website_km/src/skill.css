@@ -256,13 +256,14 @@
     #react_Logo {
         height: 8vw;
         width: 7vw;
+        margin-top: 2px;
         margin-left: 15px;
     }
 
     #next_Logo {
-        margin-top: 0;
-        width: 35px;
-        height: 35px;
+        margin-top: 4px;
+        width: 30px;
+        height: 30px;
     }
 
     #skillsContent{
