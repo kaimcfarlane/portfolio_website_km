@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4833398e.css",
-    "main.js": "/static/js/main.cc88c3ef.js",
+    "main.css": "/static/css/main.bfb38f94.css",
+    "main.js": "/static/js/main.2aa639bd.js",
     "static/js/787.311e56ff.chunk.js": "/static/js/787.311e56ff.chunk.js",
     "static/media/weatherappImg1.png": "/static/media/weatherappImg1.22c42bd778e72079a0ea.png",
     "static/media/virtualRealityPic1.jpg": "/static/media/virtualRealityPic1.5aea9be4bbcfc88924e8.jpg",
@@ -59,6 +59,7 @@
     "static/media/ufit2.png": "/static/media/ufit2.8b54333741e677b667a4.png",
     "static/media/UF_Logo.png": "/static/media/UF_Logo.dbf5e08a5499c55bf413.png",
     "static/media/davinciresolveLogo.png": "/static/media/davinciresolveLogo.9fde63d3370dcb435143.png",
+    "static/media/Flask_logo.png": "/static/media/Flask_logo.948f530fa304ad6d9e36.png",
     "static/media/expressLogo.png": "/static/media/expressLogo.5400d59fde3fda29c607.png",
     "static/media/javaLogo.png": "/static/media/javaLogo.0c66e88b871f91eb4188.png",
     "static/media/reactLogo.png": "/static/media/reactLogo.e293bb8e29685c5dccd6.png",
@@ -68,21 +69,23 @@
     "static/media/unitylogo.png": "/static/media/unitylogo.4f269642df7ff30fcc36.png",
     "static/media/c++.png": "/static/media/c++.2de0ae20980cffd2da09.png",
     "static/media/purpleWeb_Logo1.png": "/static/media/purpleWeb_Logo1.47b9b9dc22f6c74bb329.png",
+    "static/media/angular_logo.png": "/static/media/angular_logo.ea5c6fed50329cda07e2.png",
     "static/media/javascriptIcon.png": "/static/media/javascriptIcon.3338fa38e2ad24931071.png",
     "static/media/purpleWeb_Logo2.png": "/static/media/purpleWeb_Logo2.a4ee629a3ab705362664.png",
     "static/media/htmlLogo.png": "/static/media/htmlLogo.552d8d8b1befe18dd10f.png",
     "static/media/ufit3.jpeg": "/static/media/ufit3.62ef9ffec4d281a19a98.jpeg",
+    "static/media/AWS_logo.png": "/static/media/AWS_logo.af83709e2e928c1e54b1.png",
     "static/media/jiralogo.png": "/static/media/jiralogo.41f43f0a54572f715426.png",
     "static/media/gitlabLogo.png": "/static/media/gitlabLogo.12222677fd791345f9d1.png",
     "static/media/cssLogo.png": "/static/media/cssLogo.e8880e3282bdc9a71248.png",
     "static/media/purpleawardLogo.png": "/static/media/purpleawardLogo.f76a7398bd0b723e6887.png",
     "index.html": "/index.html",
-    "main.4833398e.css.map": "/static/css/main.4833398e.css.map",
-    "main.cc88c3ef.js.map": "/static/js/main.cc88c3ef.js.map",
+    "main.bfb38f94.css.map": "/static/css/main.bfb38f94.css.map",
+    "main.2aa639bd.js.map": "/static/js/main.2aa639bd.js.map",
     "787.311e56ff.chunk.js.map": "/static/js/787.311e56ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4833398e.css",
-    "static/js/main.cc88c3ef.js"
+    "static/css/main.bfb38f94.css",
+    "static/js/main.2aa639bd.js"
   ]
 }
