@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.28d8cb76.css",
-    "main.js": "/static/js/main.3881f61b.js",
+    "main.js": "/static/js/main.620384b8.js",
     "static/js/787.311e56ff.chunk.js": "/static/js/787.311e56ff.chunk.js",
     "static/media/weatherappImg1.png": "/static/media/weatherappImg1.22c42bd778e72079a0ea.png",
     "static/media/virtualRealityPic1.jpg": "/static/media/virtualRealityPic1.5aea9be4bbcfc88924e8.jpg",
@@ -44,6 +44,7 @@
     "static/media/reacttsImg2.png": "/static/media/reacttsImg2.d1b2f321216ccb5f609e.png",
     "static/media/Kiwi-cat-logo-1.png": "/static/media/Kiwi-cat-logo-1.985f41d9086b02ae6c66.png",
     "static/media/react_Logo5.png": "/static/media/react_Logo5.136945b02c13693e2676.png",
+    "static/media/kai_professional4.JPG": "/static/media/kai_professional4.980ff910f4dca541da25.JPG",
     "static/media/ufit7.jpeg": "/static/media/ufit7.1ce740d8aeea73df9fca.jpeg",
     "static/media/ufit5.jpeg": "/static/media/ufit5.d4807a3d5a51d9bde956.jpeg",
     "static/media/ufit4.jpeg": "/static/media/ufit4.7c4ce3e2e9cf83b90de5.jpeg",
@@ -83,11 +84,11 @@
     "static/media/purpleawardLogo.png": "/static/media/purpleawardLogo.f76a7398bd0b723e6887.png",
     "index.html": "/index.html",
     "main.28d8cb76.css.map": "/static/css/main.28d8cb76.css.map",
-    "main.3881f61b.js.map": "/static/js/main.3881f61b.js.map",
+    "main.620384b8.js.map": "/static/js/main.620384b8.js.map",
     "787.311e56ff.chunk.js.map": "/static/js/787.311e56ff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.28d8cb76.css",
-    "static/js/main.3881f61b.js"
+    "static/js/main.620384b8.js"
   ]
 }
