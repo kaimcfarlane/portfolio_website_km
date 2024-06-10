@@ -5,7 +5,7 @@ import JS_Icon from './javascriptIcon.png'
 import html_Icon from './htmlLogo.png'
 import css_Icon from './cssLogo.png'
 import java_Logo from './javaLogo.png'
-import react_Logo from './reactLogo.png'
+import react_Logo from './react_Logo5.png'
 import typescript_Logo from './typescriptLogo.png'
 import cSharp_Logo from './cSharp_Logo.png'
 import express_Logo from './expressLogo.png'
@@ -30,6 +30,7 @@ import flask_Logo from './Flask_logo.png'
 import AWS_Logo from './AWS_logo.png'
 import docker_Logo from './docker_logo.png'
 import tailwindcss_Logo from './tailwindcss_logo.png'
+import next_Logo from './next.js_Logo.png'
 
 export default function Skills({DLObj}) {
 
@@ -40,6 +41,7 @@ export default function Skills({DLObj}) {
   const titleOneH = useRef()
   const titleTwoH = useRef()
   const flaskLogo = useRef()
+  const nextLogo = useRef()
 
   useEffect(() =>{
     if(!DLObj.isLight)
@@ -54,11 +56,20 @@ export default function Skills({DLObj}) {
       flaskLogo.current.style.borderRadius = "10px";
       flaskLogo.current.style.marginRight = "20px";
       flaskLogo.current.style.marginTop = "3px";
+      nextLogo.current.style.background = "white";
+      nextLogo.current.style.padding = "3px";
+      nextLogo.current.style.borderRadius = "10px";
+      nextLogo.current.style.width = "35px";
+      nextLogo.current.style.height = "35px";
+      nextLogo.current.style.marginTop = "3px";
       if (window.screen.width > 500) {
         flaskLogo.current.style.width = "40px";
         flaskLogo.current.style.height = "40px";
         flaskLogo.current.style.marginTop = "";
         flaskLogo.current.style.marginTop = "5px";
+        nextLogo.current.style.width = "40px";
+        nextLogo.current.style.height = "40px";
+        nextLogo.current.style.marginTop = "5px";
       }
     }
     else
@@ -74,6 +85,17 @@ export default function Skills({DLObj}) {
       flaskLogo.current.style.height = "";
       flaskLogo.current.style.marginTop = "";
       flaskLogo.current.style.marginRight = "";
+      nextLogo.current.style.background = "";
+      nextLogo.current.style.padding = "";
+      nextLogo.current.style.borderRadius =""
+      nextLogo.current.style.padding = "3px";
+      if (window.screen.width > 500) {
+        nextLogo.current.style.width = "40px";
+        nextLogo.current.style.height = "40px";
+        nextLogo.current.style.marginTop = "5px";
+        nextLogo.current.style.marginTop = "5px";
+        nextLogo.current.style.padding = "";
+      }
     }
 },[DLObj])
 
@@ -171,6 +193,8 @@ useEffect(()=>{
           <div ref={imageContainer2} className='imageContainer'>
             <img className='icon' id='react_Logo' alt='libraryIcon' src={react_Logo} data-tooltip-id="reactLogo" data-tooltip-content='React.js'></img>
             <ReactTooltip  id='reactLogo'/>
+            <img ref={nextLogo} className='icon' id='next_Logo' alt='libraryIcon' src={next_Logo} data-tooltip-id="nextLogo" data-tooltip-content='Next.js'></img>
+            <ReactTooltip  id='nextLogo'/>
             <img className='icon' id='angular_Logo' alt='libraryIcon' src={angular_Logo} data-tooltip-id="angularLogo" data-tooltip-content='AngularJS'></img>
             <ReactTooltip  id='angularLogo'/>
             <img ref={flaskLogo} className='icon' id='flask_Logo' alt='libraryIcon' src={flask_Logo} data-tooltip-id="flaskLogo" data-tooltip-content='Flask'></img>

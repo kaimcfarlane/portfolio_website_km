@@ -58,11 +58,19 @@
 }
 
 #react_Logo{
+    height: 44px;
+    width: 40px;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+#next_Logo {
     height: 40px;
     width: 40px;
     margin-top: 5px;
-    margin-left: 5px;
-    margin-right: 20px;
+    margin-right: 9px;
+    transition: ease-in-out 0.3s;
 }
 
 #angular_Logo{
@@ -246,8 +254,9 @@
       
 
     #react_Logo{
-        height: 7vw;
+        height: 8vw;
         width: 7vw;
+        margin-left: 15px;
     }
 
     #skillsContent{
