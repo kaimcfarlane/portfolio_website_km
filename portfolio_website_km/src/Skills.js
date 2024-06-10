@@ -29,6 +29,7 @@ import angular_Logo from './angular_logo.png'
 import flask_Logo from './Flask_logo.png'
 import AWS_Logo from './AWS_logo.png'
 import docker_Logo from './docker_logo.png'
+import tailwindcss_Logo from './tailwindcss_logo.png'
 
 export default function Skills({DLObj}) {
 
@@ -186,6 +187,8 @@ useEffect(()=>{
             <ReactTooltip  id='sqlLogo'/>
             <img className='icon' id='bootstrap_Logo' alt='libraryIcon' src={bootstrapLogo} data-tooltip-id="bootstrapLogo" data-tooltip-content='Bootstrap'></img>
             <ReactTooltip  id='bootstrapLogo'/>
+            <img className='icon' id='tailwindcss_Logo' alt='libraryIcon' src={tailwindcss_Logo} data-tooltip-id="tailwindcssLogo" data-tooltip-content='Tailwindcss'></img>
+            <ReactTooltip  id='tailwindcssLogo'/>
           </div>
         </div>
         <div>
