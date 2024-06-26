@@ -444,7 +444,7 @@ export default function Achieve({DLObj}) {
                     <h2 ref={jobSub2} className='jobh2'>January 2024 - June 2024</h2>
                     <img id='disney_logo' src={Disney_Logo}></img>
                     <img className='achieveImg' ref={img2} id='modsvr_Pic' src={vr3} alt='' onClick={() => openJobDesc(2)} onMouseEnter={() => backgroundHoverEnter(img2)} onMouseLeave={() => backgroundHoverLeave(img2)}></img>
-                    <p ref={jobDesc2} className='jobDesc' id='jobDesc2'>Created offline-mode feature for a Seating Application utilized in WDW rides, employing Angular, Angular Material, and Flask</p>
+                    <p ref={jobDesc2} className='jobDesc' id='jobDesc2'>Created offline-mode feature for seating application utilized in WDW rides, employing Angular, Angular Material, and Flask</p>
                 </div>
                 <div ref={job3} className='job' id='job3'>
                     <h1 ref={jobTitle3} className='jobh1'>Software Engineer Intern</h1>
@@ -452,7 +452,7 @@ export default function Achieve({DLObj}) {
                     <img id='infotech_logo' src={InfoTech_Logo}></img>
                     {/* {window.innerWidth > '970px' ? 'UF Information Technology' : 'UFIT'} */}
                     <img className='achieveImg' name={'imgA'} ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
-                    <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Creating software using React.js</p>
+                    <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Developing graphical project manager interface leveraging Next.js, Typescript, NextUI, TailwindCSS and the Jira API</p>
                 </div>
             </div>
         <section id='achievePageContainer'>
