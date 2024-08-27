@@ -3,7 +3,7 @@ import React, {useRef, useEffect, useState} from 'react'
 import styles from "./Header.module.css"
 import "./burgerMenu.css"
 import './nightDay.css'
-import Pdf from './KaiMcFarlane_resume_2023.pdf'
+import Pdf from './kaimcfarlane_resume.pdf'
 import MenuTransition from './MenuTransition'
 // import "https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 // {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
