@@ -18,6 +18,8 @@ import codingPic1 from './codingPic1.jpg'
 // import ufitPic2 from './ufitPic2.jpg'
 // import vrPic1 from './virtualRealityPic1.jpg'
 
+import MicrosoftLogo from './microfost_logo1.png'
+
 import UFIT_Logo from './UFIT_Logo2.jpeg'
 import Disney_Logo from './Disney_Logo.png'
 import InfoTech_Logo from './infotech_logo3.png'
@@ -390,8 +392,8 @@ export default function Achieve({DLObj}) {
     //   pictureSwap(img3,ufitPicArr)
       if(window.innerWidth < '970') {
         jobTitle3.current.innerHTML = "Software Engineer Intern"
-        jobSub3.current.innerHTML = 'June 2024 - Present'
-        jobTitle1.current.innerHTML = "Web-App Developer Intern"
+        jobSub3.current.innerHTML = 'June 2024 - August 2024'
+        jobTitle1.current.innerHTML = "Software Engineer Intern"
         jobSub2.current.innerHTML = "January 2024 - June 2024"
     }
     }
@@ -407,14 +409,14 @@ export default function Achieve({DLObj}) {
     const updateDimension = () => {
         if(window.innerWidth < '970' && window.innerWidth > '500') {
             jobTitle3.current.innerHTML = "Software Engineer Intern"
-            jobSub3.current.innerHTML = 'June 2024 - Present'
-            jobTitle1.current.innerHTML = "Web-App Developer Intern"
+            jobSub3.current.innerHTML = 'June 2024 - August 2024'
+            jobTitle1.current.innerHTML = "Software Engineer Intern"
             jobSub2.current.innerHTML = "January 2024 - June 2024"
         }
         else{
             jobTitle3.current.innerHTML = "Software Engineer Intern"
-            jobSub3.current.innerHTML = 'June 2024 - Present'
-            jobTitle1.current.innerHTML = "Web-App Developer Intern"
+            jobSub3.current.innerHTML = 'June 2024 - August 2024'
+            jobTitle1.current.innerHTML = "Software Engineer Intern"
             jobSub2.current.innerHTML = "January 2024 - June 2024"
 
         }
@@ -433,26 +435,26 @@ export default function Achieve({DLObj}) {
         </div>
         <div ref={ref} id='workContainer'>
                 <div ref={job1} className='job' id='job1'>
-                    <h1 ref={jobTitle1} className='jobh1'>Web-App Developer Intern</h1>
-                    <h2 ref={jobSub1} className='jobh2'>January 2023 - January 2024</h2>
-                    <img id='ufit_logo' src={UFIT_Logo}></img>
-                    <img className='achieveImg' ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
-                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Redesigned and implemented new cards feature for the personal UF Workspace with React.js, Node.js, and SQL</p>
-                </div>
-                <div ref={job2} className='job' id='job2'>
-                    <h1 ref={jobTitle2} className='jobh1'>Software Engineer Intern</h1>
+                    <h1 ref={jobTitle3} className='jobh1'>Software Engineer Intern</h1>
                     <h2 ref={jobSub2} className='jobh2'>January 2024 - June 2024</h2>
                     <img id='disney_logo' src={Disney_Logo}></img>
                     <img className='achieveImg' ref={img2} id='modsvr_Pic' src={vr3} alt='' onClick={() => openJobDesc(2)} onMouseEnter={() => backgroundHoverEnter(img2)} onMouseLeave={() => backgroundHoverLeave(img2)}></img>
                     <p ref={jobDesc2} className='jobDesc' id='jobDesc2'>Created offline-mode feature for seating application utilized in WDW rides, employing Angular, Angular Material, and Flask</p>
                 </div>
-                <div ref={job3} className='job' id='job3'>
-                    <h1 ref={jobTitle3} className='jobh1'>Software Engineer Intern</h1>
-                    <h2 ref={jobSub3} className='jobh2'>June 2024 - Present</h2>
+                <div ref={job2} className='job' id='job2'>
+                    <h1 ref={jobTitle2} className='jobh1'>Software Engineer Intern</h1>
+                    <h2 ref={jobSub3} className='jobh2'>June 2024 - August 2024</h2>
                     <img id='infotech_logo' src={InfoTech_Logo}></img>
                     {/* {window.innerWidth > '970px' ? 'UF Information Technology' : 'UFIT'} */}
                     <img className='achieveImg' name={'imgA'} ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
                     <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Developing graphical project manager interface leveraging Next.js, Typescript, NextUI, TailwindCSS and the Jira API</p>
+                </div>
+                <div ref={job3} className='job' id='job3'>
+                    <h1 ref={jobTitle1} className='jobh1'>Software Engineer Intern</h1>
+                    <h2 ref={jobSub1} className='jobh2'>May 2025 - August 2025</h2>
+                    <img id='ufit_logo' src={MicrosoftLogo}></img>
+                    <img className='achieveImg' ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
+                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Redesigned and implemented new cards feature for the personal UF Workspace with React.js, Node.js, and SQL</p>
                 </div>
             </div>
         <section id='achievePageContainer'>
