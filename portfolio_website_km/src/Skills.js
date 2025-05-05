@@ -44,8 +44,10 @@ export default function Skills({DLObj}) {
   const titleTwoH = useRef()
   const flaskLogo = useRef()
   const nextLogo = useRef()
+  const azureLogo = useRef()
+  const websocketLogo = useRef()
 
-  useEffect(() =>{
+  useEffect(() => {
     if(!DLObj.isLight)
     {
       titleOne.current.style.color = "#fffffe";
@@ -142,6 +144,14 @@ const imageContainer3 = useRef()
 
 useEffect(()=>{
   if(inView) {
+    if (window.screen.width < 500) {
+      azureLogo.current.style.display = "none";
+      websocketLogo.current.style.display = "none";
+    }
+    else {
+      azureLogo.current.style.display = "block";
+      websocketLogo.current.style.display = "block";
+    }
     skillsText.current.classList.add("snappedLB")
     imageContainer1.current.classList.add("snappedRS1")
     imageContainer2.current.classList.add("snappedRS2")
@@ -238,9 +248,9 @@ useEffect(()=>{
             <ReactTooltip  id='herokuLogo'/>
             <img className='icon' alt='learnedIcon' src={jiraLogo} data-tooltip-id="jiraLogo" data-tooltip-content='Jira'></img>
             <ReactTooltip  id='jiraLogo'/>
-            <img className='icon' alt='learnedIcon' src={azure_Logo} data-tooltip-id="azureLogo" data-tooltip-content='Azure'></img>
+            <img ref={azureLogo} className='icon' alt='learnedIcon' src={azure_Logo} data-tooltip-id="azureLogo" data-tooltip-content='Azure'></img>
             <ReactTooltip  id='azureLogo'/>
-            <img className='icon' alt='learnedIcon' src={websocket_Logo} data-tooltip-id="websocketLogo" data-tooltip-content='WebSocket'></img>
+            <img ref={websocketLogo} className='icon' alt='learnedIcon' src={websocket_Logo} data-tooltip-id="websocketLogo" data-tooltip-content='WebSocket'></img>
             <ReactTooltip  id='websocketLogo'/>
           </div>
         </div>
