@@ -31,6 +31,8 @@ import AWS_Logo from './AWS_logo.png'
 import docker_Logo from './docker_logo.png'
 import tailwindcss_Logo from './tailwindcss_logo.png'
 import next_Logo from './next.js_Logo.png'
+import azure_Logo from './azure_logo_1.0.png'
+import websocket_Logo from './websocket_logo_1.1.png'
 
 export default function Skills({DLObj}) {
 
@@ -234,8 +236,12 @@ useEffect(()=>{
             <ReactTooltip  id='gitlabLogo'/>
             <img className='icon' alt='learnedIcon' src={heroku_Logo} data-tooltip-id="herokuLogo" data-tooltip-content='Heroku'></img>
             <ReactTooltip  id='herokuLogo'/>
-            <img className='icon' alt='learneIcon' src={jiraLogo} data-tooltip-id="jiraLogo" data-tooltip-content='Jira'></img>
+            <img className='icon' alt='learnedIcon' src={jiraLogo} data-tooltip-id="jiraLogo" data-tooltip-content='Jira'></img>
             <ReactTooltip  id='jiraLogo'/>
+            <img className='icon' alt='learnedIcon' src={azure_Logo} data-tooltip-id="azureLogo" data-tooltip-content='Azure'></img>
+            <ReactTooltip  id='azureLogo'/>
+            <img className='icon' alt='learnedIcon' src={websocket_Logo} data-tooltip-id="websocketLogo" data-tooltip-content='WebSocket'></img>
+            <ReactTooltip  id='websocketLogo'/>
           </div>
         </div>
       </div>

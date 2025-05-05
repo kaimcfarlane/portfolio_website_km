@@ -454,7 +454,7 @@ export default function Achieve({DLObj}) {
                     <h2 ref={jobSub1} className='jobh2'>May 2025 - August 2025</h2>
                     <img id='ufit_logo' src={MicrosoftLogo}></img>
                     <img className='achieveImg' ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
-                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Redesigned and implemented new cards feature for the personal UF Workspace with React.js, Node.js, and SQL</p>
+                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Developed software on an AI Agent that significantly enhances productivity in the Azure Core team</p>
                 </div>
             </div>
         <section id='achievePageContainer'>
