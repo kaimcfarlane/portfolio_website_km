@@ -84,8 +84,8 @@ export default function Projects({DLObj}) {
         newProject.tool1 = info1.tool1
         newProject.tool2 = info1.tool2
         newProject.tool3 = info1.tool3
-        newProject.demoUrl = 'https://recipeat.herokuapp.com/'
-        newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat_PUBLIC'
+        newProject.demoUrl = 'https://reesevisioncare.com/'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/rvc_website'
         newProject.logos = [next, tailwind, daisy]
         changeProjectInfo(newProject)
         changeState(!state)
