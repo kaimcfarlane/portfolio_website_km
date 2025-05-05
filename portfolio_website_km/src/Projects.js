@@ -1,6 +1,7 @@
 import {React, useEffect, useRef, useState} from 'react'
 import { useInView } from 'react-intersection-observer'
 import Project from './Project'
+import RVCWebsite from './RVCWebsitePic.png'
 import tankPicture from './modstankPic.png'
 import recipeImg1 from './recipeatImg1.png'
 import reactTSImg1 from './reacttsImg1.png'
@@ -26,6 +27,9 @@ import css from './cssLogo.png'
 import unity from './unitylogo.png'
 import typescript from './typescriptLogo.png'
 import model from './model.png'
+import next from './next.js_Logo.png'
+import tailwind from './tailwindcss_logo.png'
+import daisy from './daisyUI_Logo1.2.png'
 
 export default function Projects({DLObj}) {
 
@@ -41,12 +45,12 @@ export default function Projects({DLObj}) {
   const projectImg1 = useRef()
   const projectTitle1 = useRef()
 
-  const info1 = {img: recipeImg1, title: 'Recipeat', tool1: '//TypeScript', tool2: '//Node.js', tool3: '//MongoDB'}
+  const info1 = {img: RVCWebsite, title: 'RVC Website', tool1: '//Next.js', tool2: '//TailwindCSS', tool3: '//DaisyUI'}
   const info2 = {img: weatherappImg, title: 'MyClimi', tool1: '//JavaScript', tool2: '//KeyFrames', tool3: '//RestApi'}
-  const info3 = {img: CDSIMG1, title: 'CDS', tool1: '//Python', tool2: '//Arduino', tool3: '//CanvasAPI'}
+  const info3 = {img: recipeImg1, title: 'Recipeat', tool1: '//TypeScript', tool2: '//Node.js', tool3: '//MongoDB'}
   const info4 = {img: kiwiImg, title: 'Kiwi-El-Gato', tool1: '//JavaScript', tool2: '//JotForm', tool3: '//WordPress'}
   const info5 = {img: kiwipongimg, title: 'Kiwi Pong', tool1: '//C#', tool2: '//Unity', tool3: '//2D-Modeling'}
-  const info6 = {img: reactTSImg1, title: 'ReactTS', tool1: '//Javascript', tool2: '//Bootstrap', tool3: '//Chart.js'}
+  const info6 = {img: CDSIMG1, title: 'CDS', tool1: '//Python', tool2: '//Arduino', tool3: '//CanvasAPI'}
 
   useEffect(()=> {
     if(DLObj.isLight) {
@@ -76,13 +80,13 @@ export default function Projects({DLObj}) {
       if(index === 1) {
         newProject.title = info1.title
         newProject.img = [info1.img, recipeImg2, recipeImg3]
-        newProject.desc = 'A Fullstack Recipe Creation App'
+        newProject.desc = 'An Optical Website'
         newProject.tool1 = info1.tool1
         newProject.tool2 = info1.tool2
         newProject.tool3 = info1.tool3
-        newProject.demoUrl = 'https://recipeat.herokuapp.com/'
-        newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat_PUBLIC'
-        newProject.logos = [mongoDB, node, typescript]
+        newProject.demoUrl = 'https://reesevisioncare.com/'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/rvc_website'
+        newProject.logos = [next, tailwind, daisy]
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -102,13 +106,13 @@ export default function Projects({DLObj}) {
       else if(index === 3) {
         newProject.title = info3.title
         newProject.img = [info3.img, 'null']
-        newProject.desc = 'A Canvas Docking Station'
+        newProject.desc = 'A Fullstack Recipe Creation App'
         newProject.tool1 = info3.tool1
         newProject.tool2 = info3.tool2
         newProject.tool3 = info3.tool3
-        newProject.demoUrl = 'https://github.com/kaimcfarlane/CDS'
-        newProject.codeUrl = 'https://github.com/kaimcfarlane/CDS'
-        newProject.logos = [python, api, CPlus]
+        newProject.demoUrl = 'https://recipeat.herokuapp.com/'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/Recipeat_PUBLIC'
+        newProject.logos = [mongoDB, node, typescript]
         changeProjectInfo(newProject)
         changeState(!state)
       }
@@ -141,13 +145,13 @@ export default function Projects({DLObj}) {
       else if(index === 6) {
         newProject.title = info6.title
         newProject.img = [info6.img, 'null']
-        newProject.desc = 'A Series of Reaction Speed Games'
+        newProject.desc = 'A Canvas Docking Station'
         newProject.tool1 = info6.tool1
         newProject.tool2 = info6.tool2
         newProject.tool3 = info6.tool3
-        newProject.demoUrl = 'https://kaimcfarlane.github.io/ReactTS/'
-        newProject.codeUrl = 'https://github.com/kaimcfarlane/React_TS'
-        newProject.logos = [html, css, javascript]
+        newProject.demoUrl = 'https://github.com/kaimcfarlane/CDS'
+        newProject.codeUrl = 'https://github.com/kaimcfarlane/CDS'
+        newProject.logos = [python, api, CPlus]
         changeProjectInfo(newProject)
         changeState(!state)
       }

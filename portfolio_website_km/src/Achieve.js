@@ -2,21 +2,23 @@ import {React, useRef, useEffect, useState} from 'react'
 import { useInView } from 'react-intersection-observer'
 import './achieve.css'
 import purple_Logo from './purpleawardLogo.png'
-import kiwi_WebsitePic from './kiwiWebsitePic.png'
-import modsvr_Pic from './modsvr_Pic.png'
-import modstank_Pic from './modstankPic.png'
-import ufit_Pic from './ufitPic.png'
-import purpleWeb_Logo1 from './purpleWeb_Logo1.png'
-import purpleWeb_Logo2 from './purpleWeb_Logo2.png'
-import purpleWeb_Logo3 from './purpleWeb_Logo3.png'
-import kiwi_Logo from './Kiwi-cat-logo-1.png'
-import Mods_Logo from './MODS_Logo_Transparent.png'
-import Mods_Logo2 from './mods_Logo2_Transparent.png'
-import UFIT_logo from './UFIT-Primary-Signature.png'
-import UF_Logo from './UF_Logo.png'
+// import kiwi_WebsitePic from './kiwiWebsitePic.png'
+// import modsvr_Pic from './modsvr_Pic.png'
+// import modstank_Pic from './modstankPic.png'
+// import ufit_Pic from './ufitPic.png'
+// import purpleWeb_Logo1 from './purpleWeb_Logo1.png'
+// import purpleWeb_Logo2 from './purpleWeb_Logo2.png'
+// import purpleWeb_Logo3 from './purpleWeb_Logo3.png'
+// import kiwi_Logo from './Kiwi-cat-logo-1.png'
+// import Mods_Logo from './MODS_Logo_Transparent.png'
+// import Mods_Logo2 from './mods_Logo2_Transparent.png'
+// import UFIT_logo from './UFIT-Primary-Signature.png'
+// import UF_Logo from './UF_Logo.png'
 import codingPic1 from './codingPic1.jpg'
-import ufitPic2 from './ufitPic2.jpg'
-import vrPic1 from './virtualRealityPic1.jpg'
+// import ufitPic2 from './ufitPic2.jpg'
+// import vrPic1 from './virtualRealityPic1.jpg'
+
+import MicrosoftLogo from './microfost_logo1.png'
 
 import UFIT_Logo from './UFIT_Logo2.jpeg'
 import Disney_Logo from './Disney_Logo.png'
@@ -25,35 +27,35 @@ import InfoTech_Logo from './infotech_logo3.png'
 import code3 from './code3.jpg'
 
 import vr3 from './vr3.jpg'
-import mods1 from './modstankimg1.png'
+// import mods1 from './modstankimg1.png'
 import mods2 from './mods2.png'
 import mods3 from './mods3.png'
 import mods4 from './mods4.png'
-import mods5 from './mods5.png'
-import mods6 from './mods6.png'
+// import mods5 from './mods5.png'
+// import mods6 from './mods6.png'
 import mods7 from './mods7.png'
 import mods8 from './mods8.png'
 
 import kiwi1 from './kiwi1.png'
 import kiwi2 from './kiwi2.png'
-import kiwi3 from './kiwi3.png'
+// import kiwi3 from './kiwi3.png'
 import kiwi4 from './kiwi4.png'
 import kiwi5 from './kiwi5.png'
-import kiwi6 from './kiwi6.png'
+// import kiwi6 from './kiwi6.png'
 import kiwi7 from './kiwi7.png'
-import kiwi8 from './kiwi8.png'
+// import kiwi8 from './kiwi8.png'
 import kiwi9 from './kiwi9.png'
 import kiwi10 from './kiwi10.png'
 import kiwi11 from './kiwi11.png'
 import kiwi12 from './kiwi12.png'
 
-import ufit2 from './ufit2.png'
-import ufit3 from './ufit3.jpeg'
+// import ufit2 from './ufit2.png'
+// import ufit3 from './ufit3.jpeg'
 import ufit4 from './ufit4.jpeg'
 import ufit5 from './ufit5.jpeg'
 import ufit6 from './ufit6.jpeg'
 import ufit7 from './ufit7.jpeg'
-import ufit8 from './ufit8.jpeg'
+// import ufit8 from './ufit8.jpeg'
 import ufit9 from './ufit3.jpeg'
 
 
@@ -390,8 +392,8 @@ export default function Achieve({DLObj}) {
     //   pictureSwap(img3,ufitPicArr)
       if(window.innerWidth < '970') {
         jobTitle3.current.innerHTML = "Software Engineer Intern"
-        jobSub3.current.innerHTML = 'June 2024 - Present'
-        jobTitle1.current.innerHTML = "Web-App Developer Intern"
+        jobSub3.current.innerHTML = 'June 2024 - August 2024'
+        jobTitle1.current.innerHTML = "Software Engineer Intern"
         jobSub2.current.innerHTML = "January 2024 - June 2024"
     }
     }
@@ -407,14 +409,14 @@ export default function Achieve({DLObj}) {
     const updateDimension = () => {
         if(window.innerWidth < '970' && window.innerWidth > '500') {
             jobTitle3.current.innerHTML = "Software Engineer Intern"
-            jobSub3.current.innerHTML = 'June 2024 - Present'
-            jobTitle1.current.innerHTML = "Web-App Developer Intern"
+            jobSub3.current.innerHTML = 'June 2024 - August 2024'
+            jobTitle1.current.innerHTML = "Software Engineer Intern"
             jobSub2.current.innerHTML = "January 2024 - June 2024"
         }
         else{
             jobTitle3.current.innerHTML = "Software Engineer Intern"
-            jobSub3.current.innerHTML = 'June 2024 - Present'
-            jobTitle1.current.innerHTML = "Web-App Developer Intern"
+            jobSub3.current.innerHTML = 'June 2024 - August 2024'
+            jobTitle1.current.innerHTML = "Software Engineer Intern"
             jobSub2.current.innerHTML = "January 2024 - June 2024"
 
         }
@@ -433,26 +435,26 @@ export default function Achieve({DLObj}) {
         </div>
         <div ref={ref} id='workContainer'>
                 <div ref={job1} className='job' id='job1'>
-                    <h1 ref={jobTitle1} className='jobh1'>Web-App Developer Intern</h1>
-                    <h2 ref={jobSub1} className='jobh2'>January 2023 - January 2024</h2>
-                    <img id='ufit_logo' src={UFIT_Logo}></img>
-                    <img className='achieveImg' ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
-                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Redesigned and implemented new cards feature for the personal UF Workspace with React.js, Node.js, and SQL</p>
-                </div>
-                <div ref={job2} className='job' id='job2'>
-                    <h1 ref={jobTitle2} className='jobh1'>Software Engineer Intern</h1>
+                    <h1 ref={jobTitle3} className='jobh1'>Software Engineer Intern</h1>
                     <h2 ref={jobSub2} className='jobh2'>January 2024 - June 2024</h2>
                     <img id='disney_logo' src={Disney_Logo}></img>
                     <img className='achieveImg' ref={img2} id='modsvr_Pic' src={vr3} alt='' onClick={() => openJobDesc(2)} onMouseEnter={() => backgroundHoverEnter(img2)} onMouseLeave={() => backgroundHoverLeave(img2)}></img>
                     <p ref={jobDesc2} className='jobDesc' id='jobDesc2'>Created offline-mode feature for seating application utilized in WDW rides, employing Angular, Angular Material, and Flask</p>
                 </div>
-                <div ref={job3} className='job' id='job3'>
-                    <h1 ref={jobTitle3} className='jobh1'>Software Engineer Intern</h1>
-                    <h2 ref={jobSub3} className='jobh2'>June 2024 - Present</h2>
+                <div ref={job2} className='job' id='job2'>
+                    <h1 ref={jobTitle2} className='jobh1'>Software Engineer Intern</h1>
+                    <h2 ref={jobSub3} className='jobh2'>June 2024 - August 2024</h2>
                     <img id='infotech_logo' src={InfoTech_Logo}></img>
                     {/* {window.innerWidth > '970px' ? 'UF Information Technology' : 'UFIT'} */}
                     <img className='achieveImg' name={'imgA'} ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
                     <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Developing graphical project manager interface leveraging Next.js, Typescript, NextUI, TailwindCSS and the Jira API</p>
+                </div>
+                <div ref={job3} className='job' id='job3'>
+                    <h1 ref={jobTitle1} className='jobh1'>Software Engineer Intern</h1>
+                    <h2 ref={jobSub1} className='jobh2'>May 2025 - August 2025</h2>
+                    <img id='ufit_logo' src={MicrosoftLogo}></img>
+                    <img className='achieveImg' ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
+                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Developed software on an AI Agent that significantly enhances productivity in the Azure Core team</p>
                 </div>
             </div>
         <section id='achievePageContainer'>

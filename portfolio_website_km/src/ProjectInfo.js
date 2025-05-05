@@ -130,7 +130,7 @@ export default function ProjectInfo({selectedProjectInfo, DLObj, changeProjectIn
                     </div>
                     <div ref={logoBox} id='logoBox' style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                         <img alt='logo' src={selectedProjectInfo.logos[0] && selectedProjectInfo.logos[0]} style={{width: '30px', height: '30px'}}></img>
-                        <img alt='logo' src={selectedProjectInfo.logos[1] && selectedProjectInfo.logos[1]} style={{width: selectedProjectInfo.title === 'Kiwi Pong' ? '27px' : '30px', height: selectedProjectInfo.title === 'Kiwi Pong' ? '27px' : '30px'}}></img>
+                        <img alt='logo' src={selectedProjectInfo.logos[1] && selectedProjectInfo.logos[1]} style={{width: selectedProjectInfo.title === 'Kiwi Pong' ? '27px' : '30px', height: selectedProjectInfo.title === 'Kiwi Pong' ? '27px' : '30px', marginLeft: selectedProjectInfo.title === 'RVC Website' && '5px'}}></img>
                         <img alt='logo' src={selectedProjectInfo.logos[2] && selectedProjectInfo.logos[2]} style={{width: selectedProjectInfo.title === 'Recipeat' ? '26px' : '30px', height: selectedProjectInfo.title === 'Recipeat' ? '26px' : '30px', marginLeft: selectedProjectInfo.title === 'Recipeat' && '5px'}}></img>
                     </div>
                 </div>
