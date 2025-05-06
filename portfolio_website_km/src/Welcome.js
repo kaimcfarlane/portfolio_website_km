@@ -235,16 +235,20 @@ export default function Welcome({DLObj}) {
     <div id={styles.welcomeContent}>
         <h2 ref={subtitle} id={styles.subtitle}>Hey I'm,</h2>
         <h1 ref={title} id={styles.title}>Kai McFarlane</h1>
-        <p2 ref={paragraph1} id={styles.paragraph1}>Full-Stack Developer - CS Student</p2>
-        <p1 ref={paragraph2} id={styles.paragraph2}>I am a software developer driven by a love for creating exciting and impactful projects. I'm currently exploring Web-Development and pursuing a degree in computer science from the University of Florida.</p1>
+        <p2 ref={paragraph1} id={styles.paragraph1}>
+        <span
+            onClick={() => window.open('https://thelenslink.com', '_blank')}
+            style={{ textDecoration: 'underline #6246ea', cursor: 'pointer' }}
+        >Founder of The Lens Link</span> - Full-Stack Developer - CS Student</p2>
+        <p1 ref={paragraph2} id={styles.paragraph2}>I am a software developer driven by a love for creating exciting and impactful projects. I'm currently scaling my start-up, The Lens Link, and pursuing a degree in computer science from the University of Florida.</p1>
         {/* I'm a Software Developer that loves to create exciting projects through code. */}
     </div>
     <div>
         <img ref={profilePic} id={styles.profilePic} alt='Logo' src={img1}></img>
     </div>
     <div ref={welcomeSubtextMob} id={styles.welcomeSubtextMob}>
-        <p2 ref={paragraph1Mob} id={styles.paragraph1Mob}>Full-Stack Developer - CS Student</p2>
-        <p1 ref={paragraph2Mob} id={styles.paragraph2Mob}>I am a software developer driven by a love for creating exciting and impactful projects. I'm currently exploring Web-Development and pursuing a degree in computer science from the University of Florida.</p1>
+        <p2 ref={paragraph1Mob} id={styles.paragraph1Mob}>Founder of The Lens Link - Full-Stack Developer - CS Student</p2>
+        <p1 ref={paragraph2Mob} id={styles.paragraph2Mob}>I am a software developer driven by a love for creating exciting and impactful projects. I'm currently scaling my start-up, The Lens Link, and pursuing a degree in computer science from the University of Florida.</p1>
     </div>
     </section>
     <div ref={mouseContainer} id={styles.mouseContainer}>
