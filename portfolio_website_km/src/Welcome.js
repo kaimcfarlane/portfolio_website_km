@@ -238,7 +238,7 @@ export default function Welcome({DLObj}) {
         <p2 ref={paragraph1} id={styles.paragraph1}>
         <span
             onClick={() => window.open('https://thelenslink.com', '_blank')}
-            style={{ textDecoration: 'underline #6246ea', cursor: 'pointer' }}
+            style={{ textDecoration: 'underline #6246ea', textDecorationThickness: '2px', cursor: 'pointer' }}
         >Founder of The Lens Link</span> - Full-Stack Developer - CS Student</p2>
         <p1 ref={paragraph2} id={styles.paragraph2}>I am a software developer driven by a love for creating exciting and impactful projects. I'm currently scaling my start-up, The Lens Link, and pursuing a degree in computer science from the University of Florida.</p1>
         {/* I'm a Software Developer that loves to create exciting projects through code. */}
@@ -250,7 +250,7 @@ export default function Welcome({DLObj}) {
         <p2 ref={paragraph1Mob} id={styles.paragraph1Mob}>
         <span
             onClick={() => window.open('https://thelenslink.com', '_blank')}
-            style={{ textDecoration: 'underline #6246ea', cursor: 'pointer' }}
+            style={{ textDecoration: 'underline #6246ea', textDecorationThickness: '2px', cursor: 'pointer' }}
         >Founder of The Lens Link</span> - Full-Stack Developer - CS Student</p2>
         <p1 ref={paragraph2Mob} id={styles.paragraph2Mob}>I am a software developer driven by a love for creating exciting and impactful projects. I'm currently scaling my start-up, The Lens Link, and pursuing a degree in computer science from the University of Florida.</p1>
     </div>
