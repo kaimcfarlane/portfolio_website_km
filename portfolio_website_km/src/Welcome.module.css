@@ -151,7 +151,7 @@
 
 #paragraph1{
     display: block;
-    pointer-events: none;
+    /* pointer-events: none; */
     opacity: 0%;
     color: #2b2c34;
     font-weight: bold;
@@ -282,7 +282,7 @@
 
   #paragraph1Mob{
     display: none;
-    pointer-events: none;
+    /* pointer-events: none; */
     opacity: 0%;
     color: #2b2c34;
     font-weight: bold;

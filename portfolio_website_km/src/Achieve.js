@@ -447,14 +447,14 @@ export default function Achieve({DLObj}) {
                     <img id='infotech_logo' src={InfoTech_Logo}></img>
                     {/* {window.innerWidth > '970px' ? 'UF Information Technology' : 'UFIT'} */}
                     <img className='achieveImg' name={'imgA'} ref={img3} id='ufit_Pic' src={code3} alt='' onClick={() => openJobDesc(3)} onMouseEnter={() => backgroundHoverEnter(img3)} onMouseLeave={() => backgroundHoverLeave(img3)}></img>
-                    <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Developing graphical project manager interface leveraging Next.js, Typescript, NextUI, TailwindCSS and the Jira API</p>
+                    <p ref={jobDesc3} className='jobDesc' id='jobDesc3'>Developed graphical project manager interface leveraging Next.js, Typescript, NextUI, TailwindCSS and the Jira API</p>
                 </div>
                 <div ref={job3} className='job' id='job3'>
                     <h1 ref={jobTitle1} className='jobh1'>Software Engineer Intern</h1>
                     <h2 ref={jobSub1} className='jobh2'>May 2025 - August 2025</h2>
                     <img id='ufit_logo' src={MicrosoftLogo}></img>
                     <img className='achieveImg' ref={img1} id='kiwi_WebsitePic' src={codingPic1} alt='' onClick={() => openJobDesc(1)} onMouseEnter={() => backgroundHoverEnter(img1)} onMouseLeave={() => backgroundHoverLeave(img1)}></img>
-                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Developed software on an AI Agent that significantly enhances productivity in the Azure Core team</p>
+                    <p ref={jobDesc1} className='jobDesc' id='jobDesc1'>Developed software on an AI Agent that significantly enhances productivity on the Azure Core team</p>
                 </div>
             </div>
         <section id='achievePageContainer'>

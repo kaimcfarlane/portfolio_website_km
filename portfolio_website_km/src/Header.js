@@ -1,10 +1,13 @@
 import React, {useRef, useEffect, useState} from 'react'
 // import './Header.css'
 import styles from "./Header.module.css"
+import { Tooltip as ReactTooltip } from 'react-tooltip'
 import "./burgerMenu.css"
 import './nightDay.css'
 import Pdf from './kaimcfarlane_resume.pdf'
 import MenuTransition from './MenuTransition'
+import llc_white_logo from './llc_white_icon.png'
+import llc_black_logo from './llc_black_icon.png'
 // import "https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 // {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
 //      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"></link> */}
@@ -408,6 +411,13 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
         <div ref={logoText} id={styles.logoText} onClick={HomeBtn}>KM</div>
     </a>
     <div ref={entireMenu} id={styles.burgerMenu}>
+        <a href='https://thelenslink.com/' target='_blank'>
+            <div data-tooltip-id="llcLogo" data-tooltip-content='The Lens Link App'>
+                {DLObj.isLight ? <img id={styles.llc_black_logoText} src={llc_black_logo} alt="Logo" className='logo'/> : <img src={llc_white_logo} id={styles.llc_white_logoText} alt="Logo" className='logo'/>}
+            </div>
+        </a>
+        <ReactTooltip  id='llcLogo'/>
+        
         <div className='content'>
             <i ref={i} className='fas fa sun' style={{color: iColor}}></i>
             &nbsp;&nbsp;&nbsp;
@@ -418,6 +428,7 @@ export default function Header({DLObj, toggleDL, animateMenu}) {
             &nbsp;&nbsp;&nbsp;
             <i ref={i} className="fas fa-moon"></i>
         </div>
+
         <div  ref={burgerMenu} className='menu btn11' data-menu="11" onClick={burgerMenuClick}>
             <div ref={burgerMenuLeft} className='icon-left'></div>
             <div ref={burgerMenuRight} className='icon-right'></div>
